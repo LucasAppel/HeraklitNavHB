@@ -1,41 +1,85 @@
 <template>
-<div id="svgContainer">
-  <object :data=svgObj version="1.1" type="image/svg+xml" id="svgObjID">Error, svg not supported</object>
+<div class ="dragscroll" id="svgContainer" v-html="svgObj">
+  <div v-html="svgObj" />
   </div>
 </template>
 
 <script>
+
+
+
+
 export default {
+  
   name: 'svgView',
+  data () {
+    
+  
+  },
+
   props: {
-    svgObj: String
-  }
+    svgObj: String,
+    
+  }, 
+  
+  mounted() {
+    
+    },
+   
+
+
 }
+
+
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
-#svgContainer{
-  
-  align-items: top;
-  width: auto;
-  background-color: white;
-  height:97%;
-  overflow:scroll;
-  border: Inset 4px #AEAEAE;
-  margin-top: 5px;
-  padding-bottom: 32px;
-
+object {
+z-index: 0;
+cursor: grab;
 }
 
-#svgObjID {
 
- transform-origin: 0% 0%;
- height: 100%;
- width:100%;
- object-fit: contain;
+
+#svgContainer{
+ 
+ position: fixed;
+  left: 5px;
+  align-items: center;
+  width: 85%;
+  background-color: white;
+  max-height:98%;
+  overflow:scroll;
+  border: 20px 20px black;
+  cursor: grab;
+  user-select: none;
+
+  margin-top: 5px;
+  padding-bottom: 50px;
+  margin-bottom: 4%;
+ -webkit-user-select: none;
+ -webkit-overflow-scrolling: touch;
  
 }
 
+#svgObjID {
+-webkit-overflow-scrolling: touch;
+
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+position: relative;
+ height: 80vh;
+ cursor: grab;
+ transform-origin: 0% 0%;
+ 
+ object-fit: contain;
+ -webkit-user-select: none;
+}
+
 </style>
+
+

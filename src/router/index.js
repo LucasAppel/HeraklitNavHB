@@ -1,8 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Dragscroll from 'dragscroll'
 
 Vue.use(VueRouter)
+Vue.use(Dragscroll)
 
 const routes = [
   {
@@ -21,7 +23,20 @@ const routes = [
 ]
 
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior (to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { x: 0, y: 0 }
+    }
+  },
+  methods: {
+    resetZoomer() {
+      document.getElementById("zoomer").setAttribute("zvalue", 1);
+    }
+  }
+  
 })
 
 export default router

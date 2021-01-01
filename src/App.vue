@@ -27,10 +27,12 @@ import Zoomer from '@/components/Zoomer.vue'
 
 
 export default {
+  name: 'App',
   components: {
     Zoomer
   }
 }
+
 
 </script>
 
@@ -46,8 +48,8 @@ body {
 
 #app {
 
-height: 100%;
-
+height: 95%;
+margin-bottom: 5%;
 
 
 
@@ -75,17 +77,25 @@ html {
 }
 
 
+
+
 #content {
   width: 85%;
   height: 100%;
   
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
+  padding-top: 5vh;
+  z-index: 0;
   float: left;
+
+ 
+}
+
+
  
   
  
-}
+
+
 
 h1 {
   
@@ -116,7 +126,7 @@ footer {
   bottom: 0px;
   left: 0px;
   padding: 0px;
-  
+  z-index: 3;
 
 }
 

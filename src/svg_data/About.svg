@@ -1,5 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+
 <svg
+class="dragscroll"
+id="svgObjID"
  viewbox = "0 0 752 611"
   width="100%"
   height="100%"
