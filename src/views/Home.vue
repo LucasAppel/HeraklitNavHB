@@ -1,15 +1,12 @@
 <template>
-<div>
-<svgView :svgObj= svgObj />
-
-</div>
-    
+ <div v-html="svgObj">
+   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import svgView from '@/components/svgView.vue'
-import svgTest from '!!raw-loader!@/svg_data/testSVG.svg'
+
+import svgTest from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-14.svg'
 
 
 export default {
@@ -17,13 +14,7 @@ export default {
   
   data: () => ({
 svgObj: svgTest
-  }),
-  components: {
-    svgView
-  },
-mounted() {
-  
-}
+  })
 
 }
 

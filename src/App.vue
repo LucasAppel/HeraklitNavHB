@@ -11,7 +11,7 @@
  </nav>
 
 <div id="content">
-      <router-view />
+      <svgView />
         </div>
 
       
@@ -24,12 +24,13 @@
 
 <script>
 import Zoomer from '@/components/Zoomer.vue'
-
+import svgView from '@/components/svgView.vue'
 
 export default {
   name: 'App',
   components: {
-    Zoomer
+    Zoomer,
+    svgView
   }
 }
 
@@ -48,7 +49,7 @@ body {
 
 #app {
 
-height: 95%;
+height: 50vh;
 margin-bottom: 5%;
 
 
@@ -60,7 +61,7 @@ margin-bottom: 5%;
   color: black;
 }
 header {
-  height: 5%;
+  height: 5vh;
   width: 100%;
   background-color: palegoldenrod;
   position: fixed;
@@ -81,16 +82,53 @@ html {
 
 #content {
   width: 85%;
-  height: 100%;
-  
-  padding-top: 5vh;
+  height: 90vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
   z-index: 0;
   float: left;
 
  
 }
+nav {
+  min-height: 100px;
+  width: 15%;
+  
+  height: auto;
+  float: right;
+
+  margin-top: 4%;
+  padding-bottom: 2.5%;
+  position: fixed;
+  right: 0px;
+  
+}
 
 
+@media screen and (min-width:2000px) {
+  #content {
+  width: 90%;
+  height: 90vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  z-index: 0;
+  float: left;
+}
+
+nav {
+  min-height: 100px;
+  width: 10%;
+  
+  height: auto;
+  float: right;
+
+  margin-top: 4%;
+  padding-bottom: 2.5%;
+  position: fixed;
+  right: 0px;
+  
+}
+}
  
   
  
@@ -103,18 +141,7 @@ h1 {
   
 }
 
-nav {
-  min-height: 100px;
-  width: 15%;
-  height: auto;
-  float: right;
 
-  margin-top: 4%;
-  padding-bottom: 2.5%;
-  position: fixed;
-  right: 0px;
-  
-}
 
 
 footer {

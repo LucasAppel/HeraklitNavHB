@@ -1,203 +1,780 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="594.75pt" height="841.5pt" viewBox="0 0 594.75 841.5">
-<g enable-background="new">
-<g>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 244.03 514.76 L 278.97 514.76 "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 245.03 510.74 L 232.97 514.76 L 245.03 518.78 L 245.03 510.74 Z " fill-rule="evenodd"/>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 222.27 588.7 L 267.91 588.7 "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 266.91 592.72 L 278.97 588.7 L 266.91 584.68 L 266.91 592.72 Z " fill-rule="evenodd"/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 193.64 575.42 L 244.664 575.42 L 244.664 599.114 L 193.64 599.114 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp369">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp369)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-590.35" x="197.9 203.15373 209.13874 212.14247 217.38498 222.63872 227.88123 233.12374 237.62374">purchase </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp370">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp370)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold"><tspan y="-577.15" x="197.9 203.15415 206.89745 212.1516 217.39447 221.13777">orders</tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 193.64 502.56 L 232.975 502.56 L 232.975 527.707 L 193.64 527.707 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp371">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp371)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold"><tspan y="-518.15" x="197.9 206.11948 210.65203 215.8949">mess</tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp372">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp372)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold"><tspan y="-518.15" x="220.98">-</tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp373">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp373)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-504.93" x="197.9 203.1425 208.39624 213.63875">ages</tspan></text>
-</g>
-</g>
-<clipPath id="cp374">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000030518 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000045776 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp374)">
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 170.29 585.61 L 181.02 585.79 "/>
-</g>
-<clipPath id="cp375">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000030518 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000045776 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp375)">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 179.95 589.8 L 192.08 585.99 L 180.09 581.76 L 179.95 589.8 Z " fill-rule="evenodd"/>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 183.11 512.15 L 193.61 512.15 "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 184.11 508.13 L 172.05 512.15 L 184.11 516.17 L 184.11 508.13 Z " fill-rule="evenodd"/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 193.31 434.53 L 255.887 434.53 L 255.887 459.677 L 193.31 459.677 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp376">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp376)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-443.45" x="204.05 209.30374 214.54625 216.79625 219.78876 224.28876 229.53127 233.26627 235.51627 240.75878">deliveries</tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 259.91 448.67 L 278.64 448.67 "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 260.91 444.65 L 248.85 448.67 L 260.91 452.69 L 260.91 444.65 Z " fill-rule="evenodd"/>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 278.64 427.94 L 306.98603 427.94 L 306.98603 598.66006 L 278.64 598.66006 Z "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 143.71 429.13 L 172.056 429.13 L 172.056 599.85 L 143.71 599.85 Z " fill="#ffffff" fill-rule="evenodd"/>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 143.71 429.13 L 172.056 429.13 L 172.056 599.85 L 143.71 599.85 Z "/>
-<clipPath id="cp377">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000007629 841.5 L 594.75 841.5 L 594.75 .00012207 L -.000015259 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp377)">
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 128.73 448.06 L 143.43 448.33 "/>
-</g>
-<clipPath id="cp378">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000007629 841.5 L 594.75 841.5 L 594.75 .00012207 L -.000015259 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp378)">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 129.81 444.06 L 117.67 447.85 L 129.66 452.1 L 129.81 444.06 Z " fill-rule="evenodd"/>
-</g>
-<clipPath id="cp379">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000022888 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000022888 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp379)">
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 121.34 585.89 L 132.4 585.9 "/>
-</g>
-<clipPath id="cp380">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000022888 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000022888 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp380)">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 131.39 589.92 L 143.45 585.91 L 131.39 581.88 L 131.39 589.92 Z " fill-rule="evenodd"/>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 60.378 574.64 L 120.472 574.64 L 120.472 598.334 L 60.378 598.334 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp381">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp381)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold"><tspan y="-589.58" x="76.975 82.25169 86.01755 91.29424 96.55967 100.32552 105.60222 110.878917 116.88849">orderung </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp382">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp382)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-576.35" x="70.95 76.1925 81.44625 86.68875 89.692508 94.94626 103.18126 107.68126 111.41626">customers</tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 66.65 435.76 L 117.673999 435.76 L 117.673999 460.907 L 66.65 460.907 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp383">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp383)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-457.9" x="74.65 79.915 84.4375 89.7025 94.9675 100.24375 103.270008 108.535 113.81126">accepted </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp384">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp384)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-444.67" x="84.7 89.95375 95.19625 100.43875 103.442508 108.685009 110.935009 113.927509">overall </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp385">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp385)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-431.47" x="79.675 84.92876 90.17126 92.42126 95.41376 99.91376 105.15626 108.89126">delivery</tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp386">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp386)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-550.4" x="134.38 139.62252 144.87625 150.11876 153.1225 158.37624 166.61124 171.11124 174.84624">customers</tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 253.34 525.85 L 333.192 525.85 L 333.192 579.35598 L 253.34 579.35598 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp387">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp387)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-566.2" x="271.73 274.73377 276.98377 280.71876 285.96125 288.965 293.465 296.4575 298.7075 303.94999 306.95375 309.94624">[ retailer  </tspan></text>
-</g>
-</g>
-<clipPath id="cp388">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp388)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-566.2" x="312.4 315.39976">&#x2022; </tspan></text>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp389">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp389)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-554.33" x="273.23 278.49543 283.77214 289.04884 295.0584 297.33598 299.61354 304.87895 308.64479">supplier </tspan></text>
-</g>
-</g>
-<clipPath id="cp390">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp390)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-554.33" x="310.88 313.87916 316.86705">&#x2022;  </tspan></text>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp391">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp391)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-542.42" x="279.6 282.60377 286.33876 290.83876 293.83125 299.085 304.33876 307.3425">freight </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp392">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp392)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-529.72" x="267.55 270.55375 275.8075 279.54249 286.29249 291.53498 295.26997 300.5237 305.7662 308.76997 314.01246 316.26246 319.99748">forwarders ] </tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 183.11 448.33 L 200.13 448.33 "/>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 184.11 444.31 L 172.05 448.33 L 184.11 452.35 L 184.11 444.31 Z " fill-rule="evenodd"/>
-</g>
-</g>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="272.814pt"
+   height="172.66pt"
+   viewBox="0 0 272.814 172.66"
+   id="svgObjID"
+   sodipodi:docname="engl. Teil_I_II-2-14.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata285">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs283" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview281"
+     showgrid="false"
+     inkscape:zoom="0.75757576"
+     inkscape:cx="315.996"
+     inkscape:cy="239.3"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg279"
+     inkscape:document-rotation="0" />
+  
+    <g
+       enable-background="new"
+       id="g277"
+       transform="translate(-60.378,-241.275)">
+      <g
+         id="g275">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 244.03,514.76 h 34.94"
+           id="path2" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 245.03,510.74 -12.06,4.02 12.06,4.02 z"
+           fill-rule="evenodd"
+           id="path4" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 222.27,588.7 h 45.64"
+           id="path6" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 266.91,592.72 12.06,-4.02 -12.06,-4.02 z"
+           fill-rule="evenodd"
+           id="path8" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 193.64,575.42 h 51.024 v 23.694 H 193.64 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path10" />
+        <g
+           id="Layer-1"
+           data-name="P">
+          <clipPath
+             id="cp369">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path12" />
+          </clipPath>
+          <g
+             clip-path="url(#cp369)"
+             id="g19">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text17"><tspan
+                 y="-590.34998"
+                 x="197.89999 203.15373 209.13873 212.14247 217.38498 222.63872 227.88123 233.12373 237.62373"
+                 id="tspan15">purchase </tspan></text>
+          </g>
+        </g>
+        <g
+           id="g31"
+           data-name="P">
+          <clipPath
+             id="cp370">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path22" />
+          </clipPath>
+          <g
+             clip-path="url(#cp370)"
+             id="g29">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.275px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text27"><tspan
+                 y="-577.15002"
+                 x="197.89999 203.15414 206.89745 212.1516 217.39447 221.13777"
+                 id="tspan25">orders</tspan></text>
+          </g>
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 193.64,502.56 h 39.335 v 25.147 H 193.64 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path33" />
+        <g
+           id="g44"
+           data-name="P">
+          <clipPath
+             id="cp371">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path35" />
+          </clipPath>
+          <g
+             clip-path="url(#cp371)"
+             id="g42">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.275px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text40"><tspan
+                 y="-518.15002"
+                 x="197.89999 206.11948 210.65202 215.8949"
+                 id="tspan38">mess</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g55"
+           data-name="P">
+          <clipPath
+             id="cp372">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path46" />
+          </clipPath>
+          <g
+             clip-path="url(#cp372)"
+             id="g53">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.275px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text51"><tspan
+                 y="-518.15002"
+                 x="220.98"
+                 id="tspan49">-</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g66"
+           data-name="P">
+          <clipPath
+             id="cp373">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path57" />
+          </clipPath>
+          <g
+             clip-path="url(#cp373)"
+             id="g64">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text62"><tspan
+                 y="-504.92999"
+                 x="197.89999 203.1425 208.39624 213.63875"
+                 id="tspan60">ages</tspan></text>
+          </g>
+        </g>
+        <clipPath
+           id="cp374">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -3.0518e-5,841.5 H 594.75 V 1.8311e-4 L -4.5776e-5,1.2207e-4"
+             fill-rule="evenodd"
+             id="path68" />
+        </clipPath>
+        <g
+           clip-path="url(#cp374)"
+           id="g73">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             fill="none"
+             stroke="#000000"
+             d="m 170.29,585.61 10.73,0.18"
+             id="path71" />
+        </g>
+        <clipPath
+           id="cp375">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -3.0518e-5,841.5 H 594.75 V 1.8311e-4 L -4.5776e-5,1.2207e-4"
+             fill-rule="evenodd"
+             id="path75" />
+        </clipPath>
+        <g
+           clip-path="url(#cp375)"
+           id="g80">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="m 179.95,589.8 12.13,-3.81 -11.99,-4.23 z"
+             fill-rule="evenodd"
+             id="path78" />
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 183.11,512.15 h 10.5"
+           id="path82" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 184.11,508.13 -12.06,4.02 12.06,4.02 z"
+           fill-rule="evenodd"
+           id="path84" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 193.31,434.53 h 62.577 v 25.147 H 193.31 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path86" />
+        <g
+           id="g97"
+           data-name="P">
+          <clipPath
+             id="cp376">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path88" />
+          </clipPath>
+          <g
+             clip-path="url(#cp376)"
+             id="g95">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text93"><tspan
+                 y="-443.45001"
+                 x="204.05 209.30374 214.54625 216.79625 219.78876 224.28876 229.53127 233.26627 235.51627 240.75877"
+                 id="tspan91">deliveries</tspan></text>
+          </g>
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 259.91,448.67 h 18.73"
+           id="path99" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 260.91,444.65 -12.06,4.02 12.06,4.02 z"
+           fill-rule="evenodd"
+           id="path101" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="0.75"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 278.64,427.94 h 28.34603 V 598.66006 H 278.64 Z"
+           id="path103" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 143.71,429.13 h 28.346 V 599.85 H 143.71 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path105" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="0.75"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 143.71,429.13 h 28.346 V 599.85 H 143.71 Z"
+           id="path107" />
+        <clipPath
+           id="cp377">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -7.629e-6,841.5 H 594.75 V 1.2207e-4 H -1.5259e-5"
+             fill-rule="evenodd"
+             id="path109" />
+        </clipPath>
+        <g
+           clip-path="url(#cp377)"
+           id="g114">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             fill="none"
+             stroke="#000000"
+             d="m 128.73,448.06 14.7,0.27"
+             id="path112" />
+        </g>
+        <clipPath
+           id="cp378">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -7.629e-6,841.5 H 594.75 V 1.2207e-4 H -1.5259e-5"
+             fill-rule="evenodd"
+             id="path116" />
+        </clipPath>
+        <g
+           clip-path="url(#cp378)"
+           id="g121">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="m 129.81,444.06 -12.14,3.79 11.99,4.25 z"
+             fill-rule="evenodd"
+             id="path119" />
+        </g>
+        <clipPath
+           id="cp379">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -2.2888e-5,841.5 H 594.75 V 1.8311e-4 L -2.2888e-5,1.2207e-4"
+             fill-rule="evenodd"
+             id="path123" />
+        </clipPath>
+        <g
+           clip-path="url(#cp379)"
+           id="g128">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             stroke-width="1.5"
+             stroke-linecap="round"
+             stroke-linejoin="round"
+             fill="none"
+             stroke="#000000"
+             d="m 121.34,585.89 11.06,0.01"
+             id="path126" />
+        </g>
+        <clipPath
+           id="cp380">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M -2.2888e-5,841.5 H 594.75 V 1.8311e-4 L -2.2888e-5,1.2207e-4"
+             fill-rule="evenodd"
+             id="path130" />
+        </clipPath>
+        <g
+           clip-path="url(#cp380)"
+           id="g135">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="m 131.39,589.92 12.06,-4.01 -12.06,-4.03 z"
+             fill-rule="evenodd"
+             id="path133" />
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 60.378,574.64 h 60.094 v 23.694 H 60.378 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path137" />
+        <g
+           id="g148"
+           data-name="P">
+          <clipPath
+             id="cp381">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path139" />
+          </clipPath>
+          <g
+             clip-path="url(#cp381)"
+             id="g146">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.275px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text144"><tspan
+                 y="-589.58002"
+                 x="76.974998 82.251694 86.017548 91.294243 96.559669 100.32552 105.60222 110.87891 116.88849"
+                 id="tspan142">orderung </tspan></text>
+          </g>
+        </g>
+        <g
+           id="g159"
+           data-name="P">
+          <clipPath
+             id="cp382">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path150" />
+          </clipPath>
+          <g
+             clip-path="url(#cp382)"
+             id="g157">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text155"><tspan
+                 y="-576.34998"
+                 x="70.949997 76.192497 81.446251 86.688751 89.692505 94.946259 103.18126 107.68126 111.41626"
+                 id="tspan153">customers</tspan></text>
+          </g>
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 66.65,435.76 h 51.024 v 25.147 H 66.65 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path161" />
+        <g
+           id="g172"
+           data-name="P">
+          <clipPath
+             id="cp383">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path163" />
+          </clipPath>
+          <g
+             clip-path="url(#cp383)"
+             id="g170">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text168"><tspan
+                 y="-457.89999"
+                 x="74.650002 79.915001 84.4375 89.702499 94.967499 100.24375 103.27 108.535 113.81126"
+                 id="tspan166">accepted </tspan></text>
+          </g>
+        </g>
+        <g
+           id="g183"
+           data-name="P">
+          <clipPath
+             id="cp384">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path174" />
+          </clipPath>
+          <g
+             clip-path="url(#cp384)"
+             id="g181">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text179"><tspan
+                 y="-444.67001"
+                 x="84.699997 89.953751 95.196251 100.43875 103.4425 108.68501 110.93501 113.92751"
+                 id="tspan177">overall </tspan></text>
+          </g>
+        </g>
+        <g
+           id="g194"
+           data-name="P">
+          <clipPath
+             id="cp385">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path185" />
+          </clipPath>
+          <g
+             clip-path="url(#cp385)"
+             id="g192">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               id="text190"><tspan
+                 y="-431.47"
+                 x="79.675003 84.928757 90.171257 92.421257 95.413757 99.913757 105.15626 108.89126"
+                 id="tspan188">delivery</tspan></text>
+          </g>
+        </g>
+        <g
+           id="g205"
+           data-name="P">
+          <clipPath
+             id="cp386">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path196" />
+          </clipPath>
+          <g
+             clip-path="url(#cp386)"
+             id="g203">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               font-style="italic"
+               id="text201"><tspan
+                 y="-550.40002"
+                 x="134.38 139.62251 144.87625 150.11876 153.1225 158.37624 166.61124 171.11124 174.84624"
+                 id="tspan199">customers</tspan></text>
+          </g>
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 253.34,525.85 h 79.852 v 53.50598 H 253.34 Z"
+           fill="#ffffff"
+           fill-rule="evenodd"
+           id="path207" />
+        <g
+           id="g218"
+           data-name="P">
+          <clipPath
+             id="cp387">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path209" />
+          </clipPath>
+          <g
+             clip-path="url(#cp387)"
+             id="g216">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               font-style="italic"
+               id="text214"><tspan
+                 y="-566.20001"
+                 x="271.73001 274.73376 276.98376 280.71875 285.96124 288.965 293.465 296.45749 298.70749 303.94998 306.95374 309.94623"
+                 id="tspan212">[ retailer  </tspan></text>
+          </g>
+        </g>
+        <clipPath
+           id="cp388">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path220" />
+        </clipPath>
+        <g
+           clip-path="url(#cp388)"
+           id="g227">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             font-style="italic"
+             id="text225"><tspan
+               y="-566.20001"
+               x="312.39999 315.39975"
+               id="tspan223">• </tspan></text>
+        </g>
+        <g
+           id="g238"
+           data-name="P">
+          <clipPath
+             id="cp389">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path229" />
+          </clipPath>
+          <g
+             clip-path="url(#cp389)"
+             id="g236">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.275px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               font-style="italic"
+               id="text234"><tspan
+                 y="-554.33002"
+                 x="273.23001 278.49542 283.77213 289.04883 295.05841 297.33597 299.61353 304.87894 308.64478"
+                 id="tspan232">supplier </tspan></text>
+          </g>
+        </g>
+        <clipPath
+           id="cp390">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path240" />
+        </clipPath>
+        <g
+           clip-path="url(#cp390)"
+           id="g247">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.275px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             font-style="italic"
+             id="text245"><tspan
+               y="-554.33002"
+               x="310.88 313.87915 316.86703"
+               id="tspan243">•  </tspan></text>
+        </g>
+        <g
+           id="g258"
+           data-name="P">
+          <clipPath
+             id="cp391">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path249" />
+          </clipPath>
+          <g
+             clip-path="url(#cp391)"
+             id="g256">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               font-style="italic"
+               id="text254"><tspan
+                 y="-542.41998"
+                 x="279.60001 282.60376 286.33875 290.83875 293.83124 299.08499 304.33875 307.3425"
+                 id="tspan252">freight </tspan></text>
+          </g>
+        </g>
+        <g
+           id="g269"
+           data-name="P">
+          <clipPath
+             id="cp392">
+            <path
+               transform="matrix(1,0,0,-1,0,841.5)"
+               d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+               fill-rule="evenodd"
+               id="path260" />
+          </clipPath>
+          <g
+             clip-path="url(#cp392)"
+             id="g267">
+            <text
+               xml:space="preserve"
+               transform="translate(0,841.5)"
+               font-size="11.25px"
+               font-family="ArialNarrow"
+               font-weight="bold"
+               font-style="italic"
+               id="text265"><tspan
+                 y="-529.71997"
+                 x="267.54999 270.55374 275.8075 279.54248 286.29248 291.53497 295.26996 300.52371 305.7662 308.76996 314.01245 316.26245 319.99747"
+                 id="tspan263">forwarders ] </tspan></text>
+          </g>
+        </g>
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 183.11,448.33 h 17.02"
+           id="path271" />
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 184.11,444.31 -12.06,4.02 12.06,4.02 z"
+           fill-rule="evenodd"
+           id="path273" />
+      </g>
+    </g>
+  <a xlink:href="/#/DemoClick" target="_top">
+  <rect 
+     style="fill:#0000ff;fill-opacity:0;stroke-width:0.75"
+     id="rect157"
+     width="28.346029"
+     height="170.72006"
+     x="218.26199"
+     y="1.5649401" />
+	 </a>
 </svg>

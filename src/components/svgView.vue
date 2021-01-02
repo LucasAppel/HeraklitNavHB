@@ -1,6 +1,6 @@
 <template>
-<div class ="dragscroll" id="svgContainer" v-html="svgObj">
-  <div v-html="svgObj" />
+<div class ="dragscroll" id="svgContainer">
+  <router-view />
   </div>
 </template>
 
@@ -18,16 +18,9 @@ export default {
   },
 
   props: {
-    svgObj: String,
-    
-  }, 
-  
-  mounted() {
-    
-    },
    
-
-
+    
+  }
 }
 
 
@@ -47,8 +40,8 @@ cursor: grab;
 #svgContainer{
  
  position: fixed;
-  left: 5px;
-  align-items: center;
+
+  height: 90vh;
   width: 85%;
   background-color: white;
   max-height:98%;
@@ -56,10 +49,6 @@ cursor: grab;
   border: 20px 20px black;
   cursor: grab;
   user-select: none;
-
-  margin-top: 5px;
-  padding-bottom: 50px;
-  margin-bottom: 4%;
  -webkit-user-select: none;
  -webkit-overflow-scrolling: touch;
  
@@ -73,12 +62,34 @@ cursor: grab;
   -o-user-drag: none;
 position: relative;
  height: 80vh;
+ width: 100%;
  cursor: grab;
  transform-origin: 0% 0%;
  
  object-fit: contain;
  -webkit-user-select: none;
 }
+
+@media screen and (min-width:2000px) {
+#svgContainer{
+ 
+ position: fixed;
+
+  height: 90vh;
+  width: 90%;
+  background-color: white;
+  max-height:98%;
+  overflow:scroll;
+  border: 20px 20px black;
+  cursor: grab;
+  user-select: none;
+ -webkit-user-select: none;
+ -webkit-overflow-scrolling: touch;
+ 
+}
+
+}
+
 
 </style>
 
