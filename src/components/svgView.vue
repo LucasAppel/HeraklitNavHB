@@ -39,9 +39,10 @@ cursor: grab;
 
 #svgContainer{
  
- position: fixed;
-
-  height: 90vh;
+  position: fixed;
+  padding-top: 5vh;
+  padding-bottom: 5vh;
+  height: 80vh;
   width: 85%;
   background-color: white;
   max-height:98%;

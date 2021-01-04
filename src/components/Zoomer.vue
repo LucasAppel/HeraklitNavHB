@@ -1,7 +1,11 @@
 <template>
-<div>Zoom: 
+<div>
+    <span>
+    Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="2" step="0.1" v-model="zvalue"
-      @input="zoom(zvalue)"> 
+      @input="zoom(zvalue)">  <br>
+      {{Math.floor(zvalue * 100)}}%
+    </span>
     
 </div>
 </template>
@@ -35,6 +39,33 @@ export default {
 </script>
 
 <style>
+#zoomer {
+    width: 100px;
+}
+
+br {
+    display: none;
+}
+
+span {
+white-space: nowrap;
+
+}
+
+@media screen and (max-width:1400px) {
+#zoomer {
+    width: 80px;
+}
+
+br {
+    display: initial;
+}
+
+span {
+white-space: break-spaces;
+
+}
+}
 
 
 </style>

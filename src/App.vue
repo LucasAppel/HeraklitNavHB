@@ -6,8 +6,10 @@
         <h1>Heraklit-Navigator: Handelsbetrieb</h1>
       </header>
     
- <nav>SIDEBAR<br>
+ <nav>
  <Zoomer/>
+ <hr>
+
  </nav>
 
 <div id="content">
@@ -16,7 +18,7 @@
 
       
  
-<footer>FOOTER</footer>
+<footer><h1>⇧ Signaturen ⇧</h1></footer>
   </div>
 
 
@@ -63,15 +65,29 @@ margin-bottom: 5%;
 header {
   height: 5vh;
   width: 100%;
-  background-color: palegoldenrod;
+  background-color: rgb(0, 125, 240);
   position: fixed;
   top: 0px;
   left: 0px;
   overflow: hidden;
   text-align: center;
-  
-  
+  border-bottom: solid black 1px;
+  z-index: 3;
 }
+
+footer {
+  clear: both;
+  width:100%;
+  height: 5vh;
+  background-color: rgb(150, 210, 255);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  border-top: solid black 1px;
+  z-index: 3;
+
+}
+
 
 html {
   height: 100%;
@@ -87,17 +103,17 @@ html {
   margin-top: 5vh;
   z-index: 0;
   float: left;
-
+   border-right: solid black 1px;
  
 }
 nav {
   min-height: 100px;
   width: 15%;
-  
+  border-left: solid black 1px;
   height: auto;
   float: right;
-
-  margin-top: 4%;
+  padding-top: 5px;
+  margin-top: 5vh;
   padding-bottom: 2.5%;
   position: fixed;
   right: 0px;
@@ -144,18 +160,7 @@ h1 {
 
 
 
-footer {
-  clear: both;
-  width:100%;
-  height: 5%;
-  background-color: palegreen;
-  position: fixed;
-  bottom: 0px;
-  left: 0px;
-  padding: 0px;
-  z-index: 3;
 
-}
 
 #nav a {
   font-weight: bold;
