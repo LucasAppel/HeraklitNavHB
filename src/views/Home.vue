@@ -1,5 +1,5 @@
 <template>
- <div v-html="svgObj">
+ <div v-html="svgObj" id="svgObj">
    </div>
 </template>
 

@@ -2,7 +2,7 @@
 <div>
     <span>
     Zoom: <br>
-  <input type="range" id="zoomer" zvalue="1" min="1" max="2" step="0.1" v-model="zvalue"
+  <input type="range" id="zoomer" zvalue="1" min="1" max="3" step="0.1" v-model="zvalue"
       @input="zoom(zvalue)">  <br>
       {{Math.floor(zvalue * 100)}}%
     </span>
@@ -11,29 +11,63 @@
 </template>
 
 <script>
-import $ from 'jquery'
+
 
 export default {
     Name: "Zoomer",
     directives: {
-        $
+     
     },
     data: () => ({
         zvalue: 1,
         oldz: 1
     }),
-    methods: {
 
+
+    
+    methods: {
+getScrollTopMax(ele) {
+  var ref;
+  return (ref = ele.scrollTopMax) != null
+      ? ref
+      : (ele.scrollHeight - ele.clientHeight);
+},
+
+getScrollLeftMax(ele) {
+  var ref;
+  return (ref = ele.scrollLeftMax) != null
+      ? ref
+      : (ele.scrollWidth - ele.clientWidth);
+},
 
     zoom(z) {
- document.getElementById("svgObjID").style.transform="scale("+z+", "+z+")";
- document.getElementById("svgObjID").style.width=(z*100)+"%";
- 
-  this.scroll(document.getElementById("svgContainer"));
+
+
+        var svgObj =  document.getElementById('svgObjID');
+        var container = document.getElementById('svgContainer');
+        var offsetx;
+        var offsety;
+        offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
+        offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
+     
+ svgObj.style.transform="scale("+z+", "+z+")";
+ svgObj.style.width=(z*100)+"%";
+
+
+ container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
+ container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
+
  }, 
  
 
-    }
+
+    },
+     mounted() {
+     var container = document.getElementById('svgContainer');
+     container.scrollLeft = this.getScrollLeftMax(container)/2;
+     container.scrollTop = this.getScrollTopMax(container)/2;
+  
+ }
     
 }
 </script>

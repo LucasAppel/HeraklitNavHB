@@ -12,10 +12,7 @@
 export default {
   
   name: 'svgView',
-  data () {
-    
   
-  },
 
   props: {
    
@@ -40,9 +37,9 @@ cursor: grab;
 #svgContainer{
  
   position: fixed;
-  padding-top: 5vh;
-  padding-bottom: 5vh;
-  height: 80vh;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
+  height: 86vh;
   width: 85%;
   background-color: white;
   max-height:98%;
