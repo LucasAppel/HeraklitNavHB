@@ -20,12 +20,13 @@ export default {
     },
     data: () => ({
         zvalue: 1,
-        oldz: 1
+       
     }),
 
 
     
     methods: {
+        //local methods
 getScrollTopMax(ele) {
   var ref;
   return (ref = ele.scrollTopMax) != null
@@ -39,21 +40,20 @@ getScrollLeftMax(ele) {
       ? ref
       : (ele.scrollWidth - ele.clientWidth);
 },
-
+//Zoom & Scroll
     zoom(z) {
-
-
+        //get HTML Elements
         var svgObj =  document.getElementById('svgObjID');
         var container = document.getElementById('svgContainer');
+        //Set offset
         var offsetx;
         var offsety;
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
-     
+     //Zoom
  svgObj.style.transform="scale("+z+", "+z+")";
- svgObj.style.width=(z*100)+"%";
 
-
+//Set scroll
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
  container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
 
@@ -66,7 +66,7 @@ getScrollLeftMax(ele) {
      var container = document.getElementById('svgContainer');
      container.scrollLeft = this.getScrollLeftMax(container)/2;
      container.scrollTop = this.getScrollTopMax(container)/2;
-  
+     
  }
     
 }
