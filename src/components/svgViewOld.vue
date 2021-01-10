@@ -1,29 +1,17 @@
 <template>
 <div class ="dragscroll" id="svgContainer">
-  <div class="zoomObj">
-  <retailer />
-  <customer />
-  <external />
-  </div>
-
+  <router-view />
   </div>
 </template>
 
 <script>
 
-import Retailer from './Retailer.vue'
-import Customer from './Customer.vue'
-import External from './External.vue'
+
+
 
 export default {
   
   name: 'svgView',
-  components: {
-    Retailer,
-    Customer,
-    External
-    
-  },
   
 
   data: function () {
@@ -76,9 +64,10 @@ cursor: grab;
 
 
 #svgContainer{
-
+ 
   position: fixed;
-  
+  padding-top: 2vh;
+  padding-bottom: 2vh;
   height: 86vh;
   width: 85%;
   background-color: white;
@@ -92,30 +81,20 @@ cursor: grab;
  
 }
 
-.zoomObj {
-  display: grid;
-  grid-template-columns: auto auto auto;
+#svgObjID {
+-webkit-overflow-scrolling: touch;
   
-  align-items: center;
-  transform-origin: 0% 0%;
-  width: 100%;
-  height: 100%;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-   object-fit: contain;
+position: relative;
+ height: 80vh;
+ width: 100%;
+ cursor: grab;
+ transform-origin: 0% 0%;
+ 
+ object-fit: contain;
  -webkit-user-select: none;
-
-
-}
-
-
-svg {
-  height: 100%;
-  width: 100%;
-  
 }
 
 @media screen and (min-width:2000px) {

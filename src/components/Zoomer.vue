@@ -4,7 +4,7 @@
     Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="3" step="0.1" v-model="zvalue"
       @input="zoom(zvalue)">  <br>
-      {{Math.floor(zvalue * 100)}}%
+      {{Math.round(zvalue * 100)}}%
     </span>
     
 </div>
@@ -43,7 +43,7 @@ getScrollLeftMax(ele) {
 //Zoom & Scroll
     zoom(z) {
         //get HTML Elements
-        var svgObj =  document.getElementById('svgObjID');
+        var svgObjs =  document.getElementsByClassName("zoomObj");
         var container = document.getElementById('svgContainer');
         //Set offset
         var offsetx;
@@ -51,7 +51,12 @@ getScrollLeftMax(ele) {
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
      //Zoom
- svgObj.style.transform="scale("+z+", "+z+")";
+  
+    svgObjs.forEach(svgObj => {
+         svgObj.style.transform="scale("+z+", "+z+")";
+    });
+
+     
 
 //Set scroll
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
