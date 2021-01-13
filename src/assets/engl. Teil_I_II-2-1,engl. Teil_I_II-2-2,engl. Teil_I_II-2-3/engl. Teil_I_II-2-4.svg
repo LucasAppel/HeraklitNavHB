@@ -1,83 +1,313 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="594.75pt" height="841.5pt" viewBox="0 0 594.75 841.5">
-<g enable-background="new">
-<g>
-<clipPath id="cp31">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000091553 841.5 L 594.75 841.5 L 594.75 .00012207 L -.00012207 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp31)">
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 445.89 282.42 L 512.16 282.83 "/>
-</g>
-<clipPath id="cp32">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000091553 841.5 L 594.75 841.5 L 594.75 .00012207 L -.00012207 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp32)">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 511.13 286.85 L 523.21 282.9 L 511.18 278.81 L 511.13 286.85 Z " fill-rule="evenodd"/>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width=".75" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 523.21 183.78 L 551.556 183.78 L 551.556 297.08003 L 523.21 297.08003 Z "/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp33">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp33)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-242.05" x="524.08 527.10629 530.875 535.3975 538.41256 543.6888 548.965 551.9913">freight </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp34">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp34)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold" font-style="italic"><tspan y="-228.83" x="517.3 520.3037 525.57998 529.31497 536.0874 541.3524 545.0874 550.36367 555.62869">forwarder</tspan></text>
-</g>
-</g>
-<clipPath id="cp35">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000091553 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000091553 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp35)">
-<path transform="matrix(1,0,0,-1,0,841.5)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" stroke="#000000" d="M 491.81 198.92 L 523.21 199.11 "/>
-</g>
-<clipPath id="cp36">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M -.000091553 841.5 L 594.75 841.5 L 594.75 .00018311 L -.000091553 .00012207 " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp36)">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 492.84 194.9 L 480.75 198.85 L 492.79 202.94 L 492.84 194.9 Z " fill-rule="evenodd"/>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 430.02 268.99 L 482.301 268.99 L 482.301 294.137 L 430.02 294.137 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp37">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp37)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-284.38" x="434.57 437.57377 442.8275 445.82 448.82377 451.8275 457.07 459.32 465.30503 470.55879 473.56254">to freight </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp38">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp38)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-271.15" x="434.57 437.57377 442.8275 446.5625 453.3125 458.555 462.28999 467.54374 472.78623">forwardes</tspan></text>
-</g>
-</g>
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M 430.02 184.98 L 480.75999 184.98 L 480.75999 210.127 L 430.02 210.127 Z " fill="#ffffff" fill-rule="evenodd"/>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp39">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp39)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.275" font-family="ArialNarrow" font-weight="bold"><tspan y="-200.3" x="450.25 455.5267 460.7921 464.5354 467.53456 469.78956 475.05497 477.30998">partial </tspan></text>
-</g>
-</g>
-<g id="Layer-1" data-name="P">
-<clipPath id="cp40">
-<path transform="matrix(1,0,0,-1,0,841.5)" d="M .000008862 0 L 594.75 0 L 594.75 841.5 L .000008862 841.5 Z " fill-rule="evenodd"/>
-</clipPath>
-<g clip-path="url(#cp40)">
-<text xml:space="preserve" transform="matrix(1 0 -0 1 0 841.5)" font-size="11.25" font-family="ArialNarrow" font-weight="bold"><tspan y="-187.08" x="435.67 440.9463 446.2113 448.4613 451.4538 455.9763 461.2413 465.01005 467.26005 472.52507">deliveries</tspan></text>
-</g>
-</g>
-</g>
-</g>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="129.98122pt"
+   height="114.05003pt"
+   viewBox="0 0 129.98122 114.05003"
+   id="svg105"
+   sodipodi:docname="engl. Teil_I_II-2-4.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <metadata
+     id="metadata111">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs109" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
+     id="namedview107"
+     showgrid="false"
+     inkscape:zoom="0.75757576"
+     inkscape:cx="-176.86"
+     inkscape:cy="-164.39329"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg105" />
+  <g
+     enable-background="new"
+     id="g103"
+     transform="translate(-430.02,-544.04497)">
+    <g
+       id="g101">
+      <clipPath
+         id="cp31">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="M -9.1553e-5,841.5 H 594.75 V 1.2207e-4 H -1.2207e-4"
+           fill-rule="evenodd"
+           id="path2" />
+      </clipPath>
+      <g
+         clip-path="url(#cp31)"
+         id="g7">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 445.89,282.42 66.27,0.41"
+           id="path5" />
+      </g>
+      <clipPath
+         id="cp32">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="M -9.1553e-5,841.5 H 594.75 V 1.2207e-4 H -1.2207e-4"
+           fill-rule="evenodd"
+           id="path9" />
+      </clipPath>
+      <g
+         clip-path="url(#cp32)"
+         id="g14">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 511.13,286.85 12.08,-3.95 -12.03,-4.09 z"
+           fill-rule="evenodd"
+           id="path12" />
+      </g>
+      <path
+         transform="matrix(1,0,0,-1,0,841.5)"
+         stroke-width="0.75"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         fill="none"
+         stroke="#000000"
+         d="m 523.21,183.78 h 28.346 V 297.08003 H 523.21 Z"
+         id="path16" />
+      <g
+         id="Layer-1"
+         data-name="P">
+        <clipPath
+           id="cp33">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path18" />
+        </clipPath>
+        <g
+           clip-path="url(#cp33)"
+           id="g25">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             font-style="italic"
+             id="text23"><tspan
+               y="-242.05"
+               x="524.08002 527.10626 530.875 535.39752 538.41254 543.68878 548.96503 551.99127"
+               id="tspan21">freight </tspan></text>
+        </g>
+      </g>
+      <g
+         id="g37"
+         data-name="P">
+        <clipPath
+           id="cp34">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path28" />
+        </clipPath>
+        <g
+           clip-path="url(#cp34)"
+           id="g35">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             font-style="italic"
+             id="text33"><tspan
+               y="-228.83"
+               x="517.29999 520.30371 525.57996 529.31494 536.0874 541.35242 545.0874 550.36365 555.62866"
+               id="tspan31">forwarder</tspan></text>
+        </g>
+      </g>
+      <clipPath
+         id="cp35">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="M -9.1553e-5,841.5 H 594.75 V 1.8311e-4 L -9.1553e-5,1.2207e-4"
+           fill-rule="evenodd"
+           id="path39" />
+      </clipPath>
+      <g
+         clip-path="url(#cp35)"
+         id="g44">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           stroke-width="1.5"
+           stroke-linecap="round"
+           stroke-linejoin="round"
+           fill="none"
+           stroke="#000000"
+           d="m 491.81,198.92 31.4,0.19"
+           id="path42" />
+      </g>
+      <clipPath
+         id="cp36">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="M -9.1553e-5,841.5 H 594.75 V 1.8311e-4 L -9.1553e-5,1.2207e-4"
+           fill-rule="evenodd"
+           id="path46" />
+      </clipPath>
+      <g
+         clip-path="url(#cp36)"
+         id="g51">
+        <path
+           transform="matrix(1,0,0,-1,0,841.5)"
+           d="m 492.84,194.9 -12.09,3.95 12.04,4.09 z"
+           fill-rule="evenodd"
+           id="path49" />
+      </g>
+      <path
+         transform="matrix(1,0,0,-1,0,841.5)"
+         d="m 430.02,268.99 h 52.281 v 25.147 H 430.02 Z"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path53" />
+      <g
+         id="g64"
+         data-name="P">
+        <clipPath
+           id="cp37">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path55" />
+        </clipPath>
+        <g
+           clip-path="url(#cp37)"
+           id="g62">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             id="text60"><tspan
+               y="-284.38"
+               x="434.57001 437.57376 442.82751 445.82001 448.82376 451.82751 457.07001 459.32001 465.30502 470.55878 473.56253"
+               id="tspan58">to freight </tspan></text>
+        </g>
+      </g>
+      <g
+         id="g75"
+         data-name="P">
+        <clipPath
+           id="cp38">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path66" />
+        </clipPath>
+        <g
+           clip-path="url(#cp38)"
+           id="g73">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             id="text71"><tspan
+               y="-271.14999"
+               x="434.57001 437.57376 442.82751 446.5625 453.3125 458.55499 462.28998 467.54373 472.78622"
+               id="tspan69">forwardes</tspan></text>
+        </g>
+      </g>
+      <path
+         transform="matrix(1,0,0,-1,0,841.5)"
+         d="m 430.02,184.98 h 50.73999 v 25.147 H 430.02 Z"
+         fill="#ffffff"
+         fill-rule="evenodd"
+         id="path77" />
+      <g
+         id="g88"
+         data-name="P">
+        <clipPath
+           id="cp39">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path79" />
+        </clipPath>
+        <g
+           clip-path="url(#cp39)"
+           id="g86">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.275px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             id="text84"><tspan
+               y="-200.3"
+               x="450.25 455.5267 460.79211 464.5354 467.53455 469.78955 475.05496 477.30997"
+               id="tspan82">partial </tspan></text>
+        </g>
+      </g>
+      <g
+         id="g99"
+         data-name="P">
+        <clipPath
+           id="cp40">
+          <path
+             transform="matrix(1,0,0,-1,0,841.5)"
+             d="M 8.862e-6,0 H 594.75 V 841.5 H 8.862e-6 Z"
+             fill-rule="evenodd"
+             id="path90" />
+        </clipPath>
+        <g
+           clip-path="url(#cp40)"
+           id="g97">
+          <text
+             xml:space="preserve"
+             transform="translate(0,841.5)"
+             font-size="11.25px"
+             font-family="ArialNarrow"
+             font-weight="bold"
+             id="text95"><tspan
+               y="-187.08"
+               x="435.67001 440.94629 446.2113 448.4613 451.4538 455.97629 461.2413 465.01004 467.26004 472.52505"
+               id="tspan93">deliveries</tspan></text>
+        </g>
+      </g>
+    </g>
+  </g>
 </svg>

@@ -36,17 +36,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
      id="namedview462"
      showgrid="false"
-     inkscape:zoom="0.75757576"
-     inkscape:cx="320.27333"
-     inkscape:cy="-21.990667"
-     inkscape:window-x="-6"
+     inkscape:zoom="1.5151515"
+     inkscape:cx="307.76238"
+     inkscape:cy="138.19019"
+     inkscape:window-x="3833"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg460" />
+     inkscape:current-layer="svgObjID"
+     inkscape:document-rotation="0" />
   <g
      enable-background="new"
      id="g458"
@@ -1247,4 +1248,11 @@
       </g>
     </g>
   </g>
+  <rect
+     style="fill:#0000ff;fill-opacity:0;stroke-width:0.75"
+     id="clickSVG"
+     width="28.345999"
+     height="170.72"
+     x="218.26501"
+     y="3.0910001" />
 </svg>

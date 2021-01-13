@@ -1,11 +1,11 @@
 <template>
-    <div v-html="svgObj" id="svgObjID">
+    <div v-html="svgObj" class="svgObjID">
    </div>
 </template>
 
 
 <script>
-import svgTest from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-11.svg'
+import svgTest from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-2.svg'
 
 export default {
     name: 'Customer',

@@ -46,7 +46,14 @@ body {
    height: 85%;
    width: 100%;
   margin: 0;
-
+  overflow-x: hidden;
+  
+}
+body ::-webkit-scrollbar {
+width: 0px;
+display: none;
+overflow-x: hidden;
+background: transparent; /* make scrollbar transparent */
 }
 
 #app {

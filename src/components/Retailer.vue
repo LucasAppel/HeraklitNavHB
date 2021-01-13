@@ -1,28 +1,19 @@
 <template>
-    <svgTest id="svgObjID" />
-
+    <div v-html="svgObj" class="svgObjID">
+   </div>
 </template>
 
 
 <script>
-import svgTest from '@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-11.svg'
+import svgTest from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-10.svg'
 
 export default {
     name: 'Retailer',
      data: () => ({
-
+svgObj: svgTest
   }),
-  methods: {
-testFunc: function (){
-alert('sucess')
-}
-  },
-  components: {
-svgTest
-  },
-   mounted(){
-      this.svgObj.setAttribute("id", "svgObjID");
-  }
+
+
 }
 </script>
 

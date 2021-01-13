@@ -1,10 +1,16 @@
 <template>
 <div class ="dragscroll" id="svgContainer">
-  <div class="zoomObj">
-  <retailer />
+
+<div v-if="!abstract" class="single zoomObj">
+<single-view @child="changed" />
+  </div>
+
+  <div v-if="abstract" class="grid zoomObj">
   <customer />
+  <retailer />
   <external />
   </div>
+
 
   </div>
 </template>
@@ -14,6 +20,8 @@
 import Retailer from './Retailer.vue'
 import Customer from './Customer.vue'
 import External from './External.vue'
+import singleView from './singleView'
+import SingleView from './singleView.vue'
 
 export default {
   
@@ -21,13 +29,22 @@ export default {
   components: {
     Retailer,
     Customer,
-    External
+    External,
+    singleView,
+    SingleView
     
   },
-  
-
+  methods: {
+changed(){ 
+this.abstract = !this.abstract;
+}
+  },
   data: function () {
 return {
+      abstract: false,
+
+
+
   //get HTML Elements
        svgObj: null,
        container: null,
@@ -92,14 +109,20 @@ cursor: grab;
  
 }
 
-.zoomObj {
-  display: grid;
+.grid {
+display: grid;
   grid-template-columns: auto auto auto;
+  align-items: center;
+}
+
+
+
+.zoomObj {
   
+  height:80vh;
   align-items: center;
   transform-origin: 0% 0%;
-  width: 100%;
-  height: 100%;
+
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   -khtml-user-drag: none;
@@ -111,10 +134,22 @@ cursor: grab;
 
 }
 
+.svgObjID {
+  height: auto;
+  width: 100%;
+ object-fit: contain;
+  position: absolute;
+        top: 52%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%)
+}
 
 svg {
-  height: 100%;
+  height:100%;
+  max-height: 80vh;
   width: 100%;
+ 
   
 }
 
