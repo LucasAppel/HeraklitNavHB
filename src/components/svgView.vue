@@ -1,47 +1,62 @@
 <template>
 <div class ="dragscroll" id="svgContainer">
 
-<div v-if="!abstract" class="single zoomObj">
-<single-view @child="changed" />
+<div class="zoomObj">
+<single-view @customerClick="customerChanged" @supplierClick="supplierChanged" @ffClick="ffChanged" />
+  
+
+  <div class="zoomObj" v-if="!customerAbstr">
+  <customer  />
   </div>
 
-  <div v-if="abstract" class="grid zoomObj">
-  <customer />
-  <retailer />
-  <external />
+   <div class="zoomObj" v-if="!supplierAbstr">
+  <supplier  />
   </div>
 
+   <div class="zoomObj" v-if="!ffAbstr">
+  <freightforwarders />
+  </div>
 
+</div>
   </div>
 </template>
 
 <script>
 
-import Retailer from './Retailer.vue'
+import Supplier from './Supplier.vue'
 import Customer from './Customer.vue'
-import External from './External.vue'
-import singleView from './singleView'
+import freightforwarders from './FreightForwarders.vue'
 import SingleView from './singleView.vue'
 
 export default {
   
   name: 'svgView',
   components: {
-    Retailer,
     Customer,
-    External,
-    singleView,
-    SingleView
+    Supplier,
+    SingleView,
+    freightforwarders
     
   },
   methods: {
-changed(){ 
+retailerChanged(){ 
 this.abstract = !this.abstract;
+},
+customerChanged(){
+  this.customerAbstr = !this.customerAbstr;
+},
+supplierChanged(){
+  this.supplierAbstr = !this.supplierAbstr;
+},
+ffChanged(){
+  this.ffAbstr = !this.ffAbstr;
 }
   },
   data: function () {
 return {
-      abstract: false,
+      customerAbstr: true,
+      supplierAbstr: true,
+      ffAbstr: true,
 
 
 
@@ -85,16 +100,13 @@ return {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-object {
-z-index: 0;
-cursor: grab;
-}
+
 
 
 
 #svgContainer{
 
-  position: fixed;
+  position: absolute;
   
   height: 86vh;
   width: 85%;
@@ -119,10 +131,13 @@ display: grid;
 
 .zoomObj {
   
-  height:80vh;
+  height:100%;
+  width: 100%;
+  top:0;
+  left:0;
   align-items: center;
   transform-origin: 0% 0%;
-
+  position:absolute;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   -khtml-user-drag: none;
@@ -134,21 +149,12 @@ display: grid;
 
 }
 
-.svgObjID {
-  height: auto;
-  width: 100%;
- object-fit: contain;
-  position: absolute;
-        top: 52%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
-}
+
 
 svg {
-  height:100%;
-  max-height: 80vh;
-  width: 100%;
+
+  height: 80vh;
+  width: 80%;
  
   
 }
@@ -156,7 +162,7 @@ svg {
 @media screen and (min-width:2000px) {
 #svgContainer{
  
- position: fixed;
+ position: absolute;
 
   height: 90vh;
   width: 90%;

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="zoomObj">
         <div v-if=!retailerclicked v-html="ov" class="svgObjID"></div>
         <div v-if=retailerclicked v-html="rd" class="svgObjID"></div>
    </div>
@@ -16,22 +16,47 @@ export default {
 ov: Overview,
 rd: RetailerDetailed,
 
-retailerclicked: false
+retailerclicked: false,
+clickIDS: ['retailerClick', 'customerClick', 'supplierClick', 'ffClick'] //ID's defined in SVG's
 
   }),
   methods: {
-//test1() { this.$emit('child')}
-clickRetailer(){
-this.retailerclicked = !this.retailerclicked
+
+// Function gets called when an Element is clicked
+clickEle: function(id) {
+  let $vm = this;
+return function() {
+
+  if (id == 'retailerClick') {$vm.retailerclicked = !$vm.retailerclicked}
+  else if ($vm.clickIDS.includes(id)) {$vm.$emit(id)}
+  }
 }
   },
-mounted(){
-var clickarea = document.getElementById("clickSVG");
-clickarea.addEventListener('dblclick', this.clickRetailer);
-clickarea.style.cursor="pointer";
- 
-}
 
+mounted(){
+//For each ID do
+for (let i=0; i<this.clickIDS.length; i++){
+var clickEle= document.getElementById(this.clickIDS[i]);
+if (clickEle == null){ //when Element not found throw error
+  console.error(this.clickIDS[i] + "" + "ELement not found in SVG") 
+    } else { //else change cursor, add event
+clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
+clickEle.style.cursor="pointer";
+    }
+  }
+},
+updated(){
+//For each ID do
+for (let i=0; i<this.clickIDS.length; i++){
+var clickEle= document.getElementById(this.clickIDS[i]);
+if (clickEle == null){ //when Element not found throw error
+  console.error(this.clickIDS[i] + "" + "ELement not found in SVG") 
+    } else { //else change cursor, add event
+clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
+clickEle.style.cursor="pointer";
+    }
+  }
+}
 }
 </script>
 

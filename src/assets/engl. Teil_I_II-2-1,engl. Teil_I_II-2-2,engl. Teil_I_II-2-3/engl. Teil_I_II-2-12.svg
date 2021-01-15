@@ -36,17 +36,18 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="1018"
+     inkscape:window-width="1440"
+     inkscape:window-height="838"
      id="namedview1163"
      showgrid="false"
-     inkscape:zoom="0.65821962"
-     inkscape:cx="689.51067"
-     inkscape:cy="104.2503"
-     inkscape:window-x="-6"
+     inkscape:zoom="0.93086311"
+     inkscape:cx="622.69783"
+     inkscape:cy="167.85943"
+     inkscape:window-x="3833"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg1161" />
+     inkscape:current-layer="svgObjID"
+     inkscape:document-rotation="0" />
   <g
      enable-background="new"
      id="g1159"
@@ -3093,4 +3094,18 @@
          id="path1155" />
     </g>
   </g>
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
+     id="supplierClick"
+     width="28.34606"
+     height="94.960991"
+     x="657.53796"
+     y="8.3667402" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
+     id="ffClick"
+     width="28.346001"
+     height="99.920998"
+     x="660.97797"
+     y="145.57672" />
 </svg>
