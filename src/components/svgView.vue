@@ -2,20 +2,11 @@
 <div class ="dragscroll" id="svgContainer">
 
 <div class="zoomObj">
-<single-view @customerClick="customerChanged" @supplierClick="supplierChanged" @ffClick="ffChanged" />
-  
 
-  <div class="zoomObj" v-if="!customerAbstr">
-  <customer  />
-  </div>
-
-   <div class="zoomObj" v-if="!supplierAbstr">
-  <supplier  />
-  </div>
-
-   <div class="zoomObj" v-if="!ffAbstr">
-  <freightforwarders />
-  </div>
+  <single-view @customerClick="customerChanged" @supplierClick="supplierChanged" @ffClick="ffChanged" />
+  <customer class="zoomObj" v-if="!customerAbstr" />
+  <supplier class="zoomObj" v-if="!supplierAbstr" />
+  <freightforwarders class="zoomObj" v-if="!ffAbstr" />
 
 </div>
   </div>
@@ -107,9 +98,9 @@ return {
 #svgContainer{
 
   position: absolute;
-  
+
   height: 86vh;
-  width: 85%;
+  width: 85vw;
   background-color: white;
   max-height:98%;
   overflow:scroll;
@@ -121,29 +112,25 @@ return {
  
 }
 
-.grid {
-display: grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-}
 
 
 
 .zoomObj {
-  
-  height:100%;
-  width: 100%;
+   padding-top: 60px;
+    min-width: 1000px;
+  height:75%;
+  width: 85vw;
   top:0;
   left:0;
-  align-items: center;
+  z-index: 0;
   transform-origin: 0% 0%;
-  position:absolute;
+  position: absolute;
   cursor: grab;
   -webkit-overflow-scrolling: touch;
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
-   object-fit: contain;
+   object-fit: cover;
  -webkit-user-select: none;
 
 
@@ -151,21 +138,14 @@ display: grid;
 
 
 
-svg {
-
-  height: 80vh;
-  width: 80%;
- 
-  
-}
 
 @media screen and (min-width:2000px) {
 #svgContainer{
  
  position: absolute;
-
+  
   height: 90vh;
-  width: 90%;
+  width: 90vw;
   background-color: white;
   max-height:98%;
   overflow:scroll;

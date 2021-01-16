@@ -62,5 +62,10 @@ clickEle.style.cursor="pointer";
 
 
 <style>
+svg {
+   z-index: 0;
+  padding-top: 33px;
+  position: relative;
+}
 
 </style>

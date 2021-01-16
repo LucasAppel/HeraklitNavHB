@@ -104,7 +104,7 @@ html {
 
 
 #content {
-  width: 85%;
+  width: 85vw;
   height: 90vh;
   margin-bottom: 5vh;
   margin-top: 5vh;

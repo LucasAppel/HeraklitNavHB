@@ -20,18 +20,24 @@ svgObj: svgTest
 
 <style>
 #ffContainer{
-  background-color: white;
-  z-index: 5;
+   pointer-events: none;
   position: absolute;
-  top: 42vh;
-  left: 70vw;
-  width: 14vw;
-  height: 20vh;
+  min-width: 1000px;
+ width: 100%;
+ height:100%;
 }
 #svg713 {
-  height: 20vh;
-  width: 14vw;
-  object-fit: fill;
+ pointer-events: none;
+ z-index:5;
+ background-color: white;
+  padding-top: 0px;
+  padding-left: 0px;
+  object-fit: cover;
+ position: relative;
+  top: 200px;
+  left: 492px;
+  width: 190px;
+  height: 210px;
 }
 
 </style>

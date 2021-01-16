@@ -23,19 +23,24 @@ svgObj1: svgTest1
 
 <style>
 #supplierContainer{
- background-color: white;
-  z-index: 5;
+  pointer-events: none;
   position: absolute;
-  top: 17vh;
-  left: 71.2vw;
-  width: 14vw;
-  height: 20vh;
+  min-width: 1000px;
+ width: 100%;
+ height:100%;
 }
 
 #svg186 {
-  height: 20vh;
-  width: 14vw;
-  object-fit: fill;
-
+  pointer-events: none;
+ z-index:5;
+ background-color: white;
+  padding-top: 0px;
+  padding-left: 0px;
+  object-fit: cover;
+ position: relative;
+  top: 10px;
+  left: 501px;
+  width: 190px;
+  height: 210px;
 }
 </style>
