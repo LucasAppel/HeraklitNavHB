@@ -1,22 +1,22 @@
 <template>
-<div v-html="svgObj1" id="supplierContainer">
+<div v-html="inlineSVG" id="supplierContainer">
   testsupplier
 </div>
 </template>
 
 
 <script>
-import svgTest1 from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg'
+import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg'
 
 
 export default {
     name: 'Supplier',
      data: () => ({
-svgObj1: svgTest1
+inlineSVG: rawSVG
 
   }),
    mounted(){
-      
+ 
   }
 }
 </script>

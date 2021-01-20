@@ -52,37 +52,41 @@ return {
 
 
   //get HTML Elements
-       svgObj: null,
+      /* svgObj: null,
        container: null,
        scale: null,
        width: null,
        lastScrollTop: null,
        lastScrollLeft: null
-
+*/
 
 }
   },
-
+/*
   beforeUpdate(){
         this.svgObj = document.getElementById('svgObjID');
         this.container = document.getElementById('svgContainer');
-        if (this.svgObj != null && this.container != null){
-        this.scale = this.svgObj.style.transform; //Scale of SVG
+        if (this.svgObj != null) this.scale = this.svgObj.style.transform; //Scale of SVG 
+        if (this.container != null){
         this.lastScrollTop = this.container.scrollTop;
         this.lastScrollLeft = this.container.scrollLeft;
         }
   },
-
+*/
   updated(){
+    /*
         this.svgObj = document.getElementById('svgObjID');
         this.container = document.getElementById('svgContainer');
-        this.svgObj.style.transform = this.scale; 
-
+        if (this.svgObj != null) this.svgObj.style.transform = this.scale;
+        if (this.container != null){
         this.container.lastScrollTop = this.lastScrollTop;
         this.container.lastScrollLeft = this.lastScrollLeft;
+        */
+        this.$emit("reZoom");
+        }
 }
 
-}
+
 
 
 

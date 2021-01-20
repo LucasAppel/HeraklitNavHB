@@ -44,16 +44,17 @@ getScrollLeftMax(ele) {
     zoom(z) {
         //get HTML Elements
         var svgObjs =  document.getElementsByClassName("zoomObj");
+       
         var container = document.getElementById('svgContainer');
         //Set offset
         var offsetx;
         var offsety;
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
-     //Zoom
-  
+     //Zoom single Objects
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+z+", "+z+")";
+         console.log(svgObj);
     });
 
      
@@ -62,12 +63,21 @@ getScrollLeftMax(ele) {
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
  container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
 
- }, 
- 
+ },
+
+ reZoom() { //If any HTML-Objects are updated, this method is called to determine scale
+//get HTML Elements
+    var svgObjs =  document.getElementsByClassName("zoomObj");
+ //Zoom single Objects
+    svgObjs.forEach(svgObj => {
+         svgObj.style.transform="scale("+this.zvalue+", "+this.zvalue+")";
+         console.log(svgObj);
+    });
+ }
 
 
     },
-     mounted() {
+     mounted() { //Set initial position of Scroll
      var container = document.getElementById('svgContainer');
      container.scrollLeft = this.getScrollLeftMax(container)/2;
      container.scrollTop = this.getScrollTopMax(container)/2;

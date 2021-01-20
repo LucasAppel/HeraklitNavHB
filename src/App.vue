@@ -7,13 +7,13 @@
       </header>
     
  <nav>
- <Zoomer/>
+ <Zoomer ref="Zoomer" />
  <hr>
 
  </nav>
 
 <div id="content">
-      <svgView />
+      <svgView @reZoom="reZoom" />
         </div>
 
       
@@ -33,6 +33,11 @@ export default {
   components: {
     Zoomer,
     svgView
+  },
+  methods: {
+    reZoom(){
+      this.$refs.Zoomer.reZoom();
+    }
   }
 }
 

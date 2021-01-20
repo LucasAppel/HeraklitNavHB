@@ -1,17 +1,17 @@
 <template>
-   <div v-html="svgObj" id="ffContainer">
+   <div v-html="inlineSVG" id="ffContainer">
     <h1>Testff</h1>
    </div>
 </template>
 
 
 <script>
-import svgTest from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-11.svg'
+import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-11.svg'
 
 export default {
     name: 'FreightForwarders',
      data: () => ({
-svgObj: svgTest
+inlineSVG: rawSVG
   }),
 
 

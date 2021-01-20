@@ -38,8 +38,8 @@ mounted(){
 for (let i=0; i<this.clickIDS.length; i++){
 var clickEle= document.getElementById(this.clickIDS[i]);
 if (clickEle == null){ //when Element not found throw error
-  console.error(this.clickIDS[i] + "" + "ELement not found in SVG") 
-    } else { //else change cursor, add event
+  console.log(this.clickIDS[i] + "" + "ELement not found in SVG") 
+    } else { //else change cursor, add clickevent
 clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
 clickEle.style.cursor="pointer";
     }
@@ -50,7 +50,7 @@ updated(){
 for (let i=0; i<this.clickIDS.length; i++){
 var clickEle= document.getElementById(this.clickIDS[i]);
 if (clickEle == null){ //when Element not found throw error
-  console.error(this.clickIDS[i] + "" + "ELement not found in SVG") 
+  console.log(this.clickIDS[i] + "" + "ELement not found in SVG") 
     } else { //else change cursor, add event
 clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
 clickEle.style.cursor="pointer";
