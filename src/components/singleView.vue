@@ -1,7 +1,7 @@
 <template>
     <div class="zoomObj">
-        <div v-if=!retailerclicked v-html="ov" class="svgObjID"></div>
-        <div v-if=retailerclicked v-html="rd" class="svgObjID"></div>
+        <div v-if=retailerAbstr v-html="ov" class="svgObjID"></div>
+        <div v-if=!retailerAbstr v-html="rd" class="svgObjID"></div>
    </div>
 </template>
 
@@ -13,13 +13,19 @@ import RetailerDetailed from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Te
 export default {
     name: 'singleView',
      data: () => ({
-ov: Overview,
-rd: RetailerDetailed,
-
-retailerclicked: false,
-clickIDS: ['retailerClick', 'customerClick', 'supplierClick', 'ffClick'] //ID's defined in SVG's
+       //SVG's
+        ov: Overview,
+        rd: RetailerDetailed,
+      //Data
+        
+        clickIDS: ['retailerClick', 'customerClick', 'supplierClick', 'ffClick'] //ID's defined in SVG's
 
   }),
+  computed: {
+    retailerAbstr() {return this.$store.getters.mnw.retailerAbstr}
+  },
+
+
   methods: {
 
 // Function gets called when an Element is clicked
@@ -27,13 +33,17 @@ clickEle: function(id) {
   let $vm = this;
 return function() {
 
-  if (id == 'retailerClick') {$vm.retailerclicked = !$vm.retailerclicked}
+  if (id == 'retailerClick') { $vm.$store.dispatch('setMNW', ['retailerAbstr', !$vm.retailerAbstr]); }
   else if ($vm.clickIDS.includes(id)) {$vm.$emit(id)}
   }
 }
   },
 
+
+
 mounted(){
+
+//add click functions when mounted
 //For each ID do
 for (let i=0; i<this.clickIDS.length; i++){
 var clickEle= document.getElementById(this.clickIDS[i]);
@@ -45,7 +55,9 @@ clickEle.style.cursor="pointer";
     }
   }
 },
-updated(){
+updated(){ 
+ 
+//add click functions when updated
 //For each ID do
 for (let i=0; i<this.clickIDS.length; i++){
 var clickEle= document.getElementById(this.clickIDS[i]);

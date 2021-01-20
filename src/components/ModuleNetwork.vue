@@ -21,7 +21,7 @@ import SingleView from './singleView.vue'
 
 export default {
   
-  name: 'svgView',
+  name: 'mnw',
   components: {
     Customer,
     Supplier,
@@ -30,9 +30,7 @@ export default {
     
   },
   methods: {
-retailerChanged(){ 
-this.abstract = !this.abstract;
-},
+
 customerChanged(){
   this.customerAbstr = !this.customerAbstr;
 },
@@ -45,9 +43,10 @@ ffChanged(){
   },
   data: function () {
 return {
-      customerAbstr: true,
-      supplierAbstr: true,
-      ffAbstr: true,
+  isActive: true,
+  customerAbstr: true,
+  supplierAbstr: true,
+  ffAbstr: true,
 
 
 
@@ -61,6 +60,14 @@ return {
 */
 
 }
+  },
+  mounted() {
+    //Get values from store
+    this.isActive = this.$store.getters.mnw.isActive;
+    this.customerAbstr = this.$store.getters.mnw.customerAbstr;
+    this.supplierAbstr = this.$store.getters.mnw.supplierAbstr;
+    this.customerAbstr = this.$store.getters.mnw.customerAbstr;
+    
   },
 /*
   beforeUpdate(){
@@ -82,7 +89,17 @@ return {
         this.container.lastScrollTop = this.lastScrollTop;
         this.container.lastScrollLeft = this.lastScrollLeft;
         */
-        this.$emit("reZoom");
+
+          //Share state to the store on update
+          //AUTOMATISIEREN!!
+          this.$store.dispatch('setMNW', ['isActive', this.isActive]);
+          this.$store.dispatch('setMNW', ['customerAbstr', this.customerAbstr]);
+          this.$store.dispatch('setMNW', ['ffAbstr', this.ffAbstr]);
+          this.$store.dispatch('setMNW', ['customerAbstr', this.customerAbstr]);
+          this.$store.dispatch('setMNW', ['supplierAbstr', this.supplierAbstr]);
+
+          //on update reporsition all svg
+          this.$emit("reZoom");
         }
 }
 

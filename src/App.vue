@@ -9,11 +9,12 @@
  <nav>
  <Zoomer ref="Zoomer" />
  <hr>
-
+<ModuleNetworkNav contentModule=ModuleNetworkRef />
+<hr>
  </nav>
 
 <div id="content">
-      <svgView @reZoom="reZoom" />
+      <ModuleNetwork @reZoom="reZoom" />
         </div>
 
       
@@ -26,14 +27,19 @@
 
 <script>
 import Zoomer from '@/components/Zoomer.vue'
-import svgView from '@/components/svgView.vue'
+import ModuleNetwork from '@/components/ModuleNetwork.vue'
+import ModuleNetworkNav from '@/components/ModuleNetworkNav.vue'
 
 export default {
   name: 'App',
   components: {
     Zoomer,
-    svgView
+    ModuleNetwork,
+    ModuleNetworkNav
   },
+  data: () => ({
+  
+  }),
   methods: {
     reZoom(){
       this.$refs.Zoomer.reZoom();
@@ -158,9 +164,62 @@ nav {
 }
 }
  
-  
- 
+  .ModuleList {
+text-align: left;
+padding-left: 0.8vw;
+padding-right: 0.8vw;
 
+  }
+  .ModuleList h4 {
+    color: rgb(0, 46, 88);
+    margin-bottom: 5px;
+    border-bottom: 0;
+    margin-top: 0px;
+    padding-left: 3px;
+  }
+
+.sublist {
+ background-color: rgba(0, 11, 167, 0.096);
+  border-radius: 6px;
+}
+
+ul {
+ 
+  padding: 0;
+  margin: 0;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  position: relative;
+}
+li {
+  list-style-type: none;
+  border-left: 2px solid #000;
+  margin-left: 8px;
+  padding-bottom: 8px;
+  
+}
+li div {
+  background-image:linear-gradient(to right, rgba(0, 45, 246, 0.061), rgba(0, 0, 0, 0));
+  border-radius: 10px;
+  background-origin: content-box;
+  padding-left: 1em;
+  position: relative;
+}
+
+li div::before {
+  content:'';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  bottom: 50%;
+  width: 0.75em;
+  border: 2px solid #000;
+  border-top: 0 none transparent;
+  border-right: 0 none transparent;
+}
+ul > li:last-child {
+  border-left: 2px solid transparent;
+}
 
 
 h1 {
