@@ -41,7 +41,7 @@ export default {
   
   }),
   methods: {
-    reZoom(){ //Whenever a component is rendered, func is called to determine zoom position
+    reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
     }
   }
