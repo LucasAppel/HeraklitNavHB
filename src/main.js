@@ -5,6 +5,8 @@ import Dragscroll from 'dragscroll'
 import store from './store'
 
 
+
+
 Vue.config.productionTip = false
 
 var CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');

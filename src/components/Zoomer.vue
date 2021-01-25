@@ -1,9 +1,9 @@
 <template>
 <div>
     <span>
-    Zoom: <br>
+    Zoom: <br class="zoombr">
   <input type="range" id="zoomer" zvalue="1" min="1" max="3" step="0.1" v-model="zvalue"
-      @input="zoom(zvalue)">  <br>
+      @input="zoom(zvalue)">  <br class="zoombr">
       {{Math.round(zvalue * 100)}}%
     </span>
     
@@ -92,7 +92,7 @@ getScrollLeftMax(ele) {
     width: 100px;
 }
 
-br {
+.zoombr {
     display: none;
 }
 
@@ -106,7 +106,7 @@ white-space: nowrap;
     width: 80px;
 }
 
-br {
+.zoombr {
     display: initial;
 }
 

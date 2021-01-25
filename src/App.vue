@@ -44,6 +44,20 @@ export default {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
     }
+  },
+  mounted(){
+    function preventDefault(e){
+    e.preventDefault();
+}
+
+document.ontouchmove = function(event){
+    event.preventDefault();
+}
+    document.body.addEventListener('ontouchmove', preventDefault, { passive: false });
+    document.body.style.overflow ='hidden';
+
+    
+
   }
 }
 
@@ -51,24 +65,27 @@ export default {
 </script>
 
 <style>
-
+html {
+  position: fixed;
+  overflow: hidden;
+  -webkit-overflow: hidden;
+}
 body {
    background-color: rgb(200, 200, 200);
    height: 85%;
    width: 100%;
   margin: 0;
   overflow-x: hidden;
-  
+  position: fixed;
+  overflow: hidden;
+   -webkit-overflow: hidden;
+   z-index: -5;
+   
 }
-body ::-webkit-scrollbar {
-width: 0px;
-display: none;
-overflow-x: hidden;
-background: transparent; /* make scrollbar transparent */
-}
+
 
 #app {
-
+position: fixed;
 height: 50vh;
 margin-bottom: 5%;
 
@@ -107,9 +124,6 @@ footer {
 }
 
 
-html {
-  height: 100%;
-}
 
 
 
@@ -122,19 +136,43 @@ html {
   z-index: 0;
   float: left;
    border-right: solid black 1px;
- 
+ user-select: none;
+ position: fixed;
+ overflow: hidden;
+ -webkit-overflow: hidden;
 }
 nav {
   min-height: 100px;
   width: 15%;
   border-left: solid black 1px;
-  height: auto;
+  height: 85vh;
   float: right;
   padding-top: 5px;
   margin-top: 5vh;
   padding-bottom: 2.5%;
   position: fixed;
   right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
+
+}
+
+
+/*Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(0, 83, 122, 0.212);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 169, 204);
+  border-radius: 20px;
   
 }
 
@@ -147,80 +185,28 @@ nav {
   margin-top: 5vh;
   z-index: 0;
   float: left;
+  position: fixed;
+  overflow: hidden;
+   -webkit-overflow: hidden;
 }
 
 nav {
   min-height: 100px;
   width: 10%;
-  
+  overflow-y: scroll;
   height: auto;
   float: right;
-
+  
   margin-top: 4%;
   padding-bottom: 2.5%;
   position: fixed;
   right: 0px;
   
-}
-}
- 
-  .ModuleList {
-text-align: left;
-padding-left: 0.8vw;
-padding-right: 0.8vw;
-
-  }
-  .ModuleList h4 {
-    color: rgb(0, 46, 88);
-    margin-bottom: 5px;
-    border-bottom: 0;
-    margin-top: 0px;
-    padding-left: 3px;
-  }
-
-.sublist {
- background-color: rgba(0, 11, 167, 0.096);
-  border-radius: 6px;
-}
-
-ul {
- 
-  padding: 0;
-  margin: 0;
-  padding-top: 6px;
-  padding-bottom: 8px;
-  position: relative;
-}
-li {
-  list-style-type: none;
-  border-left: 2px solid #000;
-  margin-left: 8px;
-  padding-bottom: 8px;
   
 }
-li div {
-  background-image:linear-gradient(to right, rgba(0, 45, 246, 0.061), rgba(0, 0, 0, 0));
-  border-radius: 10px;
-  background-origin: content-box;
-  padding-left: 1em;
-  position: relative;
 }
-
-li div::before {
-  content:'';
-  position: absolute;
-  top: 0;
-  left: -2px;
-  bottom: 50%;
-  width: 0.75em;
-  border: 2px solid #000;
-  border-top: 0 none transparent;
-  border-right: 0 none transparent;
-}
-ul > li:last-child {
-  border-left: 2px solid transparent;
-}
-
+ 
+ 
 
 h1 {
   
