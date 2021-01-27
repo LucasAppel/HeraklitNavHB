@@ -3,7 +3,7 @@
 
 <div class="zoomObj">
 
-  <single-view @customerClick="customerChanged" @supplierClick="supplierChanged" @ffClick="ffChanged" />
+  <retailer @customerClick="customerClick" @supplierClick="supplierClick" @ffClick="ffClick" />
   <customer class="zoomObj" v-if="!customerAbstr" />
   <supplier class="zoomObj" v-if="!supplierAbstr" />
   <freightforwarders class="zoomObj" v-if="!ffAbstr" />
@@ -17,7 +17,7 @@
 import Supplier from './Supplier.vue'
 import Customer from './Customer.vue'
 import freightforwarders from './FreightForwarders.vue'
-import SingleView from './singleView.vue'
+import Retailer from './Retailer.vue'
 
 export default {
   
@@ -25,26 +25,26 @@ export default {
   components: {
     Customer,
     Supplier,
-    SingleView,
+    Retailer,
     freightforwarders
     
   },
-  methods: {
-
-customerChanged(){
-  this.$store.dispatch('setMNW', ['customerAbstr', !this.customerAbstr]);
-},
-supplierChanged(){
-       this.$store.dispatch('setMNW', ['supplierAbstr', !this.supplierAbstr]);
-},
-ffChanged(){
-  this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);
-}
+  methods: { 
+        retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);},
+        customerClick(){this.$store.dispatch('setMNW', ['customerAbstr', !this.customerAbstr]);},
+        orderClick(){this.$store.dispatch('setMNW', ['orderAbstr', !this.orderAbstr]);},
+        inventoryClick(){this.$store.dispatch('setMNW', ['inventoryAbstr', !this.inventoryAbstr]);},
+        warehouseClick(){this.$store.dispatch('setMNW', ['warehouseAbstr', !this.warehouseAbstr]);},
+        supplierClick(){this.$store.dispatch('setMNW', ['supplierAbstr', !this.supplierAbstr]);},
+        ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);}
   },
   computed: {
     customerAbstr() {return this.$store.getters.mnw.customerAbstr},
     supplierAbstr() {return this.$store.getters.mnw.supplierAbstr},
-    ffAbstr() {return this.$store.getters.mnw.ffAbstr}
+    ffAbstr() {return this.$store.getters.mnw.ffAbstr},
+    orderAbstr() {return this.$store.getters.mnw.orderAbstr},
+    inventoryAbstr() {return this.$store.getters.mnw.inventoryAbstr},
+    warehouseAbstr() {return this.$store.getters.mnw.warehouseAbstr}
   },
   data: function () {
 return {/*
@@ -65,8 +65,9 @@ return {/*
 }
   },
   mounted() {
+  
     //Get values from store
-    this.isActive = this.$store.getters.mnw.isActive;
+    
    // this.customerAbstr = this.$store.getters.mnw.customerAbstr;
     //this.supplierAbstr = this.$store.getters.mnw.supplierAbstr;
     //this.customerAbstr = this.$store.getters.mnw.customerAbstr;
@@ -93,12 +94,9 @@ return {/*
         this.container.lastScrollLeft = this.lastScrollLeft;
         */
 
-          //Share state to the store on update
-          //AUTOMATISIEREN!!
-          this.$store.dispatch('setMNW', ['isActive', this.isActive]);
         
 
-          //on update reporsition all svg
+          //on update reposition all svg
           this.$emit("reZoom");
         }
 }
@@ -130,7 +128,7 @@ return {/*
   user-select: none;
  -webkit-user-select: none;
  -webkit-overflow-scrolling: touch;
-
+  z-index: 10;
  /*Firefox*/
  scrollbar-width: thin;
  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
@@ -170,6 +168,25 @@ return {/*
   
   height: 90vh;
   width: 90vw;
+  background-color: white;
+  max-height:98%;
+  overflow:scroll;
+  border: 20px 20px black;
+  cursor: grab;
+  user-select: none;
+ -webkit-user-select: none;
+ -webkit-overflow-scrolling: touch;
+   z-index: 10;
+}
+}
+
+@media screen and (max-width:1400px) {
+#svgContainer{
+ 
+ position: fixed;
+  
+  height: 90vh;
+  width: 77vw;
   background-color: white;
   max-height:98%;
   overflow:scroll;

@@ -1,8 +1,10 @@
 <template>
+    <span class="switchtext">Abstract <br class="zoombr">
     <label class="switch">
     <input type="checkbox" @change="changed" :checked="value">
     <span class="slider round"></span>
     </label>
+    <br class="zoombr">Concrete</span>
 </template>
 
 <script>
@@ -18,11 +20,15 @@ export default {
      
      value: {
       
-       get: function() { //Switch toggles when value is changed
+       get: function() { //Switch toggles when value is changed on direct svgclick
          console.log(this.statuss);
+        if (this.statuss == "retailerAbstr") {return !this.$store.getters.mnw.retailerAbstr;}
         if (this.statuss == "supplierAbstr") {return !this.$store.getters.mnw.supplierAbstr;}
         if (this.statuss == "ffAbstr") {return !this.$store.getters.mnw.ffAbstr;}
         if (this.statuss == "customerAbstr") {return !this.$store.getters.mnw.customerAbstr;}
+        if (this.statuss == "orderAbstr") {return !this.$store.getters.mnw.orderAbstr;}
+        if (this.statuss == "inventoryAbstr") {return !this.$store.getters.mnw.inventoryAbstr;}
+        if (this.statuss == "warehouseAbstr") {return !this.$store.getters.mnw.warehouseAbstr;}
         else return false;
        },
        set: function() {
@@ -46,6 +52,12 @@ export default {
 
 
 <style>
+ .switchtext {
+   /* Size of text for Switch */
+  
+  font-size: 70%;
+  text-align: center;
+}
  /* The switch - the box around the slider */
 .switch {
   position: relative;

@@ -9,12 +9,13 @@
  <nav>
  <Zoomer ref="Zoomer" />
  <hr>
-<ModuleNetworkNav contentModule=ModuleNetworkRef />
+<ModuleNetworkNav />
 <hr>
  </nav>
 
 <div id="content">
-      <ModuleNetwork @reZoom="reZoom" />
+      <ModuleNetwork v-if="ModuleNetworkActive" @reZoom="reZoom" />
+      <ModuleTree v-if="ModuleTreeActive" @reZoom="reZoom"/>
         </div>
 
       
@@ -26,38 +27,34 @@
 </template>
 
 <script>
+import Dragscroll from 'dragscroll';
 import Zoomer from '@/components/Zoomer.vue'
-import ModuleNetwork from '@/components/ModuleNetwork.vue'
-import ModuleNetworkNav from '@/components/ModuleNetworkNav.vue'
+import ModuleNetwork from '@/components/ModuleNetwork/ModuleNetwork.vue'
+import ModuleNetworkNav from '@/components/ModuleNetwork/ModuleNetworkNav.vue'
+import ModuleTree from '@/components/ModuleTree.vue'
 
 export default {
   name: 'App',
   components: {
     Zoomer,
     ModuleNetwork,
+    ModuleTree,
     ModuleNetworkNav
   },
   data: () => ({
   
   }),
+  computed: {
+    ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
+    ModuleTreeActive(){return this.$store.getters.mt.isActive}
+  },
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
     }
   },
-  mounted(){
-    function preventDefault(e){
-    e.preventDefault();
-}
-
-document.ontouchmove = function(event){
-    event.preventDefault();
-}
-    document.body.addEventListener('ontouchmove', preventDefault, { passive: false });
-    document.body.style.overflow ='hidden';
-
-    
-
+  updated(){
+    Dragscroll.reset()
   }
 }
 
@@ -66,6 +63,9 @@ document.ontouchmove = function(event){
 
 <style>
 html {
+  user-zoom: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
   position: fixed;
   overflow: hidden;
   -webkit-overflow: hidden;
@@ -88,7 +88,7 @@ body {
 position: fixed;
 height: 50vh;
 margin-bottom: 5%;
-
+font-size: 1.8vh;
 
 
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -143,10 +143,49 @@ footer {
 }
 nav {
   min-height: 100px;
-  width: 15%;
-  border-left: solid black 1px;
+  width: 15vw;
   height: 85vh;
   float: right;
+
+  border-left: solid black 1px;
+
+  padding-top: 5px;
+  margin-top: 5vh;
+  padding-bottom: 2.5%;
+  position: fixed;
+  right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
+  
+}
+
+
+@media screen and (min-width:2000px) { /* Extreme Width Display */
+  #content {
+
+  width: 90%;
+  height: 90vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  z-index: 0;
+  float: left;
+  position: fixed;
+  overflow: hidden;
+   -webkit-overflow: hidden;
+}
+
+nav {
+
+  min-height: 100px;
+  width: 10%;
+  overflow-y: scroll;
+  height: 90vh;
+  float: right;
+
+  border-left: solid black 1px;
+
   padding-top: 5px;
   margin-top: 5vh;
   padding-bottom: 2.5%;
@@ -157,7 +196,53 @@ nav {
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
 
+  
 }
+}
+
+@media screen and (max-width:1400px) {/* Mobile */
+  #content {
+
+  width: 77%;
+  height: 90vh;
+  margin-bottom: 5vh;
+  margin-top: 5vh;
+  z-index: 0;
+  float: left;
+  position: fixed;
+  overflow: hidden;
+   -webkit-overflow: hidden;
+}
+
+nav {
+ 
+  width: 23%;
+  height: 90vh;
+  float: right;
+    border-left: solid black 1px;
+
+  padding-top: 5px;
+  margin-top: 5vh;
+  padding-bottom: 2.5%;
+  position: fixed;
+  right: 0px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
+
+  
+}
+}
+ 
+ 
+
+h1 {
+  
+  font-size:100% ;
+  
+}
+
 
 
 /*Chrome, Edge, and Safari */
@@ -175,48 +260,6 @@ nav {
   border-radius: 20px;
   
 }
-
-
-@media screen and (min-width:2000px) {
-  #content {
-  width: 90%;
-  height: 90vh;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
-  z-index: 0;
-  float: left;
-  position: fixed;
-  overflow: hidden;
-   -webkit-overflow: hidden;
-}
-
-nav {
-  min-height: 100px;
-  width: 10%;
-  overflow-y: scroll;
-  height: auto;
-  float: right;
-  
-  margin-top: 4%;
-  padding-bottom: 2.5%;
-  position: fixed;
-  right: 0px;
-  
-  
-}
-}
- 
- 
-
-h1 {
-  
-  font-size:100% ;
-  
-}
-
-
-
-
 
 
 #nav a {

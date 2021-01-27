@@ -1,32 +1,26 @@
 <template>
 <div class="ModuleList">
-    <h4>{{Arrow}} Module Network</h4>
+    <h4 @click="changeToActive">{{Arrow}} Module Network</h4>
     <div v-if=isActive class="Sublist">
     <ul>
-        <li><div>Customers</div></li>
-        <li><div @dblclick="retailerClick">Retailer</div>
+        <li><div>Customers <br><Switcher status="customerAbstr" @checked="customerClick" /></div></li>
+        <li><div>Retailer <br><Switcher status="retailerAbstr" @checked="retailerClick" /></div>
             <ul v-if="!retailerAbstr">
-                <li><div>Order Management <br><span class="switchtext">Abstract <br class="zoombr"><Switcher /> <br class="zoombr">Concrete</span></div></li>
-                <li><div>Inventory Management <br><span class="switchtext">Abstract <br class="zoombr"><Switcher /> <br class="zoombr">Concrete</span></div></li>
-                <li><div>Warehouse <br><span class="switchtext">Abstract <br class="zoombr"><Switcher /> <br class="zoombr">Concrete</span></div></li>
+                <li><div>Order Management <br><Switcher status="orderAbstr" @checked="orderClick" /></div></li>
+                <li><div>Inventory Management <br><Switcher status="inventoryAbstr" @checked="inventoryClick" /></div></li>
+                <li><div>Warehouse <br><Switcher status="warehpuseAbstr" @checked="warehouseClick" /></div></li>
             </ul>
             </li>
-        <li><div>Supplier<br><span class="switchtext">Abstract <br class="zoombr"><Switcher status="supplierAbstr" @checked="supplierClick" /> <br class="zoombr">Concrete</span></div></li>
-        <li><div>Freight Forwarders<br><span class="switchtext">Abstract <br class="zoombr"><Switcher status="ffAbstr" @checked="ffClick" /> <br class="zoombr">Concrete</span></div></li>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        tewt
+        <li><div>Supplier<br><Switcher status="supplierAbstr" @checked="supplierClick" /></div></li>
+        <li><div>Freight Forwarders<br><Switcher status="ffAbstr" @checked="ffClick" /></div></li>
+        
     </ul>
       </div>
 </div>
 </template>
 
 <script>
-import Switcher from './tools/Switcher.vue'
+import Switcher from '@/components/tools/Switcher.vue'
 export default {
     name: "ModuleNetworkNav",
     
@@ -36,18 +30,28 @@ export default {
   
     }),
     computed: {
-        Arrow: function () { return this.ArrowDown },
+        Arrow: function () { if(this.isActive) {return this.ArrowDown} else return this.ArrowRight},
         isActive() {return this.$store.getters.mnw.isActive},
-        customerAbstr() {return this.$store.getters.mnw.customerAbstr},
-        supplierAbstr() {return this.$store.getters.mnw.supplierAbstr},
-        ffAbstr() {return this.$store.getters.mnw.ffAbstr},
-        retailerAbstr() {return this.$store.getters.mnw.retailerAbstr},
+
+    retailerAbstr() {return this.$store.getters.mnw.retailerAbstr},
+    customerAbstr() {return this.$store.getters.mnw.customerAbstr},
+    supplierAbstr() {return this.$store.getters.mnw.supplierAbstr},
+    ffAbstr() {return this.$store.getters.mnw.ffAbstr},
+    orderAbstr() {return this.$store.getters.mnw.orderAbstr},
+    inventoryAbstr() {return this.$store.getters.mnw.inventoryAbstr},
+    warehouseAbstr() {return this.$store.getters.mnw.warehouseAbstr}
         
     },
     methods: {//Methods get called when clicked on Switch
         retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);},
+        customerClick(){this.$store.dispatch('setMNW', ['customerAbstr', !this.customerAbstr]);},
+        orderClick(){this.$store.dispatch('setMNW', ['orderAbstr', !this.orderAbstr]);},
+        inventoryClick(){this.$store.dispatch('setMNW', ['inventoryAbstr', !this.inventoryAbstr]);},
+        warehouseClick(){this.$store.dispatch('setMNW', ['warehouseAbstr', !this.warehouseAbstr]);},
         supplierClick(){this.$store.dispatch('setMNW', ['supplierAbstr', !this.supplierAbstr]);},
-        ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);}
+        ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);},
+
+        changeToActive(){if(!this.isActive) this.$store.dispatch('setMNW', ['isActive', true])}
     },
     components: {
         Switcher
@@ -74,6 +78,7 @@ padding-right: 0.8vw;
     border-bottom: 0;
     margin-top: 0px;
     padding-left: 3px;
+    cursor: pointer;
   }
 
 .Sublist {
@@ -96,12 +101,7 @@ li div::after {
  pointer-events: none;
  }
 
- .switchtext {
-   /* Size of text for Switch */
-  
-  font-size: 8pt;
-  text-align: center;
-}
+
 
 
 
@@ -150,7 +150,7 @@ ul > li:last-child {
 
  li div {
      
-     cursor: pointer;
+     
      user-select: none;
      user-zoom: none;
  }

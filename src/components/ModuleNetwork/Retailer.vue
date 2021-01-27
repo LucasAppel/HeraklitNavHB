@@ -11,7 +11,7 @@ import Overview from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-
 import RetailerDetailed from '!!raw-loader!@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/engl. Teil_I_II-2-12.svg'
 
 export default {
-    name: 'singleView',
+    name: 'Retailer',
      data: () => ({
        //SVG's
         ov: Overview,
