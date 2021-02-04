@@ -31,7 +31,7 @@ import Dragscroll from 'dragscroll';
 import Zoomer from '@/components/Zoomer.vue'
 import ModuleNetwork from '@/components/ModuleNetwork/ModuleNetwork.vue'
 import ModuleNetworkNav from '@/components/ModuleNetwork/ModuleNetworkNav.vue'
-import ModuleTree from '@/components/ModuleTree.vue'
+import ModuleTree from '@/components/ModuleTree/ModuleTree.vue'
 
 export default {
   name: 'App',

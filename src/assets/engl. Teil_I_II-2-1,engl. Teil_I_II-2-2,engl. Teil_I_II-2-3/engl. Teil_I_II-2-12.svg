@@ -36,14 +36,14 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="838"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
      id="namedview1163"
      showgrid="false"
      inkscape:zoom="0.93086311"
      inkscape:cx="622.69783"
      inkscape:cy="167.85943"
-     inkscape:window-x="3833"
+     inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
      inkscape:current-layer="svgObjID"
@@ -3108,4 +3108,12 @@
      height="99.920998"
      x="660.97797"
      y="145.57672" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
+     id="customerClick"
+     width="28.34602"
+     height="242.05998"
+     x="83.328003"
+     y="9.7677402"
+     inkscape:label="#customerClick" />
 </svg>

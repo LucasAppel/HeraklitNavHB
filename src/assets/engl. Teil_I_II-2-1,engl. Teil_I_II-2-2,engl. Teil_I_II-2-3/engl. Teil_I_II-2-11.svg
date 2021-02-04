@@ -37,17 +37,17 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1440"
-     inkscape:window-height="838"
+     inkscape:window-width="1920"
+     inkscape:window-height="1018"
      id="namedview1167"
      showgrid="false"
      inkscape:zoom="0.93086312"
      inkscape:cx="705.83689"
      inkscape:cy="311.29999"
-     inkscape:window-x="3833"
+     inkscape:window-x="-6"
      inkscape:window-y="-6"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg648"
+     inkscape:current-layer="g1161"
      inkscape:document-rotation="0" />
   <a
      id="a1466"
@@ -3118,6 +3118,21 @@
              id="path815"
              style="fill:#ffffff;fill-opacity:1" />
         </a>
+        <rect
+           style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
+           id="rect647"
+           width="28.345999"
+           height="242.06"
+           x="126.93"
+           y="148.27" />
+        <rect
+           style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
+           id="customerClick"
+           width="28.346003"
+           height="242.06003"
+           x="126.93"
+           y="148.27"
+           inkscape:label="customerClick" />
       </g>
     </g>
     <rect

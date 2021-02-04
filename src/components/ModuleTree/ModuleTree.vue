@@ -17,7 +17,7 @@
 
 export default {
   
-  name: 'mnw',
+  name: 'mt',
   components: {
     
     
