@@ -1,15 +1,15 @@
 <template>
-    <div v-html="inlineSVG" id="customerContainer" >
+    <div v-html="inlineSVG" id="orderContainer" >
     <h1>TestCustomer</h1>
    </div>
 </template>
 
 
 <script>
-import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-6.svg'
+import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-7.svg'
 
 export default {
-    name: 'Customer',
+    name: 'OrderManagement',
      data: () => ({
 inlineSVG: rawSVG
   }),
@@ -22,7 +22,7 @@ inlineSVG: rawSVG
 
 
 <style>
-#customerContainer{
+#orderContainer{
   pointer-events: none;
   position: absolute;
   min-width: 1000px;
@@ -30,7 +30,7 @@ inlineSVG: rawSVG
  height:100%;
 }
 
-#svg1370 {
+#svg1515 {
   pointer-events: none;
  z-index:5;
  background-color: white;
@@ -38,10 +38,10 @@ inlineSVG: rawSVG
   padding-left: 0px;
   object-fit: cover;
  position: relative;
-  top: 120px;
-  left: -420px;
-  width: 405px;
-  height: 450px;
-  transform: scale(1, 1.9);
+  top: 133px;
+  left: -112px;
+  width: 200px;
+  height: auto;
+  transform: scale(1, 2.4);
 }
 </style>

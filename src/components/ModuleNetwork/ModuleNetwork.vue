@@ -3,10 +3,14 @@
 
 <div class="zoomObj">
 
-  <retailer @customerClick="customerClick" @supplierClick="supplierClick" @ffClick="ffClick" />
-  <customer class="zoomObj" v-if="!customerAbstr" />
-  <supplier class="zoomObj" v-if="!supplierAbstr" />
-  <freightforwarders class="zoomObj" v-if="!ffAbstr" />
+  <transition name="fade"><retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/></transition>
+  <transition name="fade"><customer class="zoomObj" v-if="!customerAbstr" key="2"/></transition>
+  <transition name="fade"><order-management class="zoomObj" v-if="!orderAbstr" key="order"/></transition>
+  <transition name="fade"><warehouse class="zoomObj" v-if="!warehouseAbstr" key="warehouse"/></transition>
+   <transition name="fade"><inventory-management class="zoomObj" v-if="!inventoryAbstr" key="inventory"/></transition>
+  <transition name="fade"><supplier class="zoomObj" v-if="!supplierAbstr" key="3"/></transition>
+  <transition name="fade"><freightforwarders class="zoomObj" v-if="!ffAbstr" key="4"/></transition>
+
 
 </div>
   </div>
@@ -18,6 +22,9 @@ import Supplier from './Supplier.vue'
 import Customer from './Customer.vue'
 import freightforwarders from './FreightForwarders.vue'
 import Retailer from './Retailer.vue'
+import OrderManagement from './OrderManagement.vue'
+import Warehouse from './Warehouse.vue'
+import InventoryManagement from './InventoryManagement.vue'
 
 export default {
   
@@ -26,11 +33,21 @@ export default {
     Customer,
     Supplier,
     Retailer,
-    freightforwarders
+    freightforwarders,
+    OrderManagement,
+    Warehouse,
+    InventoryManagement
     
   },
   methods: { 
-        retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);},
+        retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);
+        alert("click");
+         if (this.$store.getters.mnw.retailerAbstr == true) {
+          alert("retailer abstr");
+          this.$store.dispatch('setMNW', ['orderAbstr', true]);
+          this.$store.dispatch('setMNW', ['inventoryAbstr', true]);
+          this.$store.dispatch('setMNW', ['warehouseAbstr', true]);
+        }},
         customerClick(){this.$store.dispatch('setMNW', ['customerAbstr', !this.customerAbstr]);},
         orderClick(){this.$store.dispatch('setMNW', ['orderAbstr', !this.orderAbstr]);},
         inventoryClick(){this.$store.dispatch('setMNW', ['inventoryAbstr', !this.inventoryAbstr]);},
@@ -94,6 +111,7 @@ return {/*
         this.container.lastScrollLeft = this.lastScrollLeft;
         */
 
+       
         
 
           //on update reposition all svg
@@ -199,7 +217,12 @@ return {/*
 }
 
 }
-
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.2s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 
 </style>
 

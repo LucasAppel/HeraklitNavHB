@@ -8,8 +8,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.1"
-   width="698.44171pt"
-   height="256.58527pt"
+   width="697.44171pt"
+   height="268.54527pt"
    viewBox="0 0 698.44171 256.58527"
    id="svgObjID"
    sodipodi:docname="engl. Teil_I_II-2-12.svg"
@@ -3116,4 +3116,25 @@
      x="83.328003"
      y="9.7677402"
      inkscape:label="#customerClick" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.751075"
+     id="orderClick"
+     width="28.346001"
+     height="170.72"
+     x="218.588"
+     y="6.8577294" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.751075"
+     id="inventoryClick"
+     width="28.346029"
+     height="99.920998"
+     x="365.798"
+     y="7.4667401" />
+  <rect
+     style="fill:#ffffff;fill-opacity:0;stroke-width:0.751075"
+     id="warehouseClick"
+     width="28.177"
+     height="99.920998"
+     x="511.62799"
+     y="77.79673" />
 </svg>

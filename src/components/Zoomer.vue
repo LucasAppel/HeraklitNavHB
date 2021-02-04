@@ -54,7 +54,7 @@ getScrollLeftMax(ele) {
      //Zoom single Objects
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+z+", "+z+")";
-       
+            
     });
 
      

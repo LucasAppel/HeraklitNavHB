@@ -1,6 +1,5 @@
 <template>
    <div v-html="inlineSVG" id="ffContainer">
-    <h1>Testff</h1>
    </div>
 </template>
 

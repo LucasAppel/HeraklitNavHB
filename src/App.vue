@@ -19,8 +19,11 @@
         </div>
 
       
- 
-<footer><h1>⇧ Signaturen ⇧</h1></footer>
+  
+  <footer>
+    <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br>
+    <img id="signatureID" src=".\assets\engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3\engl. Teil_III_IV-1.svg">
+  </footer>
   </div>
 
 
@@ -42,16 +45,33 @@ export default {
     ModuleNetworkNav
   },
   data: () => ({
+    signatureOpen: false,
+    arrowUp: "⬆",
+    arrowDown: "⬇"
   
   }),
   computed: {
+    Arrow(){
+      if (this.signatureOpen) return this.arrowDown
+      else return this.arrowUp
+    },
     ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
     ModuleTreeActive(){return this.$store.getters.mt.isActive}
   },
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
-    }
+    },
+    signatureClick(){
+      var footer = document.getElementsByTagName("footer")[0];
+      if (this.signatureOpen) {
+        footer.style.height = "5vh";
+        }
+      else {
+        footer.style.height = "80vh";
+        }
+      this.signatureOpen = !this.signatureOpen;
+      }
   },
   updated(){
     Dragscroll.reset()
@@ -98,6 +118,7 @@ font-size: 1.8vh;
   color: black;
 }
 header {
+  display: inline-block;
   height: 5vh;
   width: 100%;
   background-color: rgb(0, 125, 240);
@@ -111,6 +132,7 @@ header {
 }
 
 footer {
+  text-align: center;
   clear: both;
   width:100%;
   height: 5vh;
@@ -120,6 +142,8 @@ footer {
   left: 0px;
   border-top: solid black 1px;
   z-index: 3;
+  transition: height 0.6s;
+  
 
 }
 
@@ -195,8 +219,6 @@ nav {
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
-
-  
 }
 }
 
@@ -238,9 +260,14 @@ nav {
  
 
 h1 {
-  
   font-size:100% ;
-  
+}
+
+footer h1 {
+  cursor: pointer;
+  width:fit-content; 
+  position: fixed;
+  left: 45%;
 }
 
 

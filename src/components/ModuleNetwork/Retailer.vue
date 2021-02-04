@@ -1,7 +1,7 @@
 <template>
     <div class="zoomObj">
-        <div v-if=retailerAbstr v-html="ov" class="svgObjID"></div>
-        <div v-if=!retailerAbstr v-html="rd" class="svgObjID"></div>
+       <div v-if=retailerAbstr v-html="ov" class="svgObjID" key="5"></div>
+       <div v-if=!retailerAbstr v-html="rd" class="svgObjID" key="6"></div>
    </div>
 </template>
 
@@ -18,7 +18,7 @@ export default {
         rd: RetailerDetailed,
       //Data
         
-        clickIDS: ['retailerClick', 'customerClick', 'supplierClick', 'ffClick'] //ID's defined in SVG's
+        clickIDS: ['retailerClick', 'customerClick', 'supplierClick', 'ffClick', 'orderClick', 'inventoryClick', 'warehouseClick'] //ID's defined in SVG's
 
   }),
   computed: {

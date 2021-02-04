@@ -3,10 +3,12 @@
 
 <div class="zoomObj">
 
-  <single-view @customerClick="customerClick" @supplierClick="supplierClick" @ffClick="ffClick" />
-  <customer class="zoomObj" v-if="!customerAbstr" />
-  <supplier class="zoomObj" v-if="!supplierAbstr" />
-  <freightforwarders class="zoomObj" v-if="!ffAbstr" />
+<transition name="fade"> 
+<single-view @customerClick="customerClick" @supplierClick="supplierClick" @ffClick="ffClick" key="a1" /> 
+<customer  class="zoomObj" v-if="!customerAbstr"  key="a2" />
+<supplier  class="zoomObj" v-if="!supplierAbstr"  key="a3" />
+<freightforwarders class="zoomObj" v-if="!ffAbstr"  key="a4" /> 
+</transition>
 
 </div>
   </div>
