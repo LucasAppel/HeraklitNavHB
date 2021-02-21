@@ -13,7 +13,7 @@
 <hr>
  </nav>
 
-<div id="content">
+<div id="content">  
       <ModuleNetwork v-if="ModuleNetworkActive" @reZoom="reZoom" />
       <ModuleTree v-if="ModuleTreeActive" @reZoom="reZoom"/>
         </div>
@@ -108,7 +108,7 @@ body {
 position: fixed;
 height: 50vh;
 margin-bottom: 5%;
-font-size: 1.8vh;
+font-size: 11pt;
 
 
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -175,7 +175,7 @@ nav {
 
   padding-top: 5px;
   margin-top: 5vh;
-  padding-bottom: 2.5%;
+  margin-bottom: 5vh;
   position: fixed;
   right: 0px;
   overflow-y: scroll;
@@ -186,7 +186,7 @@ nav {
 }
 
 
-@media screen and (min-width:2000px) { /* Extreme Width Display */
+@media screen and (min-width:2000px) { /* Super Wide Display */
   #content {
 
   width: 90%;
@@ -212,7 +212,7 @@ nav {
 
   padding-top: 5px;
   margin-top: 5vh;
-  padding-bottom: 2.5%;
+  padding-bottom: 5vh;
   position: fixed;
   right: 0px;
   overflow-y: scroll;
@@ -243,9 +243,9 @@ nav {
   float: right;
     border-left: solid black 1px;
 
-  padding-top: 5px;
+  
   margin-top: 5vh;
-  padding-bottom: 2.5%;
+  margin-bottom: 5vh;
   position: fixed;
   right: 0px;
   overflow-y: scroll;

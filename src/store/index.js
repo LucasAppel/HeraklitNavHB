@@ -8,6 +8,7 @@ export default new Vuex.Store({
 
     moduleNetwork: {
       isActive: false,
+      list: ["retailerAbstr", "customerAbstr", "supplierAbstr", "ffAbstr", "orderAbstr", "inventoryAbstr", "warehouseAbstr"],
       retailerAbstr: true,
       customerAbstr: true,
       supplierAbstr: true,

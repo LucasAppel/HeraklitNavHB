@@ -1,6 +1,6 @@
 <template>
     <div id="inventoryContainer" >
-    <img :src="require('C:/Users/appel/heraklit-nav-hb/src/assets/Screenshot 2021-02-04 215915.jpg')" id="imginvent">
+    <img :src="require('@/assets/Screenshot 2021-02-04 215915.jpg')" id="imginvent">
    </div>
 </template>
 

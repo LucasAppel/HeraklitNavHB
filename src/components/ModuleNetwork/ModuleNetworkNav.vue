@@ -29,8 +29,8 @@ export default {
     name: "ModuleNetworkNav",
     
     data: () => ({
-        ArrowRight: "⮞",
-        ArrowDown: "⮟",
+        ArrowRight: "➡️",
+        ArrowDown: "⬇️",
   
     }),
     computed: {
@@ -61,7 +61,11 @@ export default {
 
         changeToActive(){
           if(!this.isActive) this.$store.dispatch('setMNW', ['isActive', true])
-          else  this.$store.dispatch('setMNW', ['isActive', false])}
+          else  {this.$store.getters.mnw.list.forEach(element => {
+              this.$store.dispatch('setMNW', [element, true])
+              });
+            this.$store.dispatch('setMNW', ['isActive', false])}
+            }
     },
     components: {
         Switcher

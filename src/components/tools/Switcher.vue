@@ -64,6 +64,17 @@ export default {
   display: inline-block;
   width: 30px;
   height: 17px;
+  top: 2px; 
+  margin-bottom: 7px;
+}
+
+@media screen and (max-width:1400px) {/* Mobile */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
+}
 }
 
 /* Hide default HTML checkbox */

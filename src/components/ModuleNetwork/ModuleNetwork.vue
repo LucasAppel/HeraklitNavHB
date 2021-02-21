@@ -136,7 +136,7 @@ return {/*
 
   position: fixed;
 
-  height: 89.6vh;
+  height: 90vh;
   width: 85vw;
   background-color: white;
   
@@ -179,7 +179,7 @@ return {/*
 
 
 
-@media screen and (min-width:2000px) {
+@media screen and (min-width:2000px) { /* Super Wide Display */
 #svgContainer{
  
  position: fixed;
@@ -187,7 +187,7 @@ return {/*
   height: 90vh;
   width: 90vw;
   background-color: white;
-  max-height:98%;
+ 
   overflow:scroll;
   border: 20px 20px black;
   cursor: grab;
@@ -198,7 +198,7 @@ return {/*
 }
 }
 
-@media screen and (max-width:1400px) {
+@media screen and (max-width:1400px) { /*mobile*/
 #svgContainer{
  
  position: fixed;
@@ -206,7 +206,7 @@ return {/*
   height: 90vh;
   width: 77vw;
   background-color: white;
-  max-height:98%;
+
   overflow:scroll;
   border: 20px 20px black;
   cursor: grab;
