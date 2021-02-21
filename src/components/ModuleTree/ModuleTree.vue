@@ -2,54 +2,45 @@
 <div class ="dragscroll" id="svgContainer">
 
 <div class="zoomObj">
-
-<transition name="fade"> 
-<single-view @customerClick="customerClick" @supplierClick="supplierClick" @ffClick="ffClick" key="a1" /> 
-<customer  class="zoomObj" v-if="!customerAbstr"  key="a2" />
-<supplier  class="zoomObj" v-if="!supplierAbstr"  key="a3" />
-<freightforwarders class="zoomObj" v-if="!ffAbstr"  key="a4" /> 
-</transition>
-
-</div>
+       <img v-if="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG">
+       <img v-if="activeStr=='customers'" :src="require('@/assets/ModuleTree/customerMT.png')" class="MTIMG">
+       <img v-if="activeStr=='supplier'" :src="require('@/assets/ModuleTree/supplierMT.png')" class="MTIMG">
+       <img v-if="activeStr=='ff'" :src="require('@/assets/ModuleTree/ffMT.png')" class="MTIMG">
+       <img v-if="activeStr=='inventory'" :src="require('@/assets/ModuleTree/inventoryMT.png')" class="MTIMG">
+       <img v-if="activeStr=='warehouse'" :src="require('@/assets/ModuleTree/warehouseMT.png')" class="MTIMG">
+       <img v-if="activeStr=='order'" :src="require('@/assets/ModuleTree/orderMT.png')" class="MTIMG">
   </div>
+</div>
 </template>
 
 <script>
 
+import retailer from "@/assets/ModuleTree/retailerMT.png"
 
 export default {
   
-  name: 'mt',
+  name: 'mnw',
   components: {
-    
+
     
   },
   methods: { 
-        retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);},
-        customerClick(){this.$store.dispatch('setMNW', ['customerAbstr', !this.customerAbstr]);},
-        orderClick(){this.$store.dispatch('setMNW', ['orderAbstr', !this.orderAbstr]);},
-        inventoryClick(){this.$store.dispatch('setMNW', ['inventoryAbstr', !this.inventoryAbstr]);},
-        warehouseClick(){this.$store.dispatch('setMNW', ['warehouseAbstr', !this.warehouseAbstr]);},
-        supplierClick(){this.$store.dispatch('setMNW', ['supplierAbstr', !this.supplierAbstr]);},
-        ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);}
+     
   },
   computed: {
-    customerAbstr() {return this.$store.getters.mnw.customerAbstr},
-    supplierAbstr() {return this.$store.getters.mnw.supplierAbstr},
-    ffAbstr() {return this.$store.getters.mnw.ffAbstr},
-    orderAbstr() {return this.$store.getters.mnw.orderAbstr},
-    inventoryAbstr() {return this.$store.getters.mnw.inventoryAbstr},
-    warehouseAbstr() {return this.$store.getters.mnw.warehouseAbstr}
+    activeStr() {return this.$store.getters.mt.activeStr}
+   
   },
   data: function () {
-return {
-
-}
+    return {
+        retailer: retailer
+    }
   },
   mounted() {
   },
 
   updated(){
+   
           //on update reposition all svg
           this.$emit("reZoom");
         }
@@ -64,9 +55,10 @@ return {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-
-
-
+.MTIMG {
+  max-width: 100%;
+  height: 100%;
+}
 
 
 </style>

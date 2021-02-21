@@ -64,8 +64,19 @@ export default {
   display: inline-block;
   width: 30px;
   height: 17px;
+  top: -4px; 
+  margin-bottom: 2px;
+}
+
+@-moz-document url-prefix() {
+ .switch {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 17px;
   top: 2px; 
   margin-bottom: 7px;
+}
 }
 
 @media screen and (max-width:1400px) {/* Mobile */

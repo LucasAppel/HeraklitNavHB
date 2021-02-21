@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-
+    activeModule: "none",
     moduleNetwork: {
       isActive: false,
       list: ["retailerAbstr", "customerAbstr", "supplierAbstr", "ffAbstr", "orderAbstr", "inventoryAbstr", "warehouseAbstr"],
@@ -19,11 +19,16 @@ export default new Vuex.Store({
     },
     moduleTree: {
       isActive: false,
+      activeStr: "retailer",
+      retailerAbstr: false
       
     }
 
   },
   mutations: {
+    setActiveModule (state, payload){
+      state.activeModule = payload
+    },
     setMNW (state, payload){
       state.moduleNetwork[payload[0]] = payload[1];
    
@@ -37,11 +42,13 @@ export default new Vuex.Store({
   },
   actions: {
     setMNW (state, payload){ state.commit('setMNW', payload)},
-    setMT (state, payload){ state.commit('setMT', payload)}
+    setMT (state, payload){ state.commit('setMT', payload)},
+    setActiveModule (state, payload){ state.commit('setActiveModule', payload)}
   },
   modules: {
   },
   getters: {
+    activeModule: state => state.activeModule,
     mnw: state => state.moduleNetwork,
     mt: state => state.moduleTree
   }

@@ -1,29 +1,29 @@
 <template>
   <div id="app">
 
-   
+    
       <header>
         <h1>Heraklit-Navigator: Handelsbetrieb</h1>
       </header>
     
- <nav>
- <Zoomer ref="Zoomer" />
- <hr>
-<ModuleNetworkNav />
-<hr>
- </nav>
 
-<div id="content">  
-      <ModuleNetwork v-if="ModuleNetworkActive" @reZoom="reZoom" />
-      <ModuleTree v-if="ModuleTreeActive" @reZoom="reZoom"/>
-        </div>
+      <nav>
+        <Zoomer ref="Zoomer" /><hr>
+        <ModuleNetworkNav /><hr>
+        <ModuleTreeNav /><hr>
+      </nav>
 
-      
-  
-  <footer>
-    <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br>
-    <img id="signatureID" src=".\assets\engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3\engl. Teil_III_IV-1.svg">
-  </footer>
+      <div id="content">  
+        <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
+        <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
+      </div>
+   
+      <footer>
+        <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br>
+        <img id="signatureID" src=".\assets\engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3\engl. Teil_III_IV-1.svg">
+      </footer>
+
+
   </div>
 
 
@@ -35,14 +35,15 @@ import Zoomer from '@/components/Zoomer.vue'
 import ModuleNetwork from '@/components/ModuleNetwork/ModuleNetwork.vue'
 import ModuleNetworkNav from '@/components/ModuleNetwork/ModuleNetworkNav.vue'
 import ModuleTree from '@/components/ModuleTree/ModuleTree.vue'
-
+import ModuleTreeNav from '@/components/ModuleTree/ModuleTreeNav.vue'
 export default {
   name: 'App',
   components: {
     Zoomer,
     ModuleNetwork,
     ModuleTree,
-    ModuleNetworkNav
+    ModuleNetworkNav,
+    ModuleTreeNav
   },
   data: () => ({
     signatureOpen: false,
@@ -55,6 +56,7 @@ export default {
       if (this.signatureOpen) return this.arrowDown
       else return this.arrowUp
     },
+    activeModule() {return this.$store.getters.activeModule},
     ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
     ModuleTreeActive(){return this.$store.getters.mt.isActive}
   },
@@ -257,7 +259,9 @@ nav {
 }
 }
  
- 
+.clickable {
+  cursor: pointer;
+} 
 
 h1 {
   font-size:100% ;

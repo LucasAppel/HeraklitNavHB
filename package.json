@@ -11,6 +11,7 @@
     "body-scroll-lock": "^3.1.5",
     "core-js": "^3.6.5",
     "dragscroll": "0.0.8",
+    "firebase": "^8.2.9",
     "image-map": "^2.0.1",
     "intellisense": "0.0.1",
     "v-body-scroll-lock": "^1.1.3",

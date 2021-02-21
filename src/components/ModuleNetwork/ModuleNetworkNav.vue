@@ -35,7 +35,7 @@ export default {
     }),
     computed: {
         Arrow: function () { if(this.isActive) {return this.ArrowDown} else return this.ArrowRight},
-        isActive() {return this.$store.getters.mnw.isActive},
+        isActive() {return this.$store.getters.activeModule=='network'},
 
     retailerAbstr() {return this.$store.getters.mnw.retailerAbstr},
     customerAbstr() {return this.$store.getters.mnw.customerAbstr},
@@ -60,11 +60,13 @@ export default {
         ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);},
 
         changeToActive(){
-          if(!this.isActive) this.$store.dispatch('setMNW', ['isActive', true])
-          else  {this.$store.getters.mnw.list.forEach(element => {
+          console.log(this.$store.getters.activeModule)
+          if(!this.isActive){ 
+            this.$store.dispatch('setActiveModule', 'network'); //Activate Module
+            this.$store.getters.mnw.list.forEach(element => { //Reset SubMenu
               this.$store.dispatch('setMNW', [element, true])
               });
-            this.$store.dispatch('setMNW', ['isActive', false])}
+              }
             }
     },
     components: {
