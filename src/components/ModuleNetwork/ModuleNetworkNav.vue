@@ -10,7 +10,7 @@
             <ul v-if="!retailerAbstr">
                 <li><div>Order Management <br><Switcher status="orderAbstr" @checked="orderClick" /></div></li>
                 <li><div>Inventory Management <br><Switcher status="inventoryAbstr" @checked="inventoryClick" /></div></li>
-                <li><div>Warehouse <br><Switcher status="warehpuseAbstr" @checked="warehouseClick" /></div></li>
+                <li><div>Warehouse <br><Switcher status="warehouseAbstr" @checked="warehouseClick" /></div></li>
             </ul>
          </transition>
             </li>
@@ -62,6 +62,7 @@ export default {
         changeToActive(){
           console.log(this.$store.getters.activeModule)
           if(!this.isActive){ 
+            this.$emit('resetZoomer');
             this.$store.dispatch('setActiveModule', 'network'); //Activate Module
             this.$store.getters.mnw.list.forEach(element => { //Reset SubMenu
               this.$store.dispatch('setMNW', [element, true])

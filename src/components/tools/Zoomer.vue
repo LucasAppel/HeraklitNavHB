@@ -2,7 +2,7 @@
 <div>
     <span>
     Zoom: <br class="zoombr">
-  <input type="range" id="zoomer" zvalue="1" min="1" max="3" step="0.1" v-model="zvalue"
+  <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue"
       @input="zoom(zvalue)">  <br class="zoombr">
       {{Math.round(zvalue * 100)}}%
     </span>
@@ -73,6 +73,12 @@ getScrollLeftMax(ele) {
          svgObj.style.transform="scale("+this.zvalue+", "+this.zvalue+")";
      
     });
+ },
+
+ resetZoomer(){ //reset Zoom-Slider
+    var zoomer = document.getElementById('zoomer');
+    zoomer.value = 1;
+    this.zvalue = 1;
  }
 
 

@@ -9,9 +9,9 @@
 
       <nav>
         <Zoomer ref="Zoomer" /><hr>
-        <ModuleNetworkNav /><hr>
-        <ModuleTreeNav /><hr>
-        <WorkflowNav />
+        <ModuleNetworkNav @resetZoomer="resetZoomer" /><hr>
+        <ModuleTreeNav @resetZoomer="resetZoomer" /><hr>
+        <WorkflowNav @resetZoomer="resetZoomer" />
       </nav>
 
       <div id="content">  
@@ -71,6 +71,9 @@ export default {
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
+    },
+    resetZoomer(){
+      this.$refs.Zoomer.resetZoomer();
     },
     signatureClick(){
       var footer = document.getElementsByTagName("footer")[0];

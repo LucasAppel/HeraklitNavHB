@@ -24,7 +24,7 @@ export default new Vuex.Store({
     },
     workflow: {
       isActive: false,
-      activeStr: "retailer",
+      activeStr: "composed",
       retailerAbstr: false 
     }
 
