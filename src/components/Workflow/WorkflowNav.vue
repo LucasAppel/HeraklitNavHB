@@ -1,0 +1,77 @@
+<template>
+<div class="ModuleList">
+    <h4 @click="changeToActive">{{Arrow}} Workflow</h4>
+    <transition name="slide">
+    <div v-if=isActive class="Sublist">
+        
+
+        <ul>
+            <li><div>Retailer</div>
+            <transition name="slide">
+                <ul v-if="!retailerAbstr">
+                    <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="orderClick">Order Management</span></div></li>
+                    <li><div><b v-if="activeStr=='inventory'">Iventory Management</b><span v-else class="clickable" @click="inventoryClick">Inventory Management</span></div></li>
+                    <li><div><b v-if="activeStr=='warehouse'">Warehouse</b><span v-else class="clickable" @click="warehouseClick">Warehouse</span></div></li>
+                </ul>
+            </transition>
+                </li>
+            <li><div><b v-if="activeStr=='customers'">Customers</b><span v-else class="clickable" @click="customerClick">Customers</span></div></li>
+            <li><div><b v-if="activeStr=='supplier'">Supplier</b><span v-else class="clickable" @click="supplierClick">Supplier</span></div></li>
+            <li><div><b v-if="activeStr=='ff'">Freight Forwarders</b><span v-else class="clickable" @click="ffClick">Freight Forwarders</span></div></li>        
+        </ul>
+        <ul>
+            <li><div><b v-if="activeStr=='composed'">Composed Workflow</b><span v-else class="clickable" @click="composedClick">Composed Workflow</span></div></li>
+            <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Workflow</b><span v-else class="clickable" @click="altcomposedClick">Alternative <br> Composed Workflow</span></div></li>
+        </ul>
+        </div>
+        </transition>
+</div>
+</template>
+
+<script>
+
+export default {
+    name: "WorkflowNav",
+    
+    data: () => ({
+        ArrowRight: "➡️",
+        ArrowDown: "⬇️",
+  
+    }),
+    computed: {
+        Arrow: function () { if(this.isActive) {return this.ArrowDown} else return this.ArrowRight},
+        isActive() {return this.$store.getters.activeModule=="workflow"},
+        retailerAbstr() {return this.$store.getters.wf.retailerAbstr},
+        activeStr() {return this.$store.getters.wf.activeStr}
+        
+    },
+    methods: {
+        retailerClick(){this.$store.dispatch('setWF', ['retailerAbstr', false]); this.$store.dispatch('setWF', ['activeStr', "retailer"]);},
+        customerClick(){this.$store.dispatch('setWF', ['activeStr', "customers"]);},
+        orderClick(){this.$store.dispatch('setWF', ['activeStr', "order"]);},
+        inventoryClick(){this.$store.dispatch('setWF', ['activeStr', "inventory"]);},
+        warehouseClick(){this.$store.dispatch('setWF', ['activeStr', "warehouse"]);},
+        supplierClick(){this.$store.dispatch('setWF', ['activeStr', "supplier"]);},
+        ffClick(){this.$store.dispatch('setWF', ['activeStr', "ff"]);},
+        composedClick(){this.$store.dispatch('setWF', ['activeStr', 'composed'])},
+        altcomposedClick(){this.$store.dispatch('setWF', ['activeStr', 'altcomposed'])},
+      
+        changeToActive(){
+          if(!this.isActive) this.$store.dispatch('setActiveModule', "workflow")
+        }
+    },
+    components: {
+   
+       
+
+    },
+    mounted() {
+  },
+
+}
+
+</script>
+
+<style>
+
+</style>

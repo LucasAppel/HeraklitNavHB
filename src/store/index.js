@@ -20,8 +20,12 @@ export default new Vuex.Store({
     moduleTree: {
       isActive: false,
       activeStr: "retailer",
-      retailerAbstr: false
-      
+      retailerAbstr: false 
+    },
+    workflow: {
+      isActive: false,
+      activeStr: "retailer",
+      retailerAbstr: false 
     }
 
   },
@@ -31,18 +35,18 @@ export default new Vuex.Store({
     },
     setMNW (state, payload){
       state.moduleNetwork[payload[0]] = payload[1];
-   
-      console.log(payload[0], state.moduleNetwork[payload[0]])
     },
     setMT (state, payload){
       state.moduleTree[payload[0]] = payload[1];
-   
-      console.log(payload[0], state.moduleTree[payload[0]])
+    },
+    setWF (state, payload){
+      state.workflow[payload[0]] = payload[1];
     }
   },
   actions: {
     setMNW (state, payload){ state.commit('setMNW', payload)},
     setMT (state, payload){ state.commit('setMT', payload)},
+    setWF (state, payload){ state.commit('setWF', payload)},
     setActiveModule (state, payload){ state.commit('setActiveModule', payload)}
   },
   modules: {
@@ -50,6 +54,7 @@ export default new Vuex.Store({
   getters: {
     activeModule: state => state.activeModule,
     mnw: state => state.moduleNetwork,
-    mt: state => state.moduleTree
+    mt: state => state.moduleTree,
+    wf: state => state.workflow
   }
 })

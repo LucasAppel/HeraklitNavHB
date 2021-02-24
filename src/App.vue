@@ -11,11 +11,13 @@
         <Zoomer ref="Zoomer" /><hr>
         <ModuleNetworkNav /><hr>
         <ModuleTreeNav /><hr>
+        <WorkflowNav />
       </nav>
 
       <div id="content">  
         <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
+        <Workflow v-if="activeModule=='workflow'" @reZoom="reZoom" />
       </div>
    
       <footer>
@@ -31,11 +33,15 @@
 
 <script>
 import Dragscroll from 'dragscroll';
-import Zoomer from '@/components/Zoomer.vue'
+import Zoomer from '@/components/tools/Zoomer.vue'
 import ModuleNetwork from '@/components/ModuleNetwork/ModuleNetwork.vue'
 import ModuleNetworkNav from '@/components/ModuleNetwork/ModuleNetworkNav.vue'
 import ModuleTree from '@/components/ModuleTree/ModuleTree.vue'
 import ModuleTreeNav from '@/components/ModuleTree/ModuleTreeNav.vue'
+import Workflow from './components/Workflow/Workflow.vue'
+import WorkflowNav from './components/Workflow/WorkflowNav.vue';
+
+
 export default {
   name: 'App',
   components: {
@@ -43,7 +49,9 @@ export default {
     ModuleNetwork,
     ModuleTree,
     ModuleNetworkNav,
-    ModuleTreeNav
+    ModuleTreeNav,
+    WorkflowNav,
+    Workflow,
   },
   data: () => ({
     signatureOpen: false,
@@ -262,6 +270,10 @@ nav {
 .clickable {
   cursor: pointer;
 } 
+
+.clickable:hover {
+  color: darkslateblue;
+}
 
 h1 {
   font-size:100% ;
