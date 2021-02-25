@@ -64,63 +64,17 @@ export default {
     warehouseAbstr() {return this.$store.getters.mnw.warehouseAbstr}
   },
   data: function () {
-return {/*
-  isActive: true,
-  customerAbstr: true,
-  supplierAbstr: true,
-  ffAbstr: true,
-*/
-  //get HTML Elements
-      /* svgObj: null,
-       container: null,
-       scale: null,
-       width: null,
-       lastScrollTop: null,
-       lastScrollLeft: null
-*/
+return {
 
 }
   },
   mounted() {
   
-    //Get values from store
-    
-   // this.customerAbstr = this.$store.getters.mnw.customerAbstr;
-    //this.supplierAbstr = this.$store.getters.mnw.supplierAbstr;
-    //this.customerAbstr = this.$store.getters.mnw.customerAbstr;
-    
   },
-/*
-  beforeUpdate(){
-        this.svgObj = document.getElementById('svgObjID');
-        this.container = document.getElementById('svgContainer');
-        if (this.svgObj != null) this.scale = this.svgObj.style.transform; //Scale of SVG 
-        if (this.container != null){
-        this.lastScrollTop = this.container.scrollTop;
-        this.lastScrollLeft = this.container.scrollLeft;
-        }
-  },
-*/
   updated(){
-    /*
-        this.svgObj = document.getElementById('svgObjID');
-        this.container = document.getElementById('svgContainer');
-        if (this.svgObj != null) this.svgObj.style.transform = this.scale;
-        if (this.container != null){
-        this.container.lastScrollTop = this.lastScrollTop;
-        this.container.lastScrollLeft = this.lastScrollLeft;
-        */
-
-       
-        
-
-          //on update reposition all svg
           this.$emit("reZoom");
         }
 }
-
-
-
 
 
 
@@ -134,7 +88,7 @@ return {/*
 
 .svgContainer{
 
-  position: fixed;
+  position: absolute;
 
   height: 90vh;
   width: 85vw;
@@ -166,7 +120,7 @@ return {/*
   transform-origin: 0% 0%;
   position: absolute;
   cursor: grab;
-  -webkit-overflow-scrolling: touch;
+
   -khtml-user-drag: none;
   -moz-user-drag: none;
   -o-user-drag: none;
@@ -181,39 +135,13 @@ return {/*
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
 .svgContainer{
- 
- position: fixed;
-  
-  height: 90vh;
   width: 90vw;
-  background-color: white;
- 
-  overflow:scroll;
-  border: 20px 20px black;
-  cursor: grab;
-  user-select: none;
- -webkit-user-select: none;
- -webkit-overflow-scrolling: touch;
-   z-index: 10;
 }
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
 .svgContainer{
- 
- position: fixed;
-  
-  height: 90vh;
   width: 77vw;
-  background-color: white;
-
-  overflow:scroll;
-  border: 20px 20px black;
-  cursor: grab;
-  user-select: none;
- -webkit-user-select: none;
- -webkit-overflow-scrolling: touch;
- 
 }
 
 .zoomObj{

@@ -1,6 +1,6 @@
 <template>
 <div>
-<div id="wfSidebar"></div>
+<div id="wfSidebar"><h4>⇐</h4></div>
 <div class ="dragscroll svgContainer" id="svgContainerWF">
 <div class="zoomObj">
        <img v-if="activeStr=='customers'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-6.svg')" class="MTIMG">
@@ -73,24 +73,8 @@ export default {
 
 #svgContainerWF{
 
-  position: fixed;
-
-  height: 90vh;
   width: 83vw;
-  background-color: white;
-  
-  overflow:scroll;
-  border: 20px 20px black;
-  cursor: grab;
-  user-select: none;
- -webkit-user-select: none;
- -webkit-overflow-scrolling: touch;
-  z-index: 10;
- /*Firefox*/
- scrollbar-width: thin;
- scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
 
- 
 }
 
 #wfSidebar {
@@ -101,6 +85,20 @@ export default {
   z-index: 11;
   background-color: green;
 }
+
+@media screen and (max-width:1400px) { /*mobile*/
+#svgContainerWF{
+
+  width: 75vw;
+}
+}
+
+@media screen and (min-width:2000px) { /* Super Wide Display */
+#svgContainerWF{
+  width: 88vw;
+}
+} 
+
 
 </style>
 
