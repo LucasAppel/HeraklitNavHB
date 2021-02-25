@@ -1,7 +1,7 @@
 <template>
 <div>
 <div id="wfSidebar"></div>
-<div class ="dragscroll" id="svgContainer">
+<div class ="dragscroll svgContainer" id="svgContainerWF">
 <div class="zoomObj">
        <img v-if="activeStr=='customers'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-6.svg')" class="MTIMG">
        <img v-if="activeStr=='supplier'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg')" class="MTIMG">
@@ -18,8 +18,7 @@
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! CHANGE INVENTORY SVG SIZE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
-!!!!!!!! ToDO:    SVG ID to Class!  !!!!!!!!!!    Implement sidebarWF! !!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+!!!!!!!! ToDO:    Implement sidebarWF! !!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->

@@ -1,5 +1,5 @@
 <template>
-<div class ="dragscroll" id="svgContainer">
+<div class ="dragscroll svgContainer">
 
 <div class="zoomObj">
        <img v-if="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG">

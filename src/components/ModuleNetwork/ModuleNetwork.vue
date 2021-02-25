@@ -1,5 +1,5 @@
 <template>
-<div class ="dragscroll" id="svgContainer">
+<div class ="dragscroll svgContainer">
 
 <div class="zoomObj">
 
@@ -132,7 +132,7 @@ return {/*
 
 
 
-#svgContainer{
+.svgContainer{
 
   position: fixed;
 
@@ -145,7 +145,7 @@ return {/*
   cursor: grab;
   user-select: none;
  -webkit-user-select: none;
- -webkit-overflow-scrolling: touch;
+
   z-index: 10;
  /*Firefox*/
  scrollbar-width: thin;
@@ -156,12 +156,12 @@ return {/*
 
 
 .zoomObj {
-   padding-top: 60px;
-    min-width: 1000px;
-  height:75%;
-  width: 85vw;
-  top:0;
-  left:0;
+  
+  max-width: 100%; 
+  height:75vh;
+  width: 80vw;
+  top:4vh;
+  left:1.6vw;
   z-index: 0;
   transform-origin: 0% 0%;
   position: absolute;
@@ -180,7 +180,7 @@ return {/*
 
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
-#svgContainer{
+.svgContainer{
  
  position: fixed;
   
@@ -199,7 +199,7 @@ return {/*
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
-#svgContainer{
+.svgContainer{
  
  position: fixed;
   
@@ -214,6 +214,10 @@ return {/*
  -webkit-user-select: none;
  -webkit-overflow-scrolling: touch;
  
+}
+
+.zoomObj{
+  width: 70vw;
 }
 
 }
