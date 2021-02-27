@@ -25,9 +25,7 @@ inlineSVG: rawSVG
 #supplierContainer{
   pointer-events: none;
   position: absolute;
-  min-width: 1000px;
- width: 100%;
- height:100%;
+
 }
 
 #svg186 {

@@ -21,9 +21,7 @@ inlineSVG: rawSVG
 #ffContainer{
    pointer-events: none;
   position: absolute;
-  min-width: 1000px;
- width: 100%;
- height:100%;
+
 }
 #svg713 {
  pointer-events: none;
@@ -32,7 +30,7 @@ inlineSVG: rawSVG
   padding-top: 0px;
   padding-left: 0px;
   object-fit: cover;
- position: relative;
+ position: absolute;
   top: 200px;
   left: 492px;
   width: 190px;

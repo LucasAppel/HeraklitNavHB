@@ -25,9 +25,7 @@ inlineSVG: rawSVG
 #orderContainer{
   pointer-events: none;
   position: absolute;
-  min-width: 1000px;
- width: 100%;
- height:100%;
+
 }
 
 #svg4134 {
@@ -37,7 +35,7 @@ inlineSVG: rawSVG
   padding-top: 0px;
   padding-left: 0px;
   object-fit: cover;
- position: relative;
+ position: absolute;
   top: 163px;
   left: 240px;
   width: 280px;

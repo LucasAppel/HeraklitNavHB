@@ -25,9 +25,7 @@ inlineSVG: rawSVG
 #inventoryContainer{
   pointer-events: none;
   position: absolute;
-  min-width: 1000px;
- width: 100%;
- height:100%;
+
 }
 
 #imginvent {
@@ -37,9 +35,9 @@ inlineSVG: rawSVG
   padding-top: 0px;
   padding-left: 0px;
   object-fit: cover;
- position: relative;
-  top: 100px;
-  left: 53px;
+ position: absolute;
+  top: -200px;
+  left: 253px;
   width: 150px;
   height: auto;
   transform: scale(1, 3);

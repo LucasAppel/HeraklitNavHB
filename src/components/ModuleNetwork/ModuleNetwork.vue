@@ -4,12 +4,12 @@
 <div class="zoomObj">
 
   <transition name="fade"><retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/></transition>
-  <transition name="fade"><customer class="zoomObj" v-if="!customerAbstr" key="2"/></transition>
-  <transition name="fade"><order-management class="zoomObj" v-if="!orderAbstr" key="order"/></transition>
-  <transition name="fade"><warehouse class="zoomObj" v-if="!warehouseAbstr" key="warehouse"/></transition>
-   <transition name="fade"><inventory-management class="zoomObj" v-if="!inventoryAbstr" key="inventory"/></transition>
-  <transition name="fade"><supplier class="zoomObj" v-if="!supplierAbstr" key="3"/></transition>
-  <transition name="fade"><freightforwarders class="zoomObj" v-if="!ffAbstr" key="4"/></transition>
+  <transition name="fade"><customer v-if="!customerAbstr" key="2"/></transition>
+  <transition name="fade"><order-management  v-if="!orderAbstr" key="order"/></transition>
+  <transition name="fade"><warehouse v-if="!warehouseAbstr" key="warehouse"/></transition>
+   <transition name="fade"><inventory-management v-if="!inventoryAbstr" key="inventory"/></transition>
+  <transition name="fade"><supplier v-if="!supplierAbstr" key="3"/></transition>
+  <transition name="fade"><freightforwarders v-if="!ffAbstr" key="4"/></transition>
 
 
 </div>
@@ -93,7 +93,7 @@ return {
   height: 90vh;
   width: 85vw;
   background-color: white;
-  
+
   overflow:scroll;
   border: 20px 20px black;
   cursor: grab;
@@ -110,15 +110,14 @@ return {
 
 
 .zoomObj {
+  min-width: 1000px;
+ max-width: 1000px;
+  margin: 10% auto;
   
-  max-width: 100%; 
-  height:75vh;
-  width: 80vw;
-  top:4vh;
-  left:1.6vw;
+  left:0;
   z-index: 0;
   transform-origin: 0% 0%;
-  position: absolute;
+  position: relative;
   cursor: grab;
 
   -khtml-user-drag: none;
@@ -133,6 +132,8 @@ return {
 
 
 
+
+
 @media screen and (min-width:2000px) { /* Super Wide Display */
 .svgContainer{
   width: 90vw;
@@ -142,11 +143,13 @@ return {
 @media screen and (max-width:1400px) { /*mobile*/
 .svgContainer{
   width: 77vw;
+  
 }
 
 .zoomObj{
-  width: 70vw;
+  
 }
+
 
 }
 .fade-enter-active, .fade-leave-active {

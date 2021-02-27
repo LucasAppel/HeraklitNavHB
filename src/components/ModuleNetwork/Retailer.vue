@@ -1,5 +1,5 @@
 <template>
-    <div class="zoomObj">
+    <div>
        <div v-if=retailerAbstr v-html="ov" class="svgObjID" key="5"></div>
        <div v-if=!retailerAbstr v-html="rd" class="svgObjID" key="6"></div>
    </div>
@@ -76,7 +76,7 @@ clickEle.style.cursor="pointer";
 <style>
 svg {
    z-index: 0;
-  padding-top: 33px;
+ 
   position: relative;
 }
 

@@ -25,9 +25,7 @@ inlineSVG: rawSVG
 #customerContainer{
   pointer-events: none;
   position: absolute;
-  min-width: 1000px;
- width: 100%;
- height:100%;
+
 }
 
 #svg1370 {
@@ -37,7 +35,7 @@ inlineSVG: rawSVG
   padding-top: 0px;
   padding-left: 0px;
   object-fit: cover;
- position: relative;
+ position: absolute;
   top: 120px;
   left: -420px;
   width: 405px;
