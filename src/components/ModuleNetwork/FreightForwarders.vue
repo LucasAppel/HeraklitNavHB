@@ -1,5 +1,6 @@
 <template>
-   <div v-html="inlineSVG" id="ffContainer">
+   <div id="ffContainer">
+     <img :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713">
    </div>
 </template>
 
@@ -25,16 +26,24 @@ inlineSVG: rawSVG
 }
 #svg713 {
  pointer-events: none;
- z-index:5;
+ z-index:1;
  background-color: white;
   padding-top: 0px;
   padding-left: 0px;
-  object-fit: cover;
+  object-fit: fill;
  position: absolute;
-  top: 200px;
-  left: 492px;
+  top: -203px;
+  left: 964px;
   width: 190px;
-  height: 210px;
+  height: 215px;
 }
-
+@media screen and (max-width:1400px) {/* Mobile */
+#svg713 {
+  top: -140px;
+  left: 648px;
+  width: 140px;
+  height: 145px;
+  transform: scale(1, 1);
+}
+}
 </style>

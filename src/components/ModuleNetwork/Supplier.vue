@@ -1,7 +1,7 @@
 <template>
-<div v-html="inlineSVG" id="supplierContainer">
-  testsupplier
-</div>
+  <div id="supplierContainer">
+    <img :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186">
+  </div>
 </template>
 
 
@@ -25,7 +25,9 @@ inlineSVG: rawSVG
 #supplierContainer{
   pointer-events: none;
   position: absolute;
-
+  height: 0;
+  width: 0;
+  top:0;
 }
 
 #svg186 {
@@ -34,11 +36,20 @@ inlineSVG: rawSVG
  background-color: white;
   padding-top: 0px;
   padding-left: 0px;
-  object-fit: cover;
+  object-fit: fill;
  position: relative;
-  top: 10px;
-  left: 501px;
+  top: 0px;
+  left: 885px;
   width: 190px;
-  height: 210px;
+  height: 180px;
+}
+@media screen and (max-width:1400px) {/* Mobile */
+#svg186 {
+  top: -2px;
+  left: 656px;
+  width: 120px;
+  height: 130px;
+  transform: scale(1, 1);
+}
 }
 </style>

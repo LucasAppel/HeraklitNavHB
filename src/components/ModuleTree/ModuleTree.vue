@@ -64,3 +64,31 @@ export default {
 </style>
 
 
+<style scoped>
+.zoomObj {
+ min-width:90%;
+ height: 90%;
+  margin: 2% auto 0 auto;
+  left:0;
+  z-index: 0;
+  transform-origin: 0% 0%;
+  position: relative;
+  cursor: grab;
+
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+   object-fit: cover;
+ -webkit-user-select: none;
+}
+
+@media screen and (max-width:1400px) {/* Mobile */
+.zoomObj {
+ 
+  margin: 5% auto 0 auto;
+  min-width: 700px;
+  max-width: 700px;
+  height: 80%;
+}
+}
+</style>

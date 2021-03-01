@@ -7,7 +7,7 @@
   <transition name="fade"><customer v-if="!customerAbstr" key="2"/></transition>
   <transition name="fade"><order-management  v-if="!orderAbstr" key="order"/></transition>
   <transition name="fade"><warehouse v-if="!warehouseAbstr" key="warehouse"/></transition>
-   <transition name="fade"><inventory-management v-if="!inventoryAbstr" key="inventory"/></transition>
+  <transition name="fade"><inventory-management v-if="!inventoryAbstr" key="inventory"/></transition>
   <transition name="fade"><supplier v-if="!supplierAbstr" key="3"/></transition>
   <transition name="fade"><freightforwarders v-if="!ffAbstr" key="4"/></transition>
 
@@ -110,9 +110,9 @@ return {
 
 
 .zoomObj {
-  min-width: 1000px;
- max-width: 1000px;
-  margin: 10% auto;
+  min-width: 1050px;
+ max-width: 1050px;
+  margin: 8% auto 0 auto;
   
   left:0;
   z-index: 0;
@@ -147,16 +147,18 @@ return {
 }
 
 .zoomObj{
-  
+   min-width: 700px;
+ max-width: 700px;
+  margin: 15% auto 0 auto;
 }
 
 
 }
 .fade-enter-active, .fade-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.0s;
 }
 .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
+  opacity: 0.0s;
 }
 
 </style>

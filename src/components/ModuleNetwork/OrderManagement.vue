@@ -1,6 +1,6 @@
 <template>
-    <div v-html="inlineSVG" id="orderContainer" >
-    <h1>TestCustomer</h1>
+    <div id="orderContainer" >
+    <img :src="require('@/assets/ModuleTree/orderMT.png')" id="svg1515">
    </div>
 </template>
 
@@ -30,16 +30,26 @@ inlineSVG: rawSVG
 
 #svg1515 {
   pointer-events: none;
- z-index:5;
+ z-index:2;
  background-color: white;
   padding-top: 0px;
   padding-left: 0px;
-  object-fit: cover;
+  object-fit:fill;
  position: absolute;
-  top: 133px;
-  left: -112px;
-  width: 200px;
-  height: auto;
+  top: -335px;
+  left: 170px;
+  width: 250px;
+  height: 140px;
   transform: scale(1, 2.4);
+}
+
+@media screen and (max-width:1400px) {/* Mobile */
+#svg1515 {
+  top: -290px;
+  left: 114px;
+  width: 170px;
+  height: 220px;
+  transform: scale(1, 1);
+}
 }
 </style>

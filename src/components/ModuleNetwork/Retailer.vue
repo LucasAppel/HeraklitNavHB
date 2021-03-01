@@ -76,7 +76,8 @@ clickEle.style.cursor="pointer";
 <style>
 svg {
    z-index: 0;
- 
+  width: 100%;
+    height: 100%;
   position: relative;
 }
 

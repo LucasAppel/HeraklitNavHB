@@ -1,6 +1,6 @@
 <template>
     <div id="inventoryContainer" >
-    <img :src="require('@/assets/Screenshot 2021-02-04 215915.jpg')" id="imginvent">
+    <img :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
    </div>
 </template>
 
@@ -34,12 +34,21 @@ inlineSVG: rawSVG
 
   padding-top: 0px;
   padding-left: 0px;
-  object-fit: cover;
+  object-fit: fill;
  position: absolute;
-  top: -200px;
-  left: 253px;
-  width: 150px;
-  height: auto;
+  top: -350px;
+  left: 377px;
+  width: 380px;
+  height: 80px;
   transform: scale(1, 3);
+}
+@media screen and (max-width:1400px) {/* Mobile */
+#imginvent {
+  top: -285px;
+  left: 261px;
+  width: 240px;
+  height: 160px;
+  transform: scale(1, 1);
+}
 }
 </style>

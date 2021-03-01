@@ -3,7 +3,10 @@
     <h4 @click="changeToActive">{{Arrow}} Workflow</h4>
     <transition name="slide">
     <div v-if=isActive class="Sublist">
-        
+         <ul>
+            <li><div><b v-if="activeStr=='composed'">Composed Workflow</b><span v-else class="clickable" @click="menuClick('composed')">Composed Workflow</span></div></li>
+            <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Workflow</b><span v-else class="clickable" @click="menuClick('altcomposed')">Alternative <br> Composed Workflow</span></div></li>
+        </ul>
 
         <ul>
             <li><div>Retailer</div>
@@ -19,10 +22,7 @@
             <li><div><b v-if="activeStr=='supplier'">Supplier</b><span v-else class="clickable" @click="menuClick('supplier')">Supplier</span></div></li>
             <li><div><b v-if="activeStr=='ff'">Freight Forwarders</b><span v-else class="clickable" @click="menuClick('ff')">Freight Forwarders</span></div></li>        
         </ul>
-        <ul>
-            <li><div><b v-if="activeStr=='composed'">Composed Workflow</b><span v-else class="clickable" @click="menuClick('composed')">Composed Workflow</span></div></li>
-            <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Workflow</b><span v-else class="clickable" @click="menuClick('altcomposed')">Alternative <br> Composed Workflow</span></div></li>
-        </ul>
+       
         </div>
         </transition>
 </div>
