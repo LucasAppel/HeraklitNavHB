@@ -2,6 +2,7 @@
 <div>
 <div id="wfSidebar"><h4></h4></div>
 <div class ="dragscroll svgContainer" id="svgContainerWF">
+
 <div class="zoomObj">
        <img v-if="activeStr=='customers'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-6.svg')" class="MTIMG">
        <img v-if="activeStr=='supplier'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg')" class="MTIMG">
@@ -71,15 +72,11 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 
-#svgContainerWF{
 
-  right:35px;
-
-}
 
 #wfSidebar {
   position: absolute;
-  right: 0px;
+  right: 15vw;
   width:35px;
   top:0px;
   bottom:0px;
@@ -88,15 +85,16 @@ export default {
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
-#svgContainerWF{
 
-  width: 75vw;
+#wfSidebar {
+  display: none;
+  right:23vw;
 }
 }
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
-#svgContainerWF{
-  width: 88vw;
+#wfSidebar {
+  right:10vw;
 }
 } 
 
@@ -105,8 +103,8 @@ export default {
 
 <style scoped>
 .zoomObj {
- min-width:90%;
- max-width: 90%;
+ min-width:68%;
+ max-width: 68%;
  height: 90%;
   margin: 2% auto 0 auto;
   left:0;
@@ -129,7 +127,8 @@ export default {
   min-width: 700px;
   max-width: 700px;
   height: 80%;
-  
+  padding-right: 29vw;
+  padding-left: 3%;
 }
 
 }

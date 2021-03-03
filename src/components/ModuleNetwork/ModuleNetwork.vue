@@ -13,6 +13,7 @@
 
 
 </div>
+
   </div>
 </template>
 
@@ -91,9 +92,12 @@ return {
   position: absolute;
   
   height: 100%;
-  width: 85vw;
+  width: 100vw;
   background-color: white;
-
+  right:0;
+  left:0;
+  
+  
   overflow:scroll;
   border: 20px 20px black;
   cursor: grab;
@@ -105,7 +109,7 @@ return {
  scrollbar-width: thin;
  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
 
- 
+
 }
 
 
@@ -126,7 +130,8 @@ return {
    object-fit: cover;
  -webkit-user-select: none;
 
-
+padding-right: 20vw;
+padding-bottom: 5vh;
 }
 
 
@@ -135,21 +140,23 @@ return {
 
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
-.svgContainer{
-  width: 90vw;
+.zoomObj{
+  padding-right: 10vw;
+
 }
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
-.svgContainer{
-  width: 77vw;
-  
-}
+
 
 .zoomObj{
    min-width: 700px;
  max-width: 700px;
   margin: 15% auto 0 auto;
+  padding-right: 32vw;
+  padding-left: 3%;
+
+
 }
 
 

@@ -66,7 +66,8 @@ export default {
 
 <style scoped>
 .zoomObj {
- min-width:90%;
+ min-width:60%;
+ max-width: 60%;
  height: 90%;
   margin: 2% auto 0 auto;
   left:0;

@@ -15,7 +15,7 @@
       </nav>
 
       <div id="content">
-        <h2 v-if="activeModule=='none'"><br><br>Heraklit-Navigator: Handelsbetrieb</h2>
+        <h2 v-if="activeModule=='none'">Heraklit-Navigator:<br>Handelsbetrieb</h2>
         <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-if="activeModule=='workflow'" @reZoom="reZoom" />
@@ -114,7 +114,8 @@ body {
   overflow: hidden;
    -webkit-overflow: hidden;
    z-index: -5;
-
+ /* background-color: rgb(0, 103, 129);*/
+ background-color: black;
 }
 
 
@@ -136,7 +137,7 @@ header {
   display: inline-block;
   height: 35px;
   width: 100%;
-  background-color: rgba(19, 19, 19, 0.829);
+  background-color: rgba(19, 19, 19, 0.904);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -160,12 +161,12 @@ footer {
   border-top: solid black 1px;
   z-index: 20;
   transition: height 0.6s;
-  background-color: rgba(2, 2, 2, 0.603);
+  background-color: rgba(46, 46, 46, 0.692);
   backdrop-filter: blur(9px);
 }
 @supports not (backdrop-filter: none) {
   footer {
-    background-color:darkgray;
+    background-color:rgba(80, 79, 79, 0.99);
   }
 }
 
@@ -175,7 +176,7 @@ footer {
 
 
 #content {
-  width: 85vw;
+  width: 100vw;
   background-image: linear-gradient(to bottom right, rgb(72, 180, 113) , rgb(105, 161, 163), rgba(49, 86, 138, 0.897));
   bottom: 35px;
   top: 35px;
@@ -209,14 +210,18 @@ nav {
   overflow-x: hidden;
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
-  
+  backdrop-filter: blur(6px);
+}
+@supports not (backdrop-filter: none) {
+  nav {
+    background-color:darkgray;
+  }
+
 }
 
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
-  #content {
-  width: 90%;
-}
+
 
 nav {
   width: 10%;
@@ -224,10 +229,7 @@ nav {
 }
 
 @media screen and (max-width:1400px) {/* Mobile */
-  #content {
-  width: 77%;
-  
-}
+
 nav {
   width: 23%;
   bottom: 35px;
@@ -235,9 +237,12 @@ nav {
   }
 }
  
-h2 {
+#content h2 {
   font-size: 40pt;
   color: white;
+  position:relative;
+  left: -8vw;
+  top: 25vh;
 }
 
 
