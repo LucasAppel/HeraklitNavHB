@@ -105,7 +105,7 @@ html {
   -webkit-overflow: hidden;
 }
 body {
-   background-color: rgb(200, 200, 200);
+   
    height: 100vh;
    width: 100vw;
   margin: 0;
@@ -122,7 +122,7 @@ body {
 position: absolute;
 height: 100vh;
 width: 100vw;
-
+font-weight:500;
 font-size: 11pt;
 
 
@@ -130,13 +130,13 @@ font-size: 11pt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: black;
+  color: rgb(14, 32, 17);
 }
 header {
   display: inline-block;
   height: 35px;
   width: 100%;
-  background-image: linear-gradient(to bottom right, rgb(50, 128, 202)30% , rgb(99, 188, 218));
+  background-color: rgba(19, 19, 19, 0.829);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -144,6 +144,8 @@ header {
   text-align: center;
   border-bottom: solid black 1px;
   z-index: 5;
+  color: white;
+    
 }
 
 footer {
@@ -151,15 +153,20 @@ footer {
   clear: both;
   width:100%;
   height: 35px;
-  background-color: rgb(150, 210, 255);
+  color: white;
   position: fixed;
   bottom: 0px;
   left: 0px;
   border-top: solid black 1px;
   z-index: 20;
   transition: height 0.6s;
-  background-image: linear-gradient(to top right, rgb(122, 180, 235) 20%, rgb(175, 212, 224) 70%);
-
+  background-color: rgba(2, 2, 2, 0.603);
+  backdrop-filter: blur(9px);
+}
+@supports not (backdrop-filter: none) {
+  footer {
+    background-color:darkgray;
+  }
 }
 
 
@@ -169,27 +176,27 @@ footer {
 
 #content {
   width: 85vw;
-  
+  background-image: linear-gradient(to bottom right, rgb(72, 180, 113) , rgb(105, 161, 163), rgba(49, 86, 138, 0.897));
   bottom: 35px;
   top: 35px;
   z-index: 0;
   float: left;
-   border-right: solid black 1px;
+  
  user-select: none;
  position: absolute;
  overflow: hidden;
 
 }
 nav {
- background-image: linear-gradient(to  right, rgb(177, 188, 200), rgb(183, 206, 214) 70%);
+ background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
  background-blend-mode: soft-light;
  background-attachment: initial;
  background-size: auto;
   width: 15vw;
   z-index: 10;
   float: right;
-  border: solid 1px;
 
+  border-top: solid black 1px;
   border-left: solid black 1px;
   
   padding-top: 5px;
@@ -230,7 +237,7 @@ nav {
  
 h2 {
   font-size: 40pt;
-  color: rgb(0, 85, 88);
+  color: white;
 }
 
 
@@ -244,6 +251,7 @@ h2 {
 
 h1 {
   font-size:100% ;
+
 }
 
 footer h1 {

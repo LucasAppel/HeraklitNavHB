@@ -99,6 +99,7 @@ containerArr.forEach(container=>{
 <style>
 #zoomer {
     width: 100px;
+    margin-bottom: -4px;
 }
 
 .zoombr {

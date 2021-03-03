@@ -8,7 +8,7 @@
          <transition name="slide">
             <ul v-if="!retailerAbstr">
                 <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="menuClick('order')">Order Management</span></div></li>
-                <li><div><b v-if="activeStr=='inventory'">Iventory Management</b><span v-else class="clickable" @click="menuClick('inventory')">Inventory Management</span></div></li>
+                <li><div><b v-if="activeStr=='inventory'">Inventory Management</b><span v-else class="clickable" @click="menuClick('inventory')">Inventory Management</span></div></li>
                 <li><div><b v-if="activeStr=='warehouse'">Warehouse</b><span v-else class="clickable" @click="menuClick('warehouse')">Warehouse</span></div></li>
             </ul>
          </transition>
