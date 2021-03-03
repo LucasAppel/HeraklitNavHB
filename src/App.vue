@@ -14,7 +14,8 @@
         <WorkflowNav @resetZoomer="resetZoomer" />
       </nav>
 
-      <div id="content">  
+      <div id="content">
+        <h2 v-if="activeModule=='none'"><br><br>Heraklit-Navigator: Handelsbetrieb</h2>
         <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-if="activeModule=='workflow'" @reZoom="reZoom" />
@@ -22,7 +23,7 @@
    
       <footer>
         <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br>
-        <img id="signatureID" src=".\assets\engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3\engl. Teil_III_IV-1.svg">
+        <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-1.svg">
       </footer>
 
 
@@ -78,10 +79,10 @@ export default {
     signatureClick(){
       var footer = document.getElementsByTagName("footer")[0];
       if (this.signatureOpen) {
-        footer.style.height = "5vh";
+        footer.style.height = "35px";
         }
       else {
-        footer.style.height = "55vh";
+        footer.style.height = "65vh";
         }
       this.signatureOpen = !this.signatureOpen;
       }
@@ -113,7 +114,7 @@ body {
   overflow: hidden;
    -webkit-overflow: hidden;
    z-index: -5;
-   
+
 }
 
 
@@ -133,23 +134,23 @@ font-size: 11pt;
 }
 header {
   display: inline-block;
-  height: 5vh;
+  height: 35px;
   width: 100%;
-  background-color: rgb(0, 125, 240);
+  background-image: linear-gradient(to bottom right, rgb(50, 128, 202)30% , rgb(99, 188, 218));
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
   text-align: center;
   border-bottom: solid black 1px;
-  z-index: 3;
+  z-index: 5;
 }
 
 footer {
   text-align: center;
   clear: both;
   width:100%;
-  height: 5vh;
+  height: 35px;
   background-color: rgb(150, 210, 255);
   position: fixed;
   bottom: 0px;
@@ -157,7 +158,7 @@ footer {
   border-top: solid black 1px;
   z-index: 20;
   transition: height 0.6s;
-  
+  background-image: linear-gradient(to top right, rgb(122, 180, 235) 20%, rgb(175, 212, 224) 70%);
 
 }
 
@@ -168,9 +169,9 @@ footer {
 
 #content {
   width: 85vw;
-  height: 90vh;
-  margin-bottom: 5vh;
-  margin-top: 5vh;
+  
+  bottom: 35px;
+  top: 35px;
   z-index: 0;
   float: left;
    border-right: solid black 1px;
@@ -180,16 +181,21 @@ footer {
 
 }
 nav {
- 
+ background-image: linear-gradient(to  right, rgb(177, 188, 200), rgb(183, 206, 214) 70%);
+ background-blend-mode: soft-light;
+ background-attachment: initial;
+ background-size: auto;
   width: 15vw;
-  height: 89vh;
+  z-index: 10;
   float: right;
+  border: solid 1px;
 
   border-left: solid black 1px;
   
   padding-top: 5px;
-  top: 5vh;
-  bottom: 5vh;
+  padding-bottom: 10px;
+  top: 35px;
+  bottom: 35px;
   position: absolute;
   right: 0px;
   overflow-y: scroll;
@@ -213,13 +219,19 @@ nav {
 @media screen and (max-width:1400px) {/* Mobile */
   #content {
   width: 77%;
+  
 }
 nav {
   width: 23%;
-  height:85vh;
+  bottom: 35px;
+  padding-bottom: 45px;
   }
 }
  
+h2 {
+  font-size: 40pt;
+  color: rgb(0, 85, 88);
+}
 
 
 .clickable {

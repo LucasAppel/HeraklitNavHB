@@ -1,10 +1,10 @@
 <template>
-    <span class="switchtext">Abstract <br class="zoombr">
+    <span class="switchtext"> Abstract <br class="zoombr">
     <label class="switch">
     <input type="checkbox" @change="changed" :checked="value">
     <span class="slider round"></span>
     </label>
-    <br class="zoombr">Concrete</span>
+    <br class="zoombr"> Concrete</span>
 </template>
 
 <script>
@@ -85,6 +85,7 @@ export default {
   display: inline-block;
   width: 30px;
   height: 17px;
+  margin-bottom: -10px;
 }
 }
 

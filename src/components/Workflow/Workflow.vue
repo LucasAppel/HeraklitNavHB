@@ -73,17 +73,18 @@ export default {
 
 #svgContainerWF{
 
-  width: 83vw;
+  right:35px;
 
 }
 
 #wfSidebar {
   position: absolute;
   right: 0px;
-  width:2vw;
-  height: 90vh;
+  width:35px;
+  top:0px;
+  bottom:0px;
   z-index: 11;
-  background-color: white;
+  background-color: lightblue;
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
@@ -105,6 +106,7 @@ export default {
 <style scoped>
 .zoomObj {
  min-width:90%;
+ max-width: 90%;
  height: 90%;
   margin: 2% auto 0 auto;
   left:0;

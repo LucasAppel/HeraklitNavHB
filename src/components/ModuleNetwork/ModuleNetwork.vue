@@ -89,8 +89,8 @@ return {
 .svgContainer{
 
   position: absolute;
-
-  height: 90vh;
+  
+  height: 100%;
   width: 85vw;
   background-color: white;
 

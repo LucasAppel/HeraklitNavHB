@@ -104,20 +104,21 @@ padding-right: 0.8vw;
 
 .Sublist {
     /* Backgound for whole div of List */
-    /*background-color: rgba(0, 86, 167, 0.26);*/
+    background-image: linear-gradient(to bottom left, rgba(82, 137, 209, 0.096), rgba(180, 226, 253, 0.137)30%, rgba(82, 137, 209, 0.075));
     border-radius: 6px;
     transition: 1s;
+    padding-top:5px;
 }
 
 li div::after {
     /* Background for List items */
     content:'';
-    width: 88%;
+    width: 86%;
     height: 100%;
     top:-1.5px;
     position: absolute;
     left: 13px;
-    background-image: linear-gradient(to right, rgba(0, 162, 255, 0.212), rgba(0,0,0,0));
+    background:  linear-gradient(to bottom right, rgba(82, 137, 209, 0.13), rgba(180, 226, 253, 0.137)30%, rgba(82, 137, 209, 0.109));
  z-index: -1;
  border-radius: 5px;
  pointer-events: none;
