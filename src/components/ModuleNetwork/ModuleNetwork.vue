@@ -4,12 +4,12 @@
 <div class="zoomObj">
 
   <transition name="fade"><retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/></transition>
-  <transition name="fade"><customer v-if="!customerAbstr" key="2"/></transition>
-  <transition name="fade"><order-management  v-if="!orderAbstr" key="order"/></transition>
-  <transition name="fade"><warehouse v-if="!warehouseAbstr" key="warehouse"/></transition>
-  <transition name="fade"><inventory-management v-if="!inventoryAbstr" key="inventory"/></transition>
-  <transition name="fade"><supplier v-if="!supplierAbstr" key="3"/></transition>
-  <transition name="fade"><freightforwarders v-if="!ffAbstr" key="4"/></transition>
+  <transition name="fade"><customer v-show="!customerAbstr" key="2"/></transition>
+  <transition name="fade"><order-management  v-show="!orderAbstr" key="order"/></transition>
+  <transition name="fade"><warehouse v-show="!warehouseAbstr" key="warehouse"/></transition>
+  <transition name="fade"><inventory-management v-show="!inventoryAbstr" key="inventory"/></transition>
+  <transition name="fade"><supplier v-show="!supplierAbstr" key="3"/></transition>
+  <transition name="fade"><freightforwarders v-show="!ffAbstr" key="4"/></transition>
 
 
 </div>

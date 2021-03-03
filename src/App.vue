@@ -15,10 +15,10 @@
       </nav>
 
       <div id="content">
-        <h2 v-if="activeModule=='none'">Heraklit-Navigator:<br>Handelsbetrieb</h2>
-        <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
-        <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
-        <Workflow v-if="activeModule=='workflow'" @reZoom="reZoom" />
+        <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Handelsbetrieb</h2>
+        <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
+        <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
+        <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
       </div>
    
       <footer>
