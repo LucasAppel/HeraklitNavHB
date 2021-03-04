@@ -52,6 +52,9 @@ export default {
             this.$store.dispatch('setActiveModule', "tree");
             this.$emit('resetZoomer');
           }
+          else {
+              this.$store.dispatch('setActiveModule', 'none');
+          }
         }
     },
     components: {

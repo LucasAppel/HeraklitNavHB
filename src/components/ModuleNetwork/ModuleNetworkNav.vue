@@ -62,11 +62,15 @@ export default {
         changeToActive(){
           console.log(this.$store.getters.activeModule)
           if(!this.isActive){ 
-            this.$emit('resetZoomer');
+         
             this.$store.dispatch('setActiveModule', 'network'); //Activate Module
             this.$store.getters.mnw.list.forEach(element => { //Reset SubMenu
               this.$store.dispatch('setMNW', [element, true])
               });
+                 this.$emit('resetZoomer');
+              }
+              else {
+                 this.$store.dispatch('setActiveModule', 'none');
               }
             }
     },

@@ -1,5 +1,5 @@
 <template>
-<div>
+<div id="zoomerDiv">
     <span>
     Zoom: <br class="zoombr">
   <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue"
@@ -82,6 +82,7 @@ containerArr.forEach(container=>{
     var zoomer = document.getElementById('zoomer');
     zoomer.value = 1;
     this.zvalue = 1;
+    this.reZoom();
  }
 
 
@@ -100,6 +101,7 @@ containerArr.forEach(container=>{
 #zoomer {
     width: 100px;
     margin-bottom: -4px;
+    
 }
 
 .zoombr {
@@ -126,5 +128,13 @@ white-space: break-spaces;
 }
 }
 
+#zoomerDiv {
+ 
+    top:0px;
+    padding-top: 19px;
+    padding-bottom: 8px;
+    z-index:20;
+    
+}
 
 </style>

@@ -88,7 +88,8 @@ export default {
       }
   },
   updated(){
-    Dragscroll.reset()
+    Dragscroll.reset();
+
   }
 }
 
@@ -161,12 +162,12 @@ footer {
   border-top: solid black 1px;
   z-index: 20;
   transition: height 0.6s;
-  background-color: rgba(46, 46, 46, 0.692);
+  background-color: rgba(59, 59, 59, 0.472);
   backdrop-filter: blur(9px);
 }
 @supports not (backdrop-filter: none) {
   footer {
-    background-color:rgba(80, 79, 79, 0.99);
+    background-color:rgba(105, 105, 105, 0.96);
   }
 }
 
@@ -200,7 +201,7 @@ nav {
   border-top: solid black 1px;
   border-left: solid black 1px;
   
-  padding-top: 5px;
+
   padding-bottom: 10px;
   top: 35px;
   bottom: 35px;
@@ -214,7 +215,7 @@ nav {
 }
 @supports not (backdrop-filter: none) {
   nav {
-    background-color:darkgray;
+    background-color:rgba(169, 169, 169, 0.808);
   }
 
 }
@@ -227,6 +228,13 @@ nav {
   width: 10%;
 }
 }
+#content h2 { /*Welcome Text*/
+  font-size: 40pt;
+  color: white;
+  position:relative;
+  left: -8vw;
+  top: 25vh;
+}
 
 @media screen and (max-width:1400px) {/* Mobile */
 
@@ -235,15 +243,25 @@ nav {
   bottom: 35px;
   padding-bottom: 45px;
   }
+  #content h2 { /*Welcome Text*/
+  font-size: 30pt;
+  left: -12vw;
+  top: 15vh;
+}
 }
  
-#content h2 {
-  font-size: 40pt;
-  color: white;
-  position:relative;
-  left: -8vw;
-  top: 25vh;
+
+ @media screen and (max-width:400px) {/* Smartphone */
+ nav {
+  padding-bottom: 80px;
+  }
+  #content h2 { /*Welcome Text*/
+  font-size: 15pt;
+  left: -12vw;
+  top: 15vh;
 }
+}
+
 
 
 .clickable {
@@ -269,10 +287,13 @@ footer h1 {
 
 
 
+
+
 /*Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
+
 }
 
 *::-webkit-scrollbar-track {
@@ -283,6 +304,23 @@ footer h1 {
   background-color: rgb(117, 169, 204);
   border-radius: 20px;
   
+}
+
+.svgContainer::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  display: none;
+}
+
+.svgContainer::-webkit-scrollbar-track {
+  background: rgba(0, 83, 122, 0.212);
+  display: none;
+}
+
+.svgContainer::-webkit-scrollbar-thumb {
+  background-color: rgb(117, 169, 204);
+  border-radius: 20px;
+  display: none;
 }
 
 

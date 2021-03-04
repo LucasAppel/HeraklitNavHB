@@ -131,7 +131,7 @@ return {
  -webkit-user-select: none;
 
 padding-right: 20vw;
-padding-bottom: 5vh;
+padding-bottom: 5%;
 }
 
 

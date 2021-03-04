@@ -58,6 +58,9 @@ export default {
               this.$store.dispatch('setActiveModule', "workflow");
               this.$emit('resetZoomer');
           }
+        else {
+          this.$store.dispatch('setActiveModule', 'none');
+          }
         }
     },
     components: {
