@@ -27,6 +27,7 @@ import OrderManagement from './OrderManagement.vue'
 import Warehouse from './Warehouse.vue'
 import InventoryManagement from './InventoryManagement.vue'
 
+
 export default {
   
   name: 'mnw',
@@ -37,8 +38,8 @@ export default {
     freightforwarders,
     OrderManagement,
     Warehouse,
-    InventoryManagement
-    
+    InventoryManagement,
+
   },
   methods: { 
         retailerClick(){this.$store.dispatch('setMNW', ['retailerAbstr', !this.retailerAbstr]);
@@ -131,7 +132,7 @@ return {
  -webkit-user-select: none;
 
 padding-right: 20vw;
-padding-bottom: 5%;
+
 }
 
 

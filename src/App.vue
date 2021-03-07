@@ -3,7 +3,7 @@
 
     
       <header>
-        <h1>Heraklit-Navigator: Handelsbetrieb</h1>
+        <h1>Heraklit-Navigator: Retailer</h1>
       </header>
     
 
@@ -15,15 +15,15 @@
       </nav>
 
       <div id="content">
-        <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Handelsbetrieb</h2>
+        <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
       </div>
    
       <footer>
-        <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br>
-        <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-1.svg">
+        <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br><br><br>
+        <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-2.svg">
       </footer>
 
 
@@ -82,14 +82,31 @@ export default {
         footer.style.height = "35px";
         }
       else {
-        footer.style.height = "65vh";
+        footer.style.height = "75vh";
         }
       this.signatureOpen = !this.signatureOpen;
       }
   },
+  mounted(){
+     //Disable Pinch-to-zoom
+    document.addEventListener('touchmove', function (event) {
+  if (event.scale !== 1) { event.preventDefault(); }
+}, { passive: false });
+
+//Disable doubletap-to-zoom
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) { 
+  var now = (new Date()).getTime();
+  if (now - lastTouchEnd <= 300) {
+    event.preventDefault();
+  }
+  lastTouchEnd = now;
+}, false);
+
+  },
   updated(){
     Dragscroll.reset();
-
+    
   }
 }
 
@@ -98,7 +115,7 @@ export default {
 
 <style>
 html {
-  user-zoom: none;
+  
   -webkit-user-drag: none;
   -webkit-user-select: none;
   position: absolute;

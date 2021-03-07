@@ -1,11 +1,11 @@
 <template>
 <div class="ModuleList">
-    <h4 @click="changeToActive">{{Arrow}} Workflow</h4>
+    <h4 @click="changeToActive">{{Arrow}} Run</h4>
     <transition name="slide">
     <div v-if=isActive class="Sublist">
          <ul>
-            <li><div><b v-if="activeStr=='composed'">Composed Workflow</b><span v-else class="clickable" @click="menuClick('composed')">Composed Workflow</span></div></li>
-            <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Workflow</b><span v-else class="clickable" @click="menuClick('altcomposed')">Alternative <br> Composed Workflow</span></div></li>
+            <li><div><b v-if="activeStr=='composed'">Composed Run</b><span v-else class="clickable" @click="menuClick('composed')">Composed Run</span></div></li>
+            <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Run</b><span v-else class="clickable" @click="menuClick('altcomposed')">Alternative <br> Composed Run</span></div></li>
         </ul>
 
         <ul>

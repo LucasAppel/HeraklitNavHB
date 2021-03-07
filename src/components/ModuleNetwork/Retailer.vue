@@ -47,8 +47,7 @@ mounted(){
 //For each ID do
 for (let i=0; i<this.clickIDS.length; i++){
 var clickEle= document.getElementById(this.clickIDS[i]);
-if (clickEle == null){ //when Element not found throw error
-  console.log(this.clickIDS[i] + "" + "ELement not found in SVG") 
+if (clickEle == null){ return
     } else { //else change cursor, add clickevent
 clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
 clickEle.style.cursor="pointer";

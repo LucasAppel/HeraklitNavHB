@@ -60,7 +60,6 @@ export default {
         ffClick(){this.$store.dispatch('setMNW', ['ffAbstr', !this.ffAbstr]);},
 
         changeToActive(){
-          console.log(this.$store.getters.activeModule)
           if(!this.isActive){ 
          
             this.$store.dispatch('setActiveModule', 'network'); //Activate Module

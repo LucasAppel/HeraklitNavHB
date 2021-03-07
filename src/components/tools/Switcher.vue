@@ -21,7 +21,6 @@ export default {
      value: {
       
        get: function() { //Switch toggles when value is changed on direct svgclick
-         console.log(this.statuss);
         if (this.statuss == "retailerAbstr") {return !this.$store.getters.mnw.retailerAbstr;}
         if (this.statuss == "supplierAbstr") {return !this.$store.getters.mnw.supplierAbstr;}
         if (this.statuss == "ffAbstr") {return !this.$store.getters.mnw.ffAbstr;}
@@ -32,8 +31,7 @@ export default {
         else return false;
        },
        set: function() {
-         //console.log(this.statuss);
-         //this.$store.dispatch('setMNW', ['supplierAbstr', v]);
+          //setter not needed, but needs to be declared
          return
        }
      }

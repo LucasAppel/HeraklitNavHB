@@ -49,38 +49,45 @@ getScrollLeftMax(ele) {
         //Set offset
         var offsetx;
         var offsety;
+        if (containerArr.length != 0){
         containerArr.forEach(container =>{
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
         });
+        }
     //Zoom single Objects
+    if(svgObjs.length != 0){
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+z+", "+z+")";
           
     });
-
+    }
      
 
 //Set scroll
+if (containerArr.length != 0){
 containerArr.forEach(container=>{
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
  container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
 });
+    }
  },
 
  reZoom() { //If any HTML-Objects are updated, this method is called to determine scale
 //get HTML Elements
     var svgObjs =  document.getElementsByClassName("zoomObj");
  //Zoom single Objects
+ if (svgObjs.length != 0){
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+this.zvalue+", "+this.zvalue+")";
      
     });
+    }  
  },
 
  resetZoomer(){ //reset Zoom-Slider
     var zoomer = document.getElementById('zoomer');
-    zoomer.value = 1;
+    if (zoomer!= null) zoomer.value = 1;
     this.zvalue = 1;
     this.reZoom();
  }
@@ -89,9 +96,10 @@ containerArr.forEach(container=>{
     },
      mounted() { //Set initial position of Scroll
      var container = document.getElementById('svgContainer');
+     if(container != null){
      container.scrollLeft = this.getScrollLeftMax(container)/2;
      container.scrollTop = this.getScrollTopMax(container)/2;
-     
+     }
  }
     
 }
