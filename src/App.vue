@@ -6,23 +6,32 @@
         <h1>Heraklit-Navigator: Retailer</h1>
       </header>
     
-
       <nav>
-        <Zoomer ref="Zoomer" /><hr>
+        <div id="navTop">
+        <div class="SBBTN" @click="navBarClick"><img :src="require('./assets/menuClose.svg')" ></div>
+        <Zoomer ref="Zoomer" /><hr class="hrNAV">
+        </div>
+        
+        <div id="navMid">
         <ModuleNetworkNav @resetZoomer="resetZoomer" /><hr>
         <ModuleTreeNav @resetZoomer="resetZoomer" /><hr>
-        <WorkflowNav @resetZoomer="resetZoomer" />
+        <WorkflowNav @resetZoomer="resetZoomer" /> 
+          <br><br><br><br>
+        </div>
+      
       </nav>
+  
 
       <div id="content">
+        <div class="SBBTN" @click="navBarClick"><img :src="require('./assets/menuOpen.svg')"></div>
         <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
       </div>
    
-      <footer>
-        <h1 @click="signatureClick">{{Arrow}} Signatures {{Arrow}}</h1><br><br><br>
+      <footer @click="signatureClick">
+        <h1>{{Arrow}} Signatures {{Arrow}}</h1><br><br><br>
         <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-2.svg">
       </footer>
 
@@ -56,6 +65,7 @@ export default {
   },
   data: () => ({
     signatureOpen: false,
+    navBarOpen: true,
     arrowUp: "⬆",
     arrowDown: "⬇"
   
@@ -76,6 +86,30 @@ export default {
     resetZoomer(){
       this.$refs.Zoomer.resetZoomer();
     },
+    widthToFloat(px){
+            return parseFloat(getComputedStyle(px).width.split("p")[0]);
+          },
+    leftToFloat(px){
+      return parseFloat(getComputedStyle(px).left.split("p")[0]);
+    },
+    navBarClick(){
+   
+      var nav = document.getElementsByTagName("nav")[0];
+      //var sbbtn = document.getElementById('SBBTN');
+      var bodyWidth = this.widthToFloat(document.getElementsByTagName("body")[0]);
+
+            if (this.navBarOpen) {
+              nav.style.width = "0px";
+              
+              }
+            else {
+              if (bodyWidth < 1400.0) {nav.style.width = "23%";}
+              else if (bodyWidth > 2000.0) {nav.style.width = "10%";}
+              else {nav.style.width = "15%";}
+              }
+          
+            this.navBarOpen = !this.navBarOpen;
+            },
     signatureClick(){
       var footer = document.getElementsByTagName("footer")[0];
       if (this.signatureOpen) {
@@ -85,9 +119,12 @@ export default {
         footer.style.height = "75vh";
         }
       this.signatureOpen = !this.signatureOpen;
-      }
+      },
+  
   },
+
   mounted(){
+    
      //Disable Pinch-to-zoom
     document.addEventListener('touchmove', function (event) {
   if (event.scale !== 1) { event.preventDefault(); }
@@ -103,10 +140,12 @@ document.addEventListener('touchend', function (event) {
   lastTouchEnd = now;
 }, false);
 
+
   },
   updated(){
     Dragscroll.reset();
-    
+   
+ 
   }
 }
 
@@ -151,6 +190,7 @@ font-size: 11pt;
   text-align: center;
   color: rgb(14, 32, 17);
 }
+
 header {
   display: inline-block;
   height: 35px;
@@ -199,7 +239,7 @@ footer {
   bottom: 35px;
   top: 35px;
   z-index: 0;
-  float: left;
+ 
   
  user-select: none;
  position: absolute;
@@ -208,24 +248,23 @@ footer {
 }
 nav {
  background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
- background-blend-mode: soft-light;
+
  background-attachment: initial;
  background-size: auto;
-  width: 15vw;
+  width: 15%;
   z-index: 10;
-  float: right;
+  transition: width 0.6s;
 
   border-top: solid black 1px;
   border-left: solid black 1px;
   
 
-  padding-bottom: 10px;
+  white-space: nowrap;
   top: 35px;
   bottom: 35px;
   position: absolute;
   right: 0px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+ 
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
   backdrop-filter: blur(6px);
@@ -257,8 +296,7 @@ nav {
 
 nav {
   width: 23%;
-  bottom: 35px;
-  padding-bottom: 45px;
+  
   }
   #content h2 { /*Welcome Text*/
   font-size: 30pt;
@@ -269,9 +307,7 @@ nav {
  
 
  @media screen and (max-width:400px) {/* Smartphone */
- nav {
-  padding-bottom: 80px;
-  }
+
   #content h2 { /*Welcome Text*/
   font-size: 15pt;
   left: -12vw;
@@ -302,15 +338,61 @@ footer h1 {
   top: -4px;
 }
 
+#navTop {
+  z-index:50;
+  position: sticky;
+  top:0;
+
+  
+
+
+  overflow: hidden;
+ 
+}
+
+#navMid {
+   overflow-y: scroll;
+  overflow-x: hidden;
+height: calc(100% - 95px);
+padding-top:10px;
+
+}
 
 
 
+.SBBTN{
+  background-color: rgba(255, 255, 255, 0.198);
+  position: absolute;
+  width:32px;
+  height: 32px;
+  right: 8px;
+  top: 8px;
+  transform: scale(0.7);
+  z-index: 30;
+  border-radius: 12px;
+  padding: 2px;
+  border: 3px solid black;
 
-/*Chrome, Edge, and Safari */
+
+  transition: 0.6s;
+  backdrop-filter: blur(6px);
+}
+@supports not (backdrop-filter: none) {
+  #SBBTN {
+    background-color:rgba(169, 169, 169, 0.808);
+  }
+}
+
+.hrNAV {
+ margin:0;
+
+}
+
+/*Scrollbars: Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 10px;
   height: 10px;
-
+  
 }
 
 *::-webkit-scrollbar-track {
@@ -324,8 +406,8 @@ footer h1 {
 }
 
 .svgContainer::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 0px;
+  height: 0px;
   display: none;
 }
 
@@ -336,18 +418,9 @@ footer h1 {
 
 .svgContainer::-webkit-scrollbar-thumb {
   background-color: rgb(117, 169, 204);
-  border-radius: 20px;
+  border-radius: 0px;
   display: none;
 }
 
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 
 </style>

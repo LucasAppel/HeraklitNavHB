@@ -92,7 +92,7 @@ export default {
 text-align: left;
 padding-left: 0.8vw;
 padding-right: 0.8vw;
-
+overflow-x:hidden;
 
   }
   .ModuleList h4 { /* Style of Module title */

@@ -1,9 +1,9 @@
 <template>
 <div id="zoomerDiv">
     <span>
-    Zoom: <br class="zoombr">
+    Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue"
-      @input="zoom(zvalue)">  <br class="zoombr">
+      @input="zoom(zvalue)">  <br>
       {{Math.round(zvalue * 100)}}%
     </span>
     

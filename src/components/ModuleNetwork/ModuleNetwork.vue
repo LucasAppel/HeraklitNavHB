@@ -106,11 +106,13 @@ return {
  -webkit-user-select: none;
 
   z-index: 10;
- /*Firefox*/
- scrollbar-width: thin;
+ /*Firefox
+
  scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
-
-
+*/
+ scrollbar-width: none;
+ overflow: -moz-scrollbars-none;
+ -ms-overflow-style: none;
 }
 
 
@@ -142,7 +144,7 @@ padding-right: 20vw;
 
 @media screen and (min-width:2000px) { /* Super Wide Display */
 .zoomObj{
-  padding-right: 10vw;
+  padding-right: 10%;
 
 }
 }
@@ -154,8 +156,8 @@ padding-right: 20vw;
    min-width: 700px;
  max-width: 700px;
   margin: 15% auto 0 auto;
-  padding-right: 32vw;
-  padding-left: 3%;
+  padding-right: 21vw;
+  padding-left: 1%;
 
 
 }
