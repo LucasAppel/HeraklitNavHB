@@ -132,9 +132,9 @@ return {
   -o-user-drag: none;
    object-fit: cover;
  -webkit-user-select: none;
-
-padding-right: 20vw;
-
+padding-bottom: 2%;
+padding-right: 21vw;
+transition: padding 0.6s;
 }
 
 

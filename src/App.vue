@@ -93,19 +93,21 @@ export default {
       return parseFloat(getComputedStyle(px).left.split("p")[0]);
     },
     navBarClick(){
-   
+      var zoomObjs = document.getElementsByClassName('zoomObj');
       var nav = document.getElementsByTagName("nav")[0];
       //var sbbtn = document.getElementById('SBBTN');
       var bodyWidth = this.widthToFloat(document.getElementsByTagName("body")[0]);
 
             if (this.navBarOpen) {
               nav.style.width = "0px";
-              
+              zoomObjs.forEach(zoomObj => {
+                zoomObj.style.paddingRight = "9%";
+              })
               }
             else {
-              if (bodyWidth < 1400.0) {nav.style.width = "23%";}
-              else if (bodyWidth > 2000.0) {nav.style.width = "10%";}
-              else {nav.style.width = "15%";}
+              if (bodyWidth < 1400.0) {nav.style.width = "23%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) }
+              else if (bodyWidth > 2000.0) {nav.style.width = "10%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "5%";}) }
+              else {nav.style.width = "15%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) }
               }
           
             this.navBarOpen = !this.navBarOpen;
