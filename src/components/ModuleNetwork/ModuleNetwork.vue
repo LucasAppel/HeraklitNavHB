@@ -1,5 +1,5 @@
 <template>
-<div class ="dragscroll svgContainer">
+<div class ="dragscroll svgContainer" id="network">
 
 <div class="zoomObj">
 
@@ -126,12 +126,8 @@ return {
   transform-origin: 0% 0%;
   position: relative;
   cursor: grab;
-
-  -khtml-user-drag: none;
-  -moz-user-drag: none;
-  -o-user-drag: none;
-   object-fit: cover;
- -webkit-user-select: none;
+  object-fit: cover;
+ 
 padding-bottom: 2%;
 padding-right: 21vw;
 transition: padding 0.6s;

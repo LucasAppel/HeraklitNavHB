@@ -94,6 +94,7 @@ export default {
     },
     navBarClick(){
       var zoomObjs = document.getElementsByClassName('zoomObj');
+      var padRight = document.getElementsByClassName('padRight');
       var nav = document.getElementsByTagName("nav")[0];
       //var sbbtn = document.getElementById('SBBTN');
       var bodyWidth = this.widthToFloat(document.getElementsByTagName("body")[0]);
@@ -103,11 +104,25 @@ export default {
               zoomObjs.forEach(zoomObj => {
                 zoomObj.style.paddingRight = "9%";
               })
+              padRight.forEach(zoomObj => {
+                zoomObj.style.paddingRight = "0px";
+              })
               }
             else {
-              if (bodyWidth < 1400.0) {nav.style.width = "23%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) }
-              else if (bodyWidth > 2000.0) {nav.style.width = "10%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "5%";}) }
-              else {nav.style.width = "15%"; zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) }
+              if (bodyWidth < 1400.0) {
+                nav.style.width = "23%"; 
+                zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) 
+                padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
+                }
+              else if (bodyWidth > 2000.0) {
+                nav.style.width = "10%"; 
+                zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "5%";}) 
+                }
+              else {
+                nav.style.width = "15%"; 
+                zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";
+                padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
+                }) }
               }
           
             this.navBarOpen = !this.navBarOpen;
@@ -132,15 +147,7 @@ export default {
   if (event.scale !== 1) { event.preventDefault(); }
 }, { passive: false });
 
-//Disable doubletap-to-zoom
-var lastTouchEnd = 0;
-document.addEventListener('touchend', function (event) { 
-  var now = (new Date()).getTime();
-  if (now - lastTouchEnd <= 300) {
-    event.preventDefault();
-  }
-  lastTouchEnd = now;
-}, false);
+
 
 
   },
@@ -156,9 +163,14 @@ document.addEventListener('touchend', function (event) {
 
 <style>
 html {
-  
-  -webkit-user-drag: none;
-  -webkit-user-select: none;
+   -khtml-user-drag: none;
+   -moz-user-drag: none;
+   -o-user-drag: none;
+   
+   user-select: none;
+   -webkit-user-select: none;
+   -webkit-user-drag: none;
+ 
   position: absolute;
   overflow: hidden;
   -webkit-overflow: hidden;

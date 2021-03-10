@@ -42,17 +42,33 @@ return function() {
 
 
 mounted(){
+let $vm = this;
+
+  //Disable doubletap-to-zoom if not tapping on module
+var lastTouchEnd = 0;
+document.addEventListener('touchend', function (event) { 
+ 
+  var now = (new Date()).getTime();
+  if (now - lastTouchEnd <= 500) {
+    if(!$vm.clickIDS.includes(event.target.id)){
+    event.preventDefault(); }
+  }
+  lastTouchEnd = now;
+}, false);
+
 
 //add click functions when mounted
 //For each ID do
 for (let i=0; i<this.clickIDS.length; i++){
-var clickEle= document.getElementById(this.clickIDS[i]);
+var clickEle = document.getElementById(this.clickIDS[i]);
 if (clickEle == null){ return
     } else { //else change cursor, add clickevent
 clickEle.addEventListener('dblclick', this.clickEle(this.clickIDS[i]));
 clickEle.style.cursor="pointer";
     }
   }
+
+
 },
 updated(){ 
  

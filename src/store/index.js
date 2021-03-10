@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeModule: "none",
+    activeModule: "none", // tree || network || workflow
     moduleNetwork: {
       isActive: false,
       list: ["retailerAbstr", "customerAbstr", "supplierAbstr", "ffAbstr", "orderAbstr", "inventoryAbstr", "warehouseAbstr"],

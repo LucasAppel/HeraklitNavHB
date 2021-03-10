@@ -1,6 +1,6 @@
 <template>
    <div id="ffContainer">
-     <img :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713">
+     <img :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713"  class="padRight">
    </div>
 </template>
 
@@ -36,6 +36,7 @@ inlineSVG: rawSVG
   left: 964px;
   width: 190px;
   height: 215px;
+
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg713 {

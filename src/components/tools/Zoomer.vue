@@ -20,7 +20,7 @@ export default {
     },
     data: () => ({
         zvalue: 1,
-       
+        eventscale: 0
     }),
 
 
@@ -39,22 +39,37 @@ getScrollLeftMax(ele) {
   return (ref = ele.scrollLeftMax) != null
       ? ref
       : (ele.scrollWidth - ele.clientWidth);
+}, 
+
+getEventCoordinates(e){
+    var x = null;
+    var y = null;
+  if(/*e.type == 'touchstart' || */ e.type == 'touchmove' /* || e.type == 'touchend' || e.type == 'touchcancel' */){
+        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
+        x = touch.pageX;
+        y = touch.pageY;
+    } else if (e.type == 'wheel' || e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave') {
+        x = e.clientX;
+        y = e.clientY;
+    }
+    console.log("Touch/Mouse Coord (x/y): " + x.toString() + "/" + y.toString());
+    return (x, y);
 },
+
+
 //Zoom & Scroll
     zoom(z) {
         //get HTML Elements
         var svgObjs =  document.getElementsByClassName("zoomObj");
-       
-        var containerArr = document.getElementsByClassName('svgContainer');
+        var container = document.getElementById(this.$store.getters.activeModule);
         //Set offset
         var offsetx;
         var offsety;
-        if (containerArr.length != 0){
-        containerArr.forEach(container =>{
+       
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
-        });
-        }
+      
+        
     //Zoom single Objects
     if(svgObjs.length != 0){
     svgObjs.forEach(svgObj => {
@@ -64,13 +79,12 @@ getScrollLeftMax(ele) {
     }
      
 
-//Set scroll
-if (containerArr.length != 0){
-containerArr.forEach(container=>{
+//Set scrollposition
+
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
  container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
-});
-    }
+ console.log(container.id + " " + container.scrollLeft);
+
  },
 
  reZoom() { //If any HTML-Objects are updated, this method is called to determine scale
@@ -94,14 +108,47 @@ containerArr.forEach(container=>{
 
 
     },
-     mounted() { //Set initial position of Scroll
+     mounted() {
+    var $vm = this;
+
+    document.addEventListener('wheel', function (event){$vm.getEventCoordinates(event)})
+
+     //Set initial position of Scroll
      var container = document.getElementById('svgContainer');
      if(container != null){
      container.scrollLeft = this.getScrollLeftMax(container)/2;
      container.scrollTop = this.getScrollTopMax(container)/2;
      }
- }
+
+  //Disable Pinch-to-zoom, activate for svgContainer
     
+    document.getElementById('content').ontouchmove = function (event) {
+        if(event.touches.length > 1){ //more then one finger on screen
+            var scaling = 0.2; //How fast should it be scrolled
+                if (event.scale - $vm.eventscale > 0) if ($vm.zvalue < 5) $vm.zvalue += scaling; else $vm.zvalue = 5;
+                if (event.scale - $vm.eventscale < 0) if ($vm.zvalue > 1) $vm.zvalue -= scaling; else $vm.zvalue = 1;
+                $vm.eventscale = event.scale;
+        $vm.zoom($vm.zvalue);
+        $vm.reZoom();
+        if (event.scale !== 1) { 
+            event.preventDefault(); }
+        }
+        }
+    document.addEventListener('touchmove', function (event) {
+        if (event.scale !== 1) { 
+                    event.preventDefault(); }
+            });
+    //Add Scroll-to-Zoom functionality
+    document.getElementById('content').onwheel = function (event) {
+        if (event.deltaY < 0) if ($vm.zvalue < 5) $vm.zvalue += 0.4; else $vm.zvalue = 5;
+        if (event.deltaY > 0) if ($vm.zvalue > 1) $vm.zvalue -= 0.4; else $vm.zvalue = 1;
+        event.preventDefault();
+        $vm.zoom($vm.zvalue);
+        $vm.reZoom();
+    }
+    
+ }
+     
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div id="supplierContainer">
-    <img :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186">
+    <img :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186"  class="padRight">
   </div>
 </template>
 
@@ -42,6 +42,7 @@ inlineSVG: rawSVG
   left: 885px;
   width: 190px;
   height: 180px;
+
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg186 {
@@ -50,6 +51,11 @@ inlineSVG: rawSVG
   width: 120px;
   height: 130px;
   transform: scale(1, 1);
+}
+
+.padRight{
+  padding-right: 25vw;
+  transition: padding 0.6s;
 }
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
 <div>
 <div id="wfSidebar"><h4></h4></div>
-<div class ="dragscroll svgContainer" id="svgContainerWF">
+<div class ="dragscroll svgContainer" id="workflow">
 
 <div class="zoomObj">
        <img v-show="activeStr=='composed'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-12.svg')" class="MTIMG">
