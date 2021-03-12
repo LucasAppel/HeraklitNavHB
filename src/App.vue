@@ -15,7 +15,8 @@
         <div id="navMid">
         <ModuleNetworkNav @resetZoomer="resetZoomer" /><hr>
         <ModuleTreeNav @resetZoomer="resetZoomer" /><hr>
-        <WorkflowNav @resetZoomer="resetZoomer" /> 
+        <WorkflowNav @resetZoomer="resetZoomer" /><hr>
+        <ProofOfUseNav @resetZoomer="resetZoomer" />
           <br><br><br><br>
         </div>
       
@@ -28,6 +29,7 @@
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
+        <ProofOfUse v-show="activeModule=='proof'" @reZoom="reZoom" />
       </div>
    
       <footer @click="signatureClick">
@@ -49,8 +51,9 @@ import ModuleNetworkNav from '@/components/ModuleNetwork/ModuleNetworkNav.vue'
 import ModuleTree from '@/components/ModuleTree/ModuleTree.vue'
 import ModuleTreeNav from '@/components/ModuleTree/ModuleTreeNav.vue'
 import Workflow from './components/Workflow/Workflow.vue'
-import WorkflowNav from './components/Workflow/WorkflowNav.vue';
-
+import WorkflowNav from './components/Workflow/WorkflowNav.vue'
+import ProofOfUse from './components/ProofOfUse/ProofOfUse.vue'
+import ProofOfUseNav from './components/ProofOfUse/ProofOfUseNav.vue'
 
 export default {
   name: 'App',
@@ -62,6 +65,8 @@ export default {
     ModuleTreeNav,
     WorkflowNav,
     Workflow,
+    ProofOfUse,
+    ProofOfUseNav
   },
   data: () => ({
     signatureOpen: false,
