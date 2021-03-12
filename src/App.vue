@@ -5,10 +5,11 @@
       <header>
         <h1>Heraklit-Navigator: Retailer</h1>
       </header>
-    
+
+      <div @click="navBarClick"><img class="SBBTN" id="btn1" :src="menuClose"><img class="SBBTN" id="btn2" :src="menuOpen"></div>
+      
       <nav>
         <div id="navTop">
-        <div class="SBBTN" @click="navBarClick"><img :src="require('./assets/menuClose.svg')" ></div>
         <Zoomer ref="Zoomer" /><hr class="hrNAV">
         </div>
         
@@ -24,7 +25,6 @@
   
 
       <div id="content">
-        <div class="SBBTN" @click="navBarClick"><img :src="require('./assets/menuOpen.svg')"></div>
         <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
@@ -72,7 +72,9 @@ export default {
     signatureOpen: false,
     navBarOpen: true,
     arrowUp: "⬆",
-    arrowDown: "⬇"
+    arrowDown: "⬇",
+    menuClose: require('./assets/menuClose.svg'),
+    menuOpen: require('./assets/menuOpen.svg')
   
   }),
   computed: {
@@ -82,7 +84,8 @@ export default {
     },
     activeModule() {return this.$store.getters.activeModule},
     ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
-    ModuleTreeActive(){return this.$store.getters.mt.isActive}
+    ModuleTreeActive(){return this.$store.getters.mt.isActive},
+    menuButton(){if (this.navBarOpen) return this.menuClose; else return this.menuOpen}
   },
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
@@ -101,11 +104,13 @@ export default {
       var zoomObjs = document.getElementsByClassName('zoomObj');
       var padRight = document.getElementsByClassName('padRight');
       var nav = document.getElementsByTagName("nav")[0];
-      //var sbbtn = document.getElementById('SBBTN');
       var bodyWidth = this.widthToFloat(document.getElementsByTagName("body")[0]);
-
+      var menuBTN1 = document.getElementById('btn1');
+      var menuBTN2 = document.getElementById('btn2');
             if (this.navBarOpen) {
-              nav.style.width = "0px";
+              menuBTN1.style.opacity = "0%";
+              menuBTN2.style.opacity = "100%";
+              nav.style.right = "-25%";
               zoomObjs.forEach(zoomObj => {
                 zoomObj.style.paddingRight = "9%";
               })
@@ -114,17 +119,17 @@ export default {
               })
               }
             else {
+              menuBTN1.style.opacity = "100%";
+              menuBTN2.style.opacity = "0%";
+              nav.style.right = "0px"; 
               if (bodyWidth < 1400.0) {
-                nav.style.width = "23%"; 
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) 
                 padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
                 }
               else if (bodyWidth > 2000.0) {
-                nav.style.width = "10%"; 
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "5%";}) 
                 }
               else {
-                nav.style.width = "15%"; 
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";
                 padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
                 }) }
@@ -192,7 +197,7 @@ body {
  
   margin: 0;
   position: fixed;
-  overflow: auto;
+  overflow: hidden;
    -webkit-overflow: hidden;
    z-index: -5;
  /* background-color: rgb(0, 103, 129);*/
@@ -281,7 +286,7 @@ nav {
   width: 15%;
   z-index: 10;
   transition: width 0.6s;
-
+  transition: right 0.7s;
   border-top: solid black 1px;
   border-left: solid black 1px;
     overscroll-behavior-y: none;
@@ -389,26 +394,36 @@ padding-top:10px;
 
 
 .SBBTN{
-  background-color: rgba(255, 255, 255, 0.198);
+  background-color: rgba(255, 255, 255, 0.096);
   position: absolute;
   width:32px;
   height: 32px;
   right: 8px;
-  top: 8px;
+  top: 45px;
   transform: scale(0.7);
-  z-index: 30;
+  z-index: 300;
   border-radius: 12px;
   padding: 2px;
   border: 3px solid black;
 
 
-  transition: 0.6s;
+  transition: 1s;
   backdrop-filter: blur(6px);
 }
 @supports not (backdrop-filter: none) {
   #SBBTN {
     background-color:rgba(169, 169, 169, 0.808);
   }
+}
+
+#btn1{
+  opacity: 100%;
+  z-index:301;
+    transition: 0.7s;
+}
+#btn2{
+  opacity: 0%;
+    transition: 0.7s;
 }
 
 .hrNAV {
