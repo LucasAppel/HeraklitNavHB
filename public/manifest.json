@@ -1,0 +1,25 @@
+{
+    "name": "Heraklit-Navigator: Retailer",
+    "short_name": "HK: Retailer",
+    "lang": "en",
+    "icons": [
+        {
+            "src": "./H_69.png",
+            "sizes": "69x69",
+            "type": "image/png"
+        },
+        {
+            "src": "./H_144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        },
+        {
+            "src": "./H_192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "start_url": "./index.html",
+    "display": "fullscreen",
+    "orientation": "portrait"
+}

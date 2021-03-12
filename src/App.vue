@@ -175,24 +175,31 @@ html {
    user-select: none;
    -webkit-user-select: none;
    -webkit-user-drag: none;
- 
-  position: absolute;
+  overscroll-behavior-y: none;
+  -webkit-overscroll-behaviour-y: none;
+  -webkit-overflow-scrolling: auto;
+  position: fixed;
   overflow: hidden;
   -webkit-overflow: hidden;
+  height: 100vh;
 }
 body {
-   
+  overscroll-behavior-y: none;
+  -webkit-overscroll-behaviour-y: none;
+  -webkit-overflow-scrolling: auto;
    height: 100vh;
    width: 100vw;
+ 
   margin: 0;
-  overflow-x: hidden;
-  position: absolute;
-  overflow: hidden;
+  position: fixed;
+  overflow: auto;
    -webkit-overflow: hidden;
    z-index: -5;
  /* background-color: rgb(0, 103, 129);*/
  background-color: black;
+     
 }
+
 
 
 #app {
@@ -201,8 +208,9 @@ height: 100vh;
 width: 100vw;
 font-weight:500;
 font-size: 11pt;
-
-
+    overscroll-behavior-y: none;
+  -webkit-overscroll-behaviour-y: none;
+-webkit-overflow-scrolling: auto;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -214,7 +222,7 @@ header {
   display: inline-block;
   height: 35px;
   width: 100%;
-  background-color: rgba(19, 19, 19, 0.904);
+  background-color: rgb(0, 0, 0);
   position: absolute;
   top: 0px;
   left: 0px;
@@ -258,8 +266,9 @@ footer {
   bottom: 35px;
   top: 35px;
   z-index: 0;
- 
-  
+     overscroll-behavior-y: none;
+  -webkit-overscroll-behaviour-y: none;
+-webkit-overflow-scrolling: auto;
  user-select: none;
  position: absolute;
  overflow: hidden;
@@ -267,7 +276,6 @@ footer {
 }
 nav {
  background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
-
  background-attachment: initial;
  background-size: auto;
   width: 15%;
@@ -276,8 +284,9 @@ nav {
 
   border-top: solid black 1px;
   border-left: solid black 1px;
-  
-
+    overscroll-behavior-y: none;
+  -webkit-overscroll-behaviour-y: none;
+-webkit-overflow-scrolling: auto;
   white-space: nowrap;
   top: 35px;
   bottom: 35px;
