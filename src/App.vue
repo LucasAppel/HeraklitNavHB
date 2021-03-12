@@ -85,7 +85,6 @@ export default {
     activeModule() {return this.$store.getters.activeModule},
     ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
     ModuleTreeActive(){return this.$store.getters.mt.isActive},
-    menuButton(){if (this.navBarOpen) return this.menuClose; else return this.menuOpen}
   },
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
@@ -108,8 +107,8 @@ export default {
       var menuBTN1 = document.getElementById('btn1');
       var menuBTN2 = document.getElementById('btn2');
             if (this.navBarOpen) {
-              menuBTN1.style.opacity = "0%";
-              menuBTN2.style.opacity = "100%";
+              menuBTN1.style.opacity = "0";
+              menuBTN2.style.opacity = "1.0";
               nav.style.right = "-25%";
               zoomObjs.forEach(zoomObj => {
                 zoomObj.style.paddingRight = "9%";
@@ -119,8 +118,8 @@ export default {
               })
               }
             else {
-              menuBTN1.style.opacity = "100%";
-              menuBTN2.style.opacity = "0%";
+              menuBTN1.style.opacity = "1.0";
+              menuBTN2.style.opacity = "0";
               nav.style.right = "0px"; 
               if (bodyWidth < 1400.0) {
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) 
@@ -157,6 +156,7 @@ export default {
   if (event.scale !== 1) { event.preventDefault(); }
 }, { passive: false });
 
+  document.getElementById('btn1').style.opacity="1.0";
 
 
 
@@ -372,7 +372,7 @@ footer h1 {
 }
 
 #navTop {
-  z-index:50;
+  z-index:25;
   position: sticky;
   top:0;
 
@@ -401,12 +401,9 @@ padding-top:10px;
   right: 8px;
   top: 45px;
   transform: scale(0.7);
-  z-index: 300;
   border-radius: 12px;
   padding: 2px;
   border: 3px solid black;
-
-
   transition: 1s;
   backdrop-filter: blur(6px);
 }
@@ -417,12 +414,13 @@ padding-top:10px;
 }
 
 #btn1{
-  opacity: 100%;
-  z-index:301;
+
+  z-index:31;
     transition: 0.7s;
 }
 #btn2{
-  opacity: 0%;
+  opacity: 0.0;
+  z-index: 30;
     transition: 0.7s;
 }
 
