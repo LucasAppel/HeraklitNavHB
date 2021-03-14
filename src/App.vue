@@ -153,7 +153,7 @@ export default {
     
      //Disable Pinch-to-zoom
     document.addEventListener('touchmove', function (event) {
-  if (event.scale !== 1) { event.preventDefault(); }
+  if (event.touches.length == 2) { event.preventDefault(); }
 }, { passive: false });
 
   document.getElementById('btn1').style.opacity="1.0";

@@ -122,20 +122,27 @@ getEventCoordinates(e){
 
   //Disable Pinch-to-zoom, activate for svgContainer
     
-    document.getElementById('content').ontouchmove = function (event) {
-        if(event.touches.length > 1){ //more then one finger on screen
+   document.getElementById('content').ontouchmove = function (event) {
+        if(event.touches.length == 2){  //more then one finger on screen
+              event.preventDefault();
+            var distNow = Math.hypot(// Get the distance on move
+                    event.touches[0].pageX - event.touches[1].pageX,
+                    event.touches[0].pageY - event.touches[1].pageY);
+                    
+            var eventscale = distNow - $vm.dist; //calc difference of actual distance and previous distance, set to event.scale
+            $vm.dist = distNow; // set previous distance to actual distance 
+           
             var scaling = 0.2; //How fast should it be scrolled
-                if (event.scale - $vm.eventscale > 0) if ($vm.zvalue < 5) $vm.zvalue += scaling; else $vm.zvalue = 5;
-                if (event.scale - $vm.eventscale < 0) if ($vm.zvalue > 1) $vm.zvalue -= scaling; else $vm.zvalue = 1;
-                $vm.eventscale = event.scale;
+                if (eventscale > 0.01) if ($vm.zvalue < 5) $vm.zvalue += scaling; else $vm.zvalue = 5; //Zoom in
+                if (eventscale < 0.01) if ($vm.zvalue > 1) $vm.zvalue -= scaling; else $vm.zvalue = 1; // Zoom out
+
         $vm.zoom($vm.zvalue);
         $vm.reZoom();
-        if (event.scale !== 1) { 
-            event.preventDefault(); }
+
         }
         }
     document.addEventListener('touchmove', function (event) {
-        if (event.scale !== 1) { 
+        if (event.touches.length == 2) { 
                     event.preventDefault(); }
             });
     //Add Scroll-to-Zoom functionality
