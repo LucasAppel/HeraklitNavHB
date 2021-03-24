@@ -150,7 +150,6 @@ export default {
   },
 
   mounted(){
-    
      //Disable Pinch-to-zoom
     document.addEventListener('touchmove', function (event) {
   if (event.touches.length == 2) { event.preventDefault(); }

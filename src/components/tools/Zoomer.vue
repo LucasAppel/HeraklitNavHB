@@ -58,7 +58,7 @@ getEventCoordinates(e){
 
 
 //Zoom & Scroll
-    zoom(z) {
+    zoom(z, mobile = false, pinchCenter = undefined) {
         //get HTML Elements
         var svgObjs =  document.getElementsByClassName("zoomObj");
         var container = document.getElementById(this.$store.getters.activeModule);
@@ -66,11 +66,13 @@ getEventCoordinates(e){
         var offsetx;
         var offsety;
        
+    
         offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
         offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
       
         
     //Zoom single Objects
+    
     if(svgObjs.length != 0){
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+z+", "+z+")";
@@ -81,9 +83,16 @@ getEventCoordinates(e){
 
 //Set scrollposition
 
+if (!mobile){
  container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
  container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
- console.log(container.id + " " + container.scrollLeft);
+ console.log(container.id + " " + container.scrollLeft); 
+ console.log(pinchCenter);
+ } else {
+    container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
+    container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
+ }
+ 
 
  },
 
@@ -120,31 +129,42 @@ getEventCoordinates(e){
      container.scrollTop = this.getScrollTopMax(container)/2;
      }
 
-  //Disable Pinch-to-zoom, activate for svgContainer
-    
-   document.getElementById('content').ontouchmove = function (event) {
+
+    //Disable Pinch-to-zoom, activate for svgContainer
+    document.getElementById('content').ontouchstart = function (event) {
+        if(event.touches.length == 2){
+            $vm.startDist = Math.round(Math.hypot(// Get the distance on move
+                        Math.abs(event.touches[0].pageX - event.touches[1].pageX),
+                        Math.abs(event.touches[0].pageY - event.touches[1].pageY)));
+            $vm.startScale = $vm.zvalue;
+            $vm.startCoord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
+        }
+     }
+    document.getElementById('content').ontouchmove = function (event) {
         if(event.touches.length == 2){  //more then one finger on screen
-              event.preventDefault();
-            var distNow = Math.hypot(// Get the distance on move
-                    event.touches[0].pageX - event.touches[1].pageX,
-                    event.touches[0].pageY - event.touches[1].pageY);
+            event.preventDefault();
+              
+            var distNow = Math.round(Math.hypot(// Get the distance on move
+                    Math.abs(event.touches[0].pageX - event.touches[1].pageX),
+                    Math.abs(event.touches[0].pageY - event.touches[1].pageY)));
                     
-            var eventscale = distNow - $vm.dist; //calc difference of actual distance and previous distance, set to event.scale
-            $vm.dist = distNow; // set previous distance to actual distance 
+            var eventscale = (distNow - $vm.startDist) / $vm.startDist * 2; //calc difference of actual distance and previous distance, set to event.scale
+            // var coord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
            
-            var scaling = 0.2; //How fast should it be scrolled
-                if (eventscale > 0.01) if ($vm.zvalue < 5) $vm.zvalue += scaling; else $vm.zvalue = 5; //Zoom in
-                if (eventscale < 0.01) if ($vm.zvalue > 1) $vm.zvalue -= scaling; else $vm.zvalue = 1; // Zoom out
+            
+            $vm.zvalue = Math.min(5, Math.max(1, Math.round(($vm.startScale + eventscale*1.5)*100)/100));
 
-        $vm.zoom($vm.zvalue);
-        $vm.reZoom();
+            $vm.zoom($vm.zvalue);
+
+/*
+      var container = document.getElementById($vm.$store.getters.activeModule);
+      container.scrollTop = container.scrollTop - (coord.y - $vm.startCoord.y);
+      container.scrollLeft = container.scrollLeft - (coord.x - $vm.startCoord.x);
+    $vm.startCoord = coord; */
 
         }
         }
-    document.addEventListener('touchmove', function (event) {
-        if (event.touches.length == 2) { 
-                    event.preventDefault(); }
-            });
+    
     //Add Scroll-to-Zoom functionality
     document.getElementById('content').onwheel = function (event) {
         if (event.deltaY < 0) if ($vm.zvalue < 5) $vm.zvalue += 0.4; else $vm.zvalue = 5;
