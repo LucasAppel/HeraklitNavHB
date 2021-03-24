@@ -1,6 +1,7 @@
 <template>
 <div id="zoomerDiv">
     <span>
+       <br> {{debugText}}<br><br>
     Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue"
       @input="zoom(zvalue)">  <br>
@@ -20,7 +21,8 @@ export default {
     },
     data: () => ({
         zvalue: 1,
-        eventscale: 0
+        eventscale: 0,
+        debugText: ""
     }),
 
 
@@ -65,33 +67,45 @@ getEventCoordinates(e){
         //Set offset
         var offsetx;
         var offsety;
+        var scrollTopMax = this.getScrollTopMax(container);
+        var scrollLeftMax = this.getScrollLeftMax(container);
        
-    
-        offsetx = (this.getScrollTopMax(container) != 0 && this.getScrollTopMax(container) != -1 ) ? (container.scrollTop / (this.getScrollTopMax(container)/2)) : 1;
-        offsety = (this.getScrollLeftMax(container) != 0 && this.getScrollLeftMax(container) != -1) ? (container.scrollLeft / (this.getScrollLeftMax(container)/2)) : 1;
-      
+        if (!mobile) {
+            offsetx = (scrollTopMax != 0 && scrollTopMax != -1 ) ? (container.scrollTop / (scrollTopMax/2)) : 1;
+            offsety = (scrollLeftMax != 0 && scrollLeftMax != -1) ? (container.scrollLeft / (scrollLeftMax/2)) : 1;
+        } else {
+           offsetx = (scrollTopMax != 0 && scrollTopMax != -1 ) ? (container.scrollTop / (scrollTopMax/2)) : 1;
+            offsety = (scrollLeftMax != 0 && scrollLeftMax != -1) ? (container.scrollLeft / (scrollLeftMax/2)) : 1;
+        this.debugText = "PinchCenter.y: " + pinchCenter.y + "\n ScrolltopMax: " + scrollTopMax + "\n scrollTop: " + container.scrollTop;
+        }
         
     //Zoom single Objects
-    
+ 
     if(svgObjs.length != 0){
     svgObjs.forEach(svgObj => {
          svgObj.style.transform="scale("+z+", "+z+")";
           
     });
     }
-     
 
-//Set scrollposition
 
-if (!mobile){
- container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
- container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
- console.log(container.id + " " + container.scrollLeft); 
- console.log(pinchCenter);
- } else {
-    container.scrollTop = (z > 1) ? this.getScrollTopMax(container)/2 * offsetx : this.getScrollTopMax(container)/2;
-    container.scrollLeft = (z > 1) ? this.getScrollLeftMax(container)/2 * offsety : this.getScrollLeftMax(container)/2;
- }
+    
+
+
+    //Set scrollposition
+    scrollTopMax = this.getScrollTopMax(container);
+    scrollLeftMax = this.getScrollLeftMax(container);
+
+
+    if (!mobile){
+        container.scrollTop = (z > 1) ? Math.min(scrollTopMax/2 * offsetx, scrollTopMax) : scrollTopMax/2;
+        container.scrollLeft = (z > 1) ? Math.min(scrollLeftMax/2 * offsety, scrollLeftMax) : scrollLeftMax/2;
+        console.log(container.id + " " + container.scrollLeft); 
+        console.log(pinchCenter);
+    } else {
+        container.scrollTop = (z > 1) ? Math.min(scrollTopMax/2 * offsetx, scrollTopMax) : scrollTopMax/2;
+        container.scrollLeft = (z > 1) ? Math.min(scrollLeftMax/2 * offsety, scrollLeftMax) : scrollLeftMax/2;
+    }
  
 
  },
@@ -149,14 +163,14 @@ if (!mobile){
                     Math.abs(event.touches[0].pageY - event.touches[1].pageY)));
                     
             var eventscale = (distNow - $vm.startDist) / $vm.startDist * 2; //calc difference of actual distance and previous distance, set to event.scale
-            // var coord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
+            //var coord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
            
-            
+            // Set zvalue to startscale + eventscale
             $vm.zvalue = Math.min(5, Math.max(1, Math.round(($vm.startScale + eventscale*1.5)*100)/100));
 
-            $vm.zoom($vm.zvalue);
+            $vm.zoom($vm.zvalue, true, $vm.startCoord);
 
-/*
+/* THIS CAN MOVE PIC WITH TWO FINGERS; BUT IS GLITCHY
       var container = document.getElementById($vm.$store.getters.activeModule);
       container.scrollTop = container.scrollTop - (coord.y - $vm.startCoord.y);
       container.scrollLeft = container.scrollLeft - (coord.x - $vm.startCoord.x);
@@ -178,7 +192,6 @@ if (!mobile){
      
 }
 </script>
-
 <style>
 #zoomer {
     width: 100px;
