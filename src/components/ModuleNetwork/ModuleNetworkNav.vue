@@ -102,6 +102,7 @@ overflow-x:hidden;
     margin-top: 0px;
     padding-left: 3px;
     cursor: pointer;
+    -webkit-user-drag: none;
   }
 
 

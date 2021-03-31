@@ -3,6 +3,7 @@
     <h4 @click="changeToActive">{{Arrow}} Proof Of Use</h4>
     <transition name="slide">
     <div v-if=isActive class="Sublist">
+        <strong>Customers</strong><br><br>
         <strong>Management</strong>
             <ul><li><div>Retailer</div></li></ul>
         <strong>Inventory Managerment</strong>
@@ -10,7 +11,7 @@
         <strong>Warehouse</strong>
             <ul><li><div>Retailer</div></li></ul>
         <strong>Supplier</strong><br><br>
-        <strong>Customers</strong>
+        <strong>Freight Forwarders</strong>
     
       </div>
     </transition>

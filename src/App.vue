@@ -162,7 +162,7 @@ export default {
   },
   updated(){
     Dragscroll.reset();
-   
+    document.getElementById('zoomer').disabled = this.$store.getters.activeModule == 'none';
  
   }
 }
@@ -185,13 +185,13 @@ html {
   position: fixed;
   overflow: hidden;
   -webkit-overflow: hidden;
-  height: 100vh;
+  height: 100%;
 }
 body {
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
   -webkit-overflow-scrolling: auto;
-   height: 100vh;
+   height: 100%;
    width: 100vw;
  
   margin: 0;
@@ -387,11 +387,13 @@ footer h1 {
   overflow-x: hidden;
 height: calc(100% - 95px);
 padding-top:10px;
+z-index:50;
+-webkit-user-drag: none;
 
 }
 
 
-
+/*SidebarButton for hiding Sidebar*/
 .SBBTN{
   background-color: rgba(255, 255, 255, 0.096);
   position: absolute;
@@ -426,6 +428,11 @@ padding-top:10px;
 .hrNAV {
  margin:0;
 
+}
+
+#signatureID {
+  width: 95vw;
+  height: 55vh;
 }
 
 /*Scrollbars: Chrome, Edge, and Safari */
