@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
 import Dragscroll from 'dragscroll'
 import store from './store'
 
@@ -18,7 +17,6 @@ var webpackConfig = {
     ]}
 
 new Vue({
-    router,
     store,
     
     

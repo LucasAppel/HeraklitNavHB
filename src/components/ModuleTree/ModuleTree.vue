@@ -2,13 +2,13 @@
 <div class ="dragscroll svgContainer" id="tree">
 
 <div class="zoomObj">
-       <img v-show="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG">
-       <img v-show="activeStr=='customers'" :src="require('@/assets/ModuleTree/customerMT.png')" class="MTIMG">
-       <img v-show="activeStr=='supplier'" :src="require('@/assets/ModuleTree/supplierMT.png')" class="MTIMG">
-       <img v-show="activeStr=='ff'" :src="require('@/assets/ModuleTree/ffMT.png')" class="MTIMG">
-       <img v-show="activeStr=='inventory'" :src="require('@/assets/ModuleTree/inventoryMT.png')" class="MTIMG">
-       <img v-show="activeStr=='warehouse'" :src="require('@/assets/ModuleTree/warehouseMT.png')" class="MTIMG">
-       <img v-show="activeStr=='order'" :src="require('@/assets/ModuleTree/orderMT.png')" class="MTIMG">
+       <img v-if="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG">
+       <img v-if="activeStr=='customers'" :src="require('@/assets/ModuleTree/customerMT.png')" class="MTIMG">
+       <img v-if="activeStr=='supplier'" :src="require('@/assets/ModuleTree/supplierMT.png')" class="MTIMG">
+       <img v-if="activeStr=='ff'" :src="require('@/assets/ModuleTree/ffMT.png')" class="MTIMG">
+       <img v-if="activeStr=='inventory'" :src="require('@/assets/ModuleTree/inventoryMT.png')" class="MTIMG">
+       <img v-if="activeStr=='warehouse'" :src="require('@/assets/ModuleTree/warehouseMT.png')" class="MTIMG">
+       <img v-if="activeStr=='order'" :src="require('@/assets/ModuleTree/orderMT.png')" class="MTIMG">
   </div>
 </div>
 </template>

@@ -25,11 +25,11 @@
   
 
       <div id="content">
-        <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
-        <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
-        <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
+        <h2 v-if="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
+        <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
+        <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
-        <ProofOfUse v-show="activeModule=='proof'" @reZoom="reZoom" />
+        <ProofOfUse v-if="activeModule=='proof'" @reZoom="reZoom" />
       </div>
    
       <footer @click="signatureClick">
