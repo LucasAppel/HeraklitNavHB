@@ -109,7 +109,8 @@ export default {
             if (this.navBarOpen) {
               menuBTN1.style.opacity = "0";
               menuBTN2.style.opacity = "1.0";
-              nav.style.right = "-25%";
+              nav.style.right = "-100%";
+                nav.style.transition = "right 1.5s"
               zoomObjs.forEach(zoomObj => {
                 zoomObj.style.paddingRight = "9%";
               })
@@ -120,7 +121,8 @@ export default {
             else {
               menuBTN1.style.opacity = "1.0";
               menuBTN2.style.opacity = "0";
-              nav.style.right = "0px"; 
+              nav.style.right = "0px";
+              nav.style.transition = "right 0.5s"
               if (bodyWidth < 1400.0) {
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";}) 
                 padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
@@ -284,8 +286,8 @@ nav {
  background-size: auto;
   width: 15%;
   z-index: 10;
-  transition: width 0.6s;
-  transition: right 0.7s;
+
+  transition: right 1.5s;
   border-top: solid black 1px;
   border-left: solid black 1px;
     overscroll-behavior-y: none;
@@ -339,10 +341,15 @@ nav {
  
 
  @media screen and (max-width:400px) {/* Smartphone */
+nav {
+  width: 100%;
+  
+  }
+
 
   #content h2 { /*Welcome Text*/
   font-size: 15pt;
-  left: -12vw;
+  left: 0vw;
   top: 15vh;
 }
 }
@@ -405,7 +412,7 @@ z-index:50;
   border-radius: 12px;
   padding: 2px;
   border: 3px solid black;
-  transition: 1s;
+  transition: 3s;
   backdrop-filter: blur(6px);
 }
 @supports not (backdrop-filter: none) {
