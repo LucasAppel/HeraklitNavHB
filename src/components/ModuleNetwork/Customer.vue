@@ -1,6 +1,6 @@
 <template>
     <div id="customerContainer" >
-    <img @dblclick="customerClick" :src="require('@/assets/ModuleTree/customerMT.png')" id="svg1370">
+    <img v-hammer:doubletap="customerClick" :src="require('@/assets/ModuleNetwork/System_Kunden_MN.png')" id="svg1370">
    </div>
 </template>
 
@@ -31,25 +31,24 @@ export default {
 #svg1370 {
   pointer-events: all;
   cursor: pointer;
- z-index:5;
+ z-index:25;
  background-color: white;
   padding-top: 0px;
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -310px;
-  left: -20px;
-  width: 228px;
-  height: 220px;
-  transform: scale(1, 1.9);
+  top: -440px;
+  left: -113px;
+  width: 321px;
+  height: 480px;
+  
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg1370 {
-  top: -275px;
-  left: 0px;
-  width: 137px;
-  height: 280px;
-  transform: scale(1, 1);
+  top: -290px;
+  left: -70px;
+  width: 208px;
+  height: 340px;
 }
 
 }

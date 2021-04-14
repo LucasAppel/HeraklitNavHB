@@ -1,6 +1,6 @@
 <template>
     <div id="inventoryContainer" >
-    <img @dblclick="inventoryClick" :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
+    <img v-hammer:doubletap="inventoryClick" :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
    </div>
 </template>
 

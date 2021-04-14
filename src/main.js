@@ -3,7 +3,7 @@ import App from './App.vue'
 import Dragscroll from 'dragscroll'
 import store from './store'
 import './registerServiceWorker'
-
+import {VueHammer} from 'vue2-hammer'
 
 
 
@@ -16,9 +16,14 @@ var webpackConfig = {
         new CaseSensitivePathsPlugin()
         // other plugins ...
     ]}
-
+    VueHammer.customEvents = {
+        doubletap: { type: 'tap', event: 'doubletap', taps: 2 },
+        singletap: { type: 'tap', event: 'singletap', requireFailure: ['doubletap'] }
+      };
+Vue.use(VueHammer)
 new Vue({
     store,
+
     
     
   
@@ -28,6 +33,7 @@ new Vue({
 
 Vue.use(webpackConfig)
 Vue.use(Dragscroll)
+
 
 
 

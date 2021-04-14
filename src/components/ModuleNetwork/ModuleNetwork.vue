@@ -128,8 +128,9 @@ return {
   cursor: grab;
   object-fit: cover;
  
-  padding-bottom: 3%;
+  padding-bottom: 10%;
   padding-right: 21vw;
+  padding-left: 5%;
   transition: padding 0.6s;
 }
 
@@ -151,9 +152,10 @@ return {
 .zoomObj{
    min-width: 700px;
  max-width: 700px;
-  margin: 15% auto 0 auto;
+  margin:10% auto 0 auto;
   padding-right: 21vw;
-  padding-left: 1%;
+
+  
 
 
 }

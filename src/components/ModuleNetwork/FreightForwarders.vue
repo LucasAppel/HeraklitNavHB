@@ -1,18 +1,20 @@
 <template>
    <div id="ffContainer">
-     <img @dblclick="ffClick" :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713"  class="padRight">
+     <img v-hammer:doubletap="ffClick" :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713"  class="padRight">
    </div>
 </template>
 
 
 <script>
+
 export default {
     name: 'FreightForwarders',
+
      data: () => ({
   }),
   methods: {
     ffClick(){this.$emit('ffClick')}
-  },
+  }
 
 
 }

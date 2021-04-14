@@ -1,6 +1,6 @@
 <template>
     <div id="orderContainer" >
-    <img @dblclick="orderClick" :src="require('@/assets/ModuleTree/orderMT.png')" id="svg1515">
+    <img v-hammer:doubletap="orderClick" :src="require('@/assets/ModuleNetwork/System_Auftragsverwaltung_MN.png')" id="svg1515">
    </div>
 </template>
 
@@ -34,25 +34,26 @@ export default {
 #svg1515 {
 pointer-events: all;
 cursor: pointer;
- z-index:2;
+ z-index:20;
  background-color: white;
   padding-top: 0px;
   padding-left: 0px;
   object-fit:fill;
  position: absolute;
-  top: -335px;
-  left: 170px;
-  width: 250px;
+  top: -340px;
+  left: 172px;
+  width: 340px;
   height: 140px;
   transform: scale(1, 2.4);
 }
 
 @media screen and (max-width:1400px) {/* Mobile */
 #svg1515 {
-  top: -290px;
+
+  top: -220px;
   left: 114px;
-  width: 170px;
-  height: 220px;
+  width: 230px;
+  height: 85px;
   
 }
 }
