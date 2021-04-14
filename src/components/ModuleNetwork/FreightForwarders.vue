@@ -1,18 +1,18 @@
 <template>
    <div id="ffContainer">
-     <img :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713"  class="padRight">
+     <img @dblclick="ffClick" :src="require('@/assets/ModuleTree/ffMT.png')" id="svg713"  class="padRight">
    </div>
 </template>
 
 
 <script>
-import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-11.svg'
-
 export default {
     name: 'FreightForwarders',
      data: () => ({
-inlineSVG: rawSVG
   }),
+  methods: {
+    ffClick(){this.$emit('ffClick')}
+  },
 
 
 }
@@ -25,7 +25,8 @@ inlineSVG: rawSVG
 
 }
 #svg713 {
- pointer-events: none;
+ pointer-events: all;
+ cursor: pointer;
  z-index:1;
  background-color: white;
   padding-top: 0px;

@@ -1,19 +1,18 @@
 <template>
     <div id="inventoryContainer" >
-    <img :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
+    <img @dblclick="inventoryClick" :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
    </div>
 </template>
 
 
 <script>
-import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-7.svg'
-
 export default {
     name: 'InventoryManagement',
      data: () => ({
-inlineSVG: rawSVG
   }),
-
+  methods: {
+    inventoryClick(){this.$emit('inventoryClick')}
+  },
   mounted(){
       
   }
@@ -29,7 +28,8 @@ inlineSVG: rawSVG
 }
 
 #imginvent {
-  pointer-events: none;
+  pointer-events: all;
+  cursor: pointer;
  z-index:2;
 
   padding-top: 0px;

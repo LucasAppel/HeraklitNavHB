@@ -4,9 +4,9 @@
     <transition name="slide">
     <div v-if=isActive class="Sublist">
     <ul>
-        <li><div><b v-if="activeStr=='retailer'">Retailer</b><span v-else class="clickable" @click="retailerClick">Retailer</span></div>
+        <li><div>Retailer</div>
          <transition name="slide">
-            <ul v-if="!retailerAbstr">
+            <ul>
                 <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="menuClick('order')">Order Management</span></div></li>
                 <li><div><b v-if="activeStr=='inventory'">Inventory Management</b><span v-else class="clickable" @click="menuClick('inventory')">Inventory Management</span></div></li>
                 <li><div><b v-if="activeStr=='warehouse'">Warehouse</b><span v-else class="clickable" @click="menuClick('warehouse')">Warehouse</span></div></li>

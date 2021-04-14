@@ -2,20 +2,19 @@
 <div class ="dragscroll svgContainer" id="tree">
 
 <div class="zoomObj">
-       <img v-if="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG">
-       <img v-if="activeStr=='customers'" :src="require('@/assets/ModuleTree/customerMT.png')" class="MTIMG">
-       <img v-if="activeStr=='supplier'" :src="require('@/assets/ModuleTree/supplierMT.png')" class="MTIMG">
-       <img v-if="activeStr=='ff'" :src="require('@/assets/ModuleTree/ffMT.png')" class="MTIMG">
-       <img v-if="activeStr=='inventory'" :src="require('@/assets/ModuleTree/inventoryMT.png')" class="MTIMG">
-       <img v-if="activeStr=='warehouse'" :src="require('@/assets/ModuleTree/warehouseMT.png')" class="MTIMG">
-       <img v-if="activeStr=='order'" :src="require('@/assets/ModuleTree/orderMT.png')" class="MTIMG">
+       <!-- <img v-show="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG"> -->
+       <img v-show="activeStr=='customers'" :src="require('@/assets/figures/System_Kunden.png')" class="MTIMG">
+       <img v-show="activeStr=='supplier'" :src="require('@/assets/figures/System_Lieferant.png')" class="MTIMG">
+       <img v-show="activeStr=='ff'" :src="require('@/assets/figures/System_Speditionen.png')" class="MTIMG">
+       <img v-show="activeStr=='inventory'" :src="require('@/assets/figures/System_Bestandsverwaltung.png')" class="MTIMG">
+       <img v-show="activeStr=='warehouse'" :src="require('@/assets/figures/System_Lager.png')" class="MTIMG">
+       <img v-show="activeStr=='order'" :src="require('@/assets/figures/System_Auftragsverwaltung.png')" class="MTIMG">
   </div>
 </div>
 </template>
 
 <script>
 
-import retailer from "@/assets/ModuleTree/retailerMT.png"
 
 export default {
   
@@ -33,7 +32,6 @@ export default {
   },
   data: function () {
     return {
-        retailer: retailer
     }
   },
   mounted() {
@@ -55,10 +53,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.MTIMG {
-  max-width: 100%;
-  height: 100%;
-}
+
 
 
 </style>
@@ -68,7 +63,7 @@ export default {
 .zoomObj {
  min-width:60%;
  max-width: 60%;
- height: 90%;
+ height: 80%;
   margin: 2% auto 0 auto;
   left:0;
   z-index: 0;
@@ -80,6 +75,7 @@ export default {
   -moz-user-drag: none;
   -o-user-drag: none;
    object-fit: cover;
+   user-select: none;
  -webkit-user-select: none;
 }
 

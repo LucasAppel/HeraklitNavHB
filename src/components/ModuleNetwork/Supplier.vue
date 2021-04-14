@@ -1,20 +1,19 @@
 <template>
   <div id="supplierContainer">
-    <img :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186"  class="padRight">
+    <img @dblclick="supplierClick" :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186"  class="padRight">
   </div>
 </template>
 
 
 <script>
-import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg'
-
 
 export default {
     name: 'Supplier',
      data: () => ({
-inlineSVG: rawSVG
-
   }),
+    methods: {
+      supplierClick(){this.$emit('supplierClick')}
+  },
    mounted(){
  
   }
@@ -31,7 +30,8 @@ inlineSVG: rawSVG
 }
 
 #svg186 {
-  pointer-events: none;
+  pointer-events: all;
+  cursor: pointer;
  z-index:5;
  background-color: white;
   padding-top: 0px;

@@ -2,12 +2,12 @@
 <div class="ModuleList">
     <h4 @click="changeToActive">{{Arrow}} Module Network</h4>
     <transition name="slide">
-    <div v-if=isActive class="Sublist">
+    <div v-show=isActive class="Sublist">
     <ul>
         <li><div>Customers <br><Switcher status="customerAbstr" @checked="customerClick" /></div></li>
         <li><div>Retailer <br><Switcher status="retailerAbstr" @checked="retailerClick" /></div>
          <transition name="slide">
-            <ul v-if="!retailerAbstr">
+            <ul v-show="!retailerAbstr">
                 <li><div>Order Management <br><Switcher status="orderAbstr" @checked="orderClick" /></div></li>
                 <li><div>Inventory Management <br><Switcher status="inventoryAbstr" @checked="inventoryClick" /></div></li>
                 <li><div>Warehouse <br><Switcher status="warehouseAbstr" @checked="warehouseClick" /></div></li>
@@ -102,7 +102,13 @@ overflow-x:hidden;
     margin-top: 0px;
     padding-left: 3px;
     cursor: pointer;
-    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    user-select: none;
+   -webkit-user-select: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+       -o-user-drag: none;
+      -webkit-user-drag: none;
   }
 
 

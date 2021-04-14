@@ -1,6 +1,6 @@
 <template>
     <div id="orderContainer" >
-    <img :src="require('@/assets/ModuleTree/orderMT.png')" id="svg1515">
+    <img @dblclick="orderClick" :src="require('@/assets/ModuleTree/orderMT.png')" id="svg1515">
    </div>
 </template>
 
@@ -11,8 +11,11 @@ import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-
 export default {
     name: 'OrderManagement',
      data: () => ({
-inlineSVG: rawSVG
+    inlineSVG: rawSVG
   }),
+  methods:{
+    orderClick(){this.$emit('orderClick');}
+  },
 
   mounted(){
       
@@ -29,7 +32,8 @@ inlineSVG: rawSVG
 }
 
 #svg1515 {
-  pointer-events: none;
+pointer-events: all;
+cursor: pointer;
  z-index:2;
  background-color: white;
   padding-top: 0px;
@@ -49,7 +53,7 @@ inlineSVG: rawSVG
   left: 114px;
   width: 170px;
   height: 220px;
-  transform: scale(1, 1);
+  
 }
 }
 </style>

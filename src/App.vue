@@ -1,12 +1,11 @@
 <template>
   <div id="app">
 
-    
       <header>
         <h1>Heraklit-Navigator: Retailer</h1>
       </header>
 
-      <div @click="navBarClick"><img class="SBBTN" id="btn1" :src="menuClose"><img class="SBBTN" id="btn2" :src="menuOpen"></div>
+      <div @click="navButtonClick"><img class="SBBTN" id="btn1" :src="menuClose"><img class="SBBTN" id="btn2" :src="menuOpen"></div>
       
       <nav>
         <div id="navTop">
@@ -25,11 +24,11 @@
   
 
       <div id="content">
-        <h2 v-if="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
-        <ModuleNetwork v-if="activeModule=='network'" @reZoom="reZoom" />
-        <ModuleTree v-if="activeModule=='tree'" @reZoom="reZoom"/>
+        <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
+        <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
+        <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
-        <ProofOfUse v-if="activeModule=='proof'" @reZoom="reZoom" />
+        <ProofOfUse v-show="activeModule=='proof'" @reZoom="reZoom" />
       </div>
    
       <footer @click="signatureClick">
@@ -37,10 +36,7 @@
         <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-2.svg">
       </footer>
 
-
   </div>
-
-
 </template>
 
 <script>
@@ -90,7 +86,7 @@ export default {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
       this.$refs.Zoomer.reZoom();
     },
-    resetZoomer(){
+    resetZoomer(){ //Reset values to 100%
       this.$refs.Zoomer.resetZoomer();
     },
     widthToFloat(px){
@@ -99,7 +95,7 @@ export default {
     leftToFloat(px){
       return parseFloat(getComputedStyle(px).left.split("p")[0]);
     },
-    navBarClick(){
+    navButtonClick(){
       var zoomObjs = document.getElementsByClassName('zoomObj');
       var padRight = document.getElementsByClassName('padRight');
       var nav = document.getElementsByTagName("nav")[0];
@@ -110,7 +106,10 @@ export default {
               menuBTN1.style.opacity = "0";
               menuBTN2.style.opacity = "1.0";
               nav.style.right = "-100%";
-                nav.style.transition = "right 1.5s"
+              nav.style.transition = "right 1.5s"
+              if (bodyWidth < 400.0) {
+                 nav.style.transition = "right 0.5s"
+              }
               zoomObjs.forEach(zoomObj => {
                 zoomObj.style.paddingRight = "9%";
               })
@@ -152,7 +151,7 @@ export default {
   },
 
   mounted(){
-     //Disable Pinch-to-zoom
+     //Disable Pinch-to-zoom on whole Website
     document.addEventListener('touchmove', function (event) {
   if (event.touches.length == 2) { event.preventDefault(); }
 }, { passive: false });
@@ -177,10 +176,10 @@ html {
    -khtml-user-drag: none;
    -moz-user-drag: none;
    -o-user-drag: none;
-   
+      -webkit-user-drag: none;
    user-select: none;
    -webkit-user-select: none;
-   -webkit-user-drag: none;
+  -webkit-touch-callout: none;
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
   -webkit-overflow-scrolling: auto;
@@ -188,6 +187,7 @@ html {
   overflow: hidden;
   -webkit-overflow: hidden;
   height: 100%;
+  
 }
 body {
   overscroll-behavior-y: none;
@@ -203,7 +203,11 @@ body {
    z-index: -5;
  /* background-color: rgb(0, 103, 129);*/
  background-color: black;
-     
+       -khtml-user-drag: none;
+   -moz-user-drag: none;
+   -o-user-drag: none;
+      -webkit-user-drag: none; 
+      -webkit-touch-callout: none;
 }
 
 
@@ -269,7 +273,7 @@ footer {
 #content {
   width: 100vw;
   background-image: linear-gradient(to bottom right, rgb(72, 180, 113) , rgb(105, 161, 163), rgba(49, 86, 138, 0.897));
-  bottom: 35px;
+  bottom: 0px;
   top: 35px;
   z-index: 0;
      overscroll-behavior-y: none;
@@ -290,12 +294,12 @@ nav {
   transition: right 1.5s;
   border-top: solid black 1px;
   border-left: solid black 1px;
-    overscroll-behavior-y: none;
+  overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
--webkit-overflow-scrolling: auto;
+  -webkit-overflow-scrolling: auto;
   white-space: nowrap;
   top: 35px;
-  bottom: 35px;
+  bottom: 0px;
   position: absolute;
   right: 0px;
  

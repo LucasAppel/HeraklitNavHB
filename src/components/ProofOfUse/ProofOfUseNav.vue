@@ -2,7 +2,7 @@
 <div class="ModuleList">
     <h4 @click="changeToActive">{{Arrow}} Proof Of Use</h4>
     <transition name="slide">
-    <div v-if=isActive class="Sublist">
+    <div v-show=isActive class="Sublist">
         <strong>Customers</strong><br><br>
         <strong>Management</strong>
             <ul><li><div>Retailer</div></li></ul>

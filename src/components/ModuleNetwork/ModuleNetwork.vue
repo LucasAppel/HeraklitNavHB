@@ -4,12 +4,12 @@
 <div class="zoomObj">
 
   <transition name="fade"><retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/></transition>
-  <transition name="fade"><customer v-if="!customerAbstr" key="2"/></transition>
-  <transition name="fade"><order-management  v-if="!orderAbstr" key="order"/></transition>
-  <transition name="fade"><warehouse v-if="!warehouseAbstr" key="warehouse"/></transition>
-  <transition name="fade"><inventory-management v-if="!inventoryAbstr" key="inventory"/></transition>
-  <transition name="fade"><supplier v-if="!supplierAbstr" key="3"/></transition>
-  <transition name="fade"><freightforwarders v-if="!ffAbstr" key="4"/></transition>
+  <transition name="fade"><customer @customerClick="customerClick" v-show="!customerAbstr" key="2"/></transition>
+  <transition name="fade"><order-management @orderClick="orderClick" v-show="!orderAbstr" key="order"/></transition>
+  <transition name="fade"><warehouse @warehouseClick="warehouseClick" v-show="!warehouseAbstr" key="warehouse"/></transition>
+  <transition name="fade"><inventory-management @inventoryClick="inventoryClick" v-show="!inventoryAbstr" key="inventory"/></transition>
+  <transition name="fade"><supplier @supplierClick="supplierClick" v-show="!supplierAbstr" key="3"/></transition>
+  <transition name="fade"><freightforwarders @ffClick="ffClick" v-show="!ffAbstr" key="4"/></transition>
 
 
 </div>
@@ -118,7 +118,7 @@ return {
 
 .zoomObj {
   min-width: 1050px;
- max-width: 1050px;
+  max-width: 1050px;
   margin: 8% auto 0 auto;
   
   left:0;
@@ -128,9 +128,9 @@ return {
   cursor: grab;
   object-fit: cover;
  
-padding-bottom: 2%;
-padding-right: 21vw;
-transition: padding 0.6s;
+  padding-bottom: 3%;
+  padding-right: 21vw;
+  transition: padding 0.6s;
 }
 
 

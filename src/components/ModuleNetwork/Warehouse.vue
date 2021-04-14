@@ -1,18 +1,18 @@
 <template>
-    <div id="orderContainer" >
+    <div @dblclick="warehouseClick" id="orderContainer" >
     <img :src="require('@/assets/ModuleTree/warehouseMT.png')" id="svg4134">
    </div>
 </template>
 
 
 <script>
-import rawSVG from '!!raw-loader!@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-9.svg'
-
 export default {
     name: 'Warehouse',
      data: () => ({
-inlineSVG: rawSVG
   }),
+      methods: {
+        warehouseClick(){this.$emit('warehouseClick')}
+  },
 
   mounted(){
       
@@ -29,7 +29,8 @@ inlineSVG: rawSVG
 }
 
 #svg4134 {
-  pointer-events: none;
+  pointer-events: all;
+  cursor: pointer;
  z-index:2;
  background-color: white;
   padding-top: 0px;

@@ -19,7 +19,7 @@ export default new Vuex.Store({
     },
     moduleTree: {
       isActive: false,
-      activeStr: "retailer",
+      activeStr: "order",
       retailerAbstr: false 
     },
     workflow: {
