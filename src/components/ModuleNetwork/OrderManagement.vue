@@ -42,7 +42,7 @@ cursor: pointer;
  position: absolute;
   top: -340px;
   left: 172px;
-  width: 340px;
+  width: 353px;
   height: 140px;
   transform: scale(1, 2.4);
 }
@@ -52,7 +52,7 @@ cursor: pointer;
 
   top: -220px;
   left: 114px;
-  width: 230px;
+  width: 237px;
   height: 85px;
   
 }

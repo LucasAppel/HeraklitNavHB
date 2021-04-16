@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeModule: "none", // tree || network || workflow || proof
+    activeModule: "none", // tree || network || workflow || proof || views
     moduleNetwork: {
       isActive: false,
       list: ["retailerAbstr", "customerAbstr", "supplierAbstr", "ffAbstr", "orderAbstr", "inventoryAbstr", "warehouseAbstr"],
@@ -20,6 +20,11 @@ export default new Vuex.Store({
     moduleTree: {
       isActive: false,
       activeStr: "order",
+      retailerAbstr: false 
+    },
+    views: {
+      isActive: false,
+      activeStr: "retailer",
       retailerAbstr: false 
     },
     workflow: {
@@ -41,12 +46,16 @@ export default new Vuex.Store({
     },
     setWF (state, payload){
       state.workflow[payload[0]] = payload[1];
+    },
+    setV (state, payload){
+      state.views[payload[0]] = payload[1];
     }
   },
   actions: {
     setMNW (state, payload){ state.commit('setMNW', payload)},
     setMT (state, payload){ state.commit('setMT', payload)},
     setWF (state, payload){ state.commit('setWF', payload)},
+    setV (state, payload){ state.commit('setV', payload)},
     setActiveModule (state, payload){ state.commit('setActiveModule', payload)}
   },
   modules: {
@@ -55,6 +64,7 @@ export default new Vuex.Store({
     activeModule: state => state.activeModule,
     mnw: state => state.moduleNetwork,
     mt: state => state.moduleTree,
+    v: state => state.views,
     wf: state => state.workflow
   }
 })

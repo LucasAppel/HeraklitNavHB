@@ -1,7 +1,6 @@
 <template>
 <div id="zoomerDiv">
     <span>
-      <!-- <br> {{debugText}}<br><br> -->
     Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue" @input="zoom(zvalue)" disabled="true">  <br>
       {{Math.round(zvalue * 100)}}%
@@ -19,8 +18,9 @@ export default {
      
     },
     data: () => ({
-        zvalue: 1,
-        eventscale: 0,
+        zvalue: 1.0,
+        eventscale: 0.0,
+        startScale:1.0,
         debugText: ""
     }),
 
@@ -123,8 +123,8 @@ getEventCoordinates(e){
 
  resetZoomer(){ //reset Zoom-Slider
     var zoomer = document.getElementById('zoomer');
-    if (zoomer!= null) zoomer.value = 1;
-    this.zvalue = 1;
+    if (zoomer!= null) zoomer.value = 1.0;
+    this.zvalue = 1.0;
     this.reZoom();
  }
 
@@ -149,6 +149,7 @@ getEventCoordinates(e){
             $vm.startDist = Math.round(Math.hypot(// Get the distance on move
                         Math.abs(event.touches[0].pageX - event.touches[1].pageX),
                         Math.abs(event.touches[0].pageY - event.touches[1].pageY)));
+                    
             $vm.startScale = $vm.zvalue;
             $vm.startCoord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
         }
@@ -161,13 +162,14 @@ getEventCoordinates(e){
                     Math.abs(event.touches[0].pageX - event.touches[1].pageX),
                     Math.abs(event.touches[0].pageY - event.touches[1].pageY)));
                     
-            var eventscale = (distNow - $vm.startDist) / $vm.startDist * 2; //calc difference of actual distance and previous distance, set to event.scale
+            var eventscale = (distNow - $vm.startDist) / $vm.startDist * 2.0; //calc difference of actual distance and previous distance, set to event.scale
             //var coord = {x: (event.touches[0].pageX + event.touches[1].pageX)/2, y: (event.touches[0].pageY + event.touches[1].pageY)/2}
-           
-            // Set zvalue to startscale + eventscale
-            $vm.zvalue = Math.min(5, Math.max(1, Math.round(($vm.startScale + eventscale*1.5)*100)/100));
 
-            $vm.zoom($vm.zvalue, true, $vm.startCoord);
+           $vm.eventscale = eventscale;
+            // Set zvalue to startscale + eventscale
+            $vm.zvalue = Math.min(5.0, Math.max(1.0, (parseFloat($vm.startScale) + parseFloat(eventscale)*1.5)));
+    
+            $vm.zoom($vm.zvalue);
 
 /* THIS CAN MOVE PIC WITH TWO FINGERS; BUT IS GLITCHY
       var container = document.getElementById($vm.$store.getters.activeModule);

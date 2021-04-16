@@ -64,6 +64,7 @@ export default {
  max-width: 60%;
  height: 90%;
   margin: 2% auto 0 auto;
+    padding-left: 0%;
   left:0;
   z-index: 0;
   transform-origin: 0% 0%;

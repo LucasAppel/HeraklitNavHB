@@ -1,6 +1,6 @@
 <template>
   <div id="supplierContainer">
-    <img v-hammer:doubletap="supplierClick" :src="require('@/assets/ModuleTree/supplierMT.png')" id="svg186"  class="padRight">
+    <img v-hammer:doubletap="supplierClick" :src="require('@/assets/ModuleNetwork/System_Lieferant_MN.png')" id="svg186"  class="padRight">
   </div>
 </template>
 
@@ -39,7 +39,7 @@ export default {
   object-fit: fill;
  position: relative;
   top: 0px;
-  left: 885px;
+  left: 960px;
   width: 190px;
   height: 180px;
 
@@ -50,7 +50,7 @@ export default {
   left: 656px;
   width: 120px;
   height: 130px;
-  transform: scale(1, 1);
+
 }
 
 .padRight{

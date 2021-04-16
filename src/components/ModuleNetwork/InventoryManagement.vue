@@ -1,6 +1,6 @@
 <template>
     <div id="inventoryContainer" >
-    <img v-hammer:doubletap="inventoryClick" :src="require('@/assets/ModuleTree/inventoryMT.png')" id="imginvent">
+    <img v-hammer:doubletap="inventoryClick" :src="require('@/assets/ModuleNetwork/System_Bestandsverwaltung_MN.png')" id="imginvent">
    </div>
 </template>
 
@@ -36,19 +36,18 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -350px;
-  left: 377px;
-  width: 380px;
-  height: 80px;
-  transform: scale(1, 3);
+  top: -425px;
+  left: 491px;
+  width: 270px;
+  height: 215px;
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #imginvent {
-  top: -285px;
-  left: 261px;
-  width: 240px;
-  height: 160px;
-  transform: scale(1, 1);
+  top: -280px;
+  left: 327px;
+  width: 183px;
+  height: 130px;
+
 }
 }
 </style>

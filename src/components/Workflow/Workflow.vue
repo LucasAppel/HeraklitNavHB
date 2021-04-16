@@ -106,8 +106,11 @@ export default {
 .zoomObj {
  min-width:68%;
  max-width: 68%;
- height: 90%;
-  margin: 1% auto 0 auto;
+ height: 60vh;
+  margin: 5% auto 0 auto;
+  padding-bottom: 5%;
+  padding-top: 0%;
+  padding-left: 1%;
   left:0;
   z-index: 0;
   transform-origin: 0% 0%;
@@ -126,11 +129,8 @@ export default {
 .zoomObj {
  
   margin: 5% auto 0 auto;
-  min-width: 700px;
-  max-width: 700px;
-  height: 80%;
   padding-right: 29vw;
-  padding-left: 3%;
+
 }
 
 }

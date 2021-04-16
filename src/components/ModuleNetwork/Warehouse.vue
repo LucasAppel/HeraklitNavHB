@@ -1,6 +1,6 @@
 <template>
     <div id="orderContainer" >
-    <img v-hammer:doubletap="warehouseClick" :src="require('@/assets/ModuleTree/warehouseMT.png')" id="svg4134">
+    <img v-hammer:doubletap="warehouseClick" :src="require('@/assets/ModuleNetwork/System_Lager_MN.png')" id="svg4134">
    </div>
 </template>
 
@@ -37,10 +37,10 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -314px;
+  top: -300px;
   left: 615px;
-  width: 350px;
-  height: 230px;
+  width: 345px;
+  height: 200px;
   transform: scale(1, 1.25);
 }
 @media screen and (max-width:1400px) {/* Mobile */

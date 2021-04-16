@@ -130,7 +130,7 @@ return {
  
   padding-bottom: 10%;
   padding-right: 21vw;
-  padding-left: 5%;
+  padding-left: 4%;
   transition: padding 0.6s;
 }
 
@@ -150,11 +150,11 @@ return {
 
 
 .zoomObj{
-   min-width: 700px;
- max-width: 700px;
+  min-width: 700px;
+  max-width: 700px;
   margin:10% auto 0 auto;
   padding-right: 21vw;
-
+  padding-left: calc(1vw + 60px);
   
 
 

@@ -25,7 +25,6 @@ export default {
 #customerContainer{
   pointer-events: none;
   position: absolute;
-
 }
 
 #svg1370 {
