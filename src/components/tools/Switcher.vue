@@ -1,10 +1,10 @@
 <template>
-    <span class="switchtext"> Abstract <br class="zoombr">
+    <span class="switchtext"> Abstract 
     <label class="switch">
     <input type="checkbox" @change="changed" :checked="value">
     <span class="slider round"></span>
     </label>
-    <br class="zoombr"> Concrete</span>
+     Concrete</span>
 </template>
 
 <script>
