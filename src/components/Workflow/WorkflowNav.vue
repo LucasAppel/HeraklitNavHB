@@ -9,7 +9,7 @@
         </ul>
 
         <ul>
-            <li><div>Retailer</div>
+            <li><div><b v-if="activeStr=='retailer'">Retailer</b><span v-else class="clickable" @click="menuClick('retailer')">Retailer</span></div>
             <transition name="slide">
                 <ul v-if="!retailerAbstr">
                     <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="menuClick('order')">Order Management</span></div></li>

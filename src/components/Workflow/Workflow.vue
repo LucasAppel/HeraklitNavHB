@@ -6,6 +6,7 @@
 <div class="zoomObj">
        <img v-show="activeStr=='composed'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-12.svg')" class="MTIMG">
        <img v-show="activeStr=='altcomposed'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-13.svg')" class="MTIMG">
+       <img v-show="activeStr=='retailer'" :src="require('@/assets/figures/Gesamtablauf_Retailer.png')" class="MTIMG">
        <img v-show="activeStr=='customers'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-6.svg')" class="MTIMG">
        <img v-show="activeStr=='supplier'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-10.svg')" class="MTIMG">
        <img v-show="activeStr=='ff'" :src="require('@/assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-11.svg')" class="MTIMG">

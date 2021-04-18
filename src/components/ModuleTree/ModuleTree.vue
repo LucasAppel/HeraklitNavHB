@@ -2,7 +2,8 @@
 <div class ="dragscroll svgContainer" id="tree">
 
 <div class="zoomObj">
-       <!-- <img v-show="activeStr=='retailer'" :src="require('@/assets/ModuleTree/retailerMT.png')" class="MTIMG"> -->
+       <img v-show="activeStr=='composed'" :src="require('@/assets/figures/Komposition_der_Module.png')" class="MTIMG">
+       <img v-show="activeStr=='retailer'" :src="require('@/assets/figures/Komposition_der_Module_Retailer.png')" class="MTIMG">
        <img v-show="activeStr=='customers'" :src="require('@/assets/figures/System_Kunden.png')" class="MTIMG">
        <img v-show="activeStr=='supplier'" :src="require('@/assets/figures/System_Lieferant.png')" class="MTIMG">
        <img v-show="activeStr=='ff'" :src="require('@/assets/figures/System_Speditionen.png')" class="MTIMG">
@@ -62,8 +63,8 @@ export default {
 <style scoped>
 .zoomObj {
  min-width:60%;
- max-width: 60%;
-  height: 60vh;
+ max-width: 90%;
+  height: 55vh;
   margin: 5% auto 0 auto;
   padding-bottom: 4%;
   padding-top: 0%;

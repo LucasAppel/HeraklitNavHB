@@ -19,7 +19,7 @@ export default new Vuex.Store({
     },
     moduleTree: {
       isActive: false,
-      activeStr: "order",
+      activeStr: "composed",
       retailerAbstr: false 
     },
     views: {

@@ -3,19 +3,21 @@
     <h4 @click="changeToActive">{{Arrow}} Module Tree</h4>
     <transition name="slide">
     <div v-if=isActive class="Sublist">
-    <ul>
-        <li><div>Retailer</div>
-         <transition name="slide">
+       <ul>
+         <li><div><b v-if="activeStr=='composed'">Composed Modules</b><span v-else class="clickable" @click="menuClick('composed')">Composed Modules</span></div></li>
+        </ul>
+        <ul>
+          <li><div><b v-if="activeStr=='retailer'">Retailer</b><span v-else class="clickable" @click="menuClick('retailer')">Retailer</span></div>
             <ul>
                 <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="menuClick('order')">Order Management</span></div></li>
                 <li><div><b v-if="activeStr=='inventory'">Inventory Management</b><span v-else class="clickable" @click="menuClick('inventory')">Inventory Management</span></div></li>
                 <li><div><b v-if="activeStr=='warehouse'">Warehouse</b><span v-else class="clickable" @click="menuClick('warehouse')">Warehouse</span></div></li>
             </ul>
-         </transition>
             </li>
         <li><div><b v-if="activeStr=='customers'">Customers</b><span v-else class="clickable" @click="menuClick('customers')">Customers</span></div></li>
         <li><div><b v-if="activeStr=='supplier'">Supplier</b><span v-else class="clickable" @click="menuClick('supplier')">Supplier</span></div></li>
         <li><div><b v-if="activeStr=='ff'">Freight Forwarders</b><span v-else class="clickable" @click="menuClick('ff')">Freight Forwarders</span></div></li>        
+   
     </ul>
       </div>
     </transition>
