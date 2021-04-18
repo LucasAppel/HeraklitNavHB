@@ -23,7 +23,11 @@ export default new Vuex.Store({
     },
     views: {
       isActive: false,
-      activeStr: "retailer"
+      activeStr: "retailer",
+      list: ["customerAbstr", "supplierAbstr", "ffAbstr"],
+      customerAbstr: true,
+      supplierAbstr: true,
+      ffAbstr: true
     },
     workflow: {
       isActive: false,

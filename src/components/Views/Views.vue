@@ -3,9 +3,12 @@
 
 <div class="zoomObj">
        <img v-show="activeStr=='retailer'" :src="require('@/assets/figures/Sichten_des_Handelsbetriebes_a.png')" class="MTIMG">
-       <img v-show="activeStr=='customers'" :src="require('@/assets/figures/Partner_Sichten_a.png')" class="MTIMG">
-       <img v-show="activeStr=='supplier'" :src="require('@/assets/figures/Partner_Sichten_c.png')" class="MTIMG">
-       <img v-show="activeStr=='ff'" :src="require('@/assets/figures/Partner_Sichten_b.png')" class="MTIMG">
+       <img v-show="activeStr=='customers' && customerAbstr" :src="require('@/assets/figures/Partner_Sichten_a.png')" class="MTIMG">
+       <img v-show="activeStr=='customers' && !customerAbstr" :src="require('@/assets/figures/Sichten_der_Geschaeftspartner_a.png')" class="MTIMG">
+       <img v-show="activeStr=='supplier' && supplierAbstr" :src="require('@/assets/figures/Partner_Sichten_c.png')" class="MTIMG">
+       <img v-show="activeStr=='supplier' && !supplierAbstr" :src="require('@/assets/figures/Sichten_der_Geschaeftspartner_b.png')" class="MTIMG">
+       <img v-show="activeStr=='ff' && ffAbstr" :src="require('@/assets/figures/Partner_Sichten_b.png')" class="MTIMG">
+       <img v-show="activeStr=='ff' && !ffAbstr" :src="require('@/assets/figures/Sichten_der_Geschaeftspartner_c.png')" class="MTIMG">
        <img v-show="activeStr=='inventory'" :src="require('@/assets/figures/Sichten_des_Handelsbetriebes_b.png')" class="MTIMG">
        <img v-show="activeStr=='warehouse'" :src="require('@/assets/figures/Sichten_des_Handelsbetriebes_d.png')" class="MTIMG">
        <img v-show="activeStr=='order'" :src="require('@/assets/figures/Sichten_des_Handelsbetriebes_c.png')" class="MTIMG">
@@ -27,7 +30,10 @@ export default {
      
   },
   computed: {
-    activeStr() {return this.$store.getters.v.activeStr}
+    activeStr() {return this.$store.getters.v.activeStr},
+    customerAbstr() {return this.$store.getters.v.customerAbstr},
+    supplierAbstr() {return this.$store.getters.v.supplierAbstr},
+    ffAbstr() {return this.$store.getters.v.ffAbstr}
    
   },
   data: function () {

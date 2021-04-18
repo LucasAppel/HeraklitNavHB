@@ -11,7 +11,7 @@
         <ul>
             <li><div><b v-if="activeStr=='retailer'">Retailer</b><span v-else class="clickable" @click="menuClick('retailer')">Retailer</span></div>
             <transition name="slide">
-                <ul v-if="!retailerAbstr">
+                <ul>
                     <li><div><b v-if="activeStr=='order'">Order Management</b><span v-else class="clickable" @click="menuClick('order')">Order Management</span></div></li>
                     <li><div><b v-if="activeStr=='inventory'">Iventory Management</b><span v-else class="clickable" @click="menuClick('inventory')">Inventory Management</span></div></li>
                     <li><div><b v-if="activeStr=='warehouse'">Warehouse</b><span v-else class="clickable" @click="menuClick('warehouse')">Warehouse</span></div></li>
@@ -45,8 +45,6 @@ export default {
         
     },
     methods: {
-        retailerClick(){this.$store.dispatch('setWF', ['retailerAbstr', false]); this.$store.dispatch('setWF', ['activeStr', "retailer"]);},
-
         menuClick(item=String){
             this.$store.dispatch('setWF', ['activeStr', item]);
             this.$emit('resetZoomer');

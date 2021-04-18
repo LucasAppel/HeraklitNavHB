@@ -294,7 +294,7 @@ nav {
  background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
  background-attachment: initial;
  background-size: auto;
-  width: 15%;
+  width: 19%;
   z-index: 10;
 
   transition: right 1.5s;
@@ -325,7 +325,7 @@ nav {
 
 
 nav {
-  width: 10%;
+  width: 15%;
 }
 }
 #content h2 { /*Welcome Text*/

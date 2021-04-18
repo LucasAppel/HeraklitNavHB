@@ -14,20 +14,23 @@ export default {
       ['status'],
     data: function() {
       return{
-      statuss: this.status
+
     }},
     computed: {
      
      value: {
       
        get: function() { //Switch toggles when value is changed on direct svgclick
-        if (this.statuss == "retailerAbstr") {return !this.$store.getters.mnw.retailerAbstr;}
-        if (this.statuss == "supplierAbstr") {return !this.$store.getters.mnw.supplierAbstr;}
-        if (this.statuss == "ffAbstr") {return !this.$store.getters.mnw.ffAbstr;}
-        if (this.statuss == "customerAbstr") {return !this.$store.getters.mnw.customerAbstr;}
-        if (this.statuss == "orderAbstr") {return !this.$store.getters.mnw.orderAbstr;}
-        if (this.statuss == "inventoryAbstr") {return !this.$store.getters.mnw.inventoryAbstr;}
-        if (this.statuss == "warehouseAbstr") {return !this.$store.getters.mnw.warehouseAbstr;}
+        if (this.status == "retailerAbstrMNW") {return !this.$store.getters.mnw.retailerAbstr;}
+        if (this.status == "supplierAbstrMNW") {return !this.$store.getters.mnw.supplierAbstr;}
+        if (this.status == "ffAbstrMNW") {return !this.$store.getters.mnw.ffAbstr;}
+        if (this.status == "customerAbstrMNW") {return !this.$store.getters.mnw.customerAbstr;}
+        if (this.status == "orderAbstrMNW") {return !this.$store.getters.mnw.orderAbstr;}
+        if (this.status == "inventoryAbstrMNW") {return !this.$store.getters.mnw.inventoryAbstr;}
+        if (this.status == "warehouseAbstrMNW") {return !this.$store.getters.mnw.warehouseAbstr;}
+        if (this.status == "supplierAbstrV") {return !this.$store.getters.v.supplierAbstr;}
+        if (this.status == "ffAbstrV") {return !this.$store.getters.v.ffAbstr;}
+        if (this.status == "customerAbstrV") {return !this.$store.getters.v.customerAbstr;}
         else return false;
        },
        set: function() {
@@ -38,7 +41,7 @@ export default {
     },
    
     methods:{
-      changed(){ //When switch is changed, change values in parent ModuleNetworkNav
+      changed(){ //When switch is changed, change values in parent ModuleNetworkNav / Views
         this.$emit('checked');
         
       }

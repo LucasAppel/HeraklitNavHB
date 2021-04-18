@@ -4,18 +4,18 @@
     <transition name="slide">
     <div v-show=isActive class="Sublist">
     <ul>
-        <li><div>Customers <br><Switcher status="customerAbstr" @checked="customerClick" /></div></li>
-        <li><div>Retailer <br><Switcher status="retailerAbstr" @checked="retailerClick" /></div>
+        <li><div>Customers <br><Switcher status="customerAbstrMNW" @checked="customerClick" /></div></li>
+        <li><div>Retailer <br><Switcher status="retailerAbstrMNW" @checked="retailerClick" /></div>
          <transition name="slide">
             <ul v-show="!retailerAbstr">
-                <li><div>Order Management <br><Switcher status="orderAbstr" @checked="orderClick" /></div></li>
-                <li><div>Inventory Management <br><Switcher status="inventoryAbstr" @checked="inventoryClick" /></div></li>
-                <li><div>Warehouse <br><Switcher status="warehouseAbstr" @checked="warehouseClick" /></div></li>
+                <li><div>Order Management <br><Switcher status="orderAbstrMNW" @checked="orderClick" /></div></li>
+                <li><div>Inventory Management <br><Switcher status="inventoryAbstrMNW" @checked="inventoryClick" /></div></li>
+                <li><div>Warehouse <br><Switcher status="warehouseAbstrMNW" @checked="warehouseClick" /></div></li>
             </ul>
          </transition>
             </li>
-        <li><div>Supplier<br><Switcher status="supplierAbstr" @checked="supplierClick" /></div></li>
-        <li><div>Freight Forwarders<br><Switcher status="ffAbstr" @checked="ffClick" /></div></li>
+        <li><div>Supplier<br><Switcher status="supplierAbstrMNW" @checked="supplierClick" /></div></li>
+        <li><div>Freight Forwarders<br><Switcher status="ffAbstrMNW" @checked="ffClick" /></div></li>
         
     </ul>
       </div>
@@ -63,9 +63,9 @@ export default {
           if(!this.isActive){ 
          
             this.$store.dispatch('setActiveModule', 'network'); //Activate Module
-            this.$store.getters.mnw.list.forEach(element => { //Reset SubMenu
+            /*this.$store.getters.mnw.list.forEach(element => { //Reset SubMenu
               this.$store.dispatch('setMNW', [element, true])
-              });
+              });*/
                  this.$emit('resetZoomer');
               }
               else {

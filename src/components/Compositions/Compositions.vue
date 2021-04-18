@@ -58,18 +58,17 @@ export default {
   max-width: 100%;
   height: 100%;
 }
-
-
 </style>
-
 
 <style scoped>
 .zoomObj {
  min-width:60%;
  max-width: 60%;
- height: 90%;
-  margin: 2% auto 0 auto;
-    padding-left: 0%;
+ height: 60vh;
+  margin: 10vh auto 0 auto;
+  padding-bottom: 3%;
+  padding-top: 0%;
+  padding-left: 0%;
   left:0;
   z-index: 0;
   transform-origin: 0% 0%;
@@ -81,7 +80,7 @@ export default {
   -o-user-drag: none;
    object-fit: cover;
    user-select: none;
-  -webkit-user-select: none;
+ -webkit-user-select: none;
 }
 
 @media screen and (max-width:1400px) {/* Mobile */
@@ -90,7 +89,7 @@ export default {
   margin: 5% auto 0 auto;
   min-width: 700px;
   max-width: 700px;
-  height: 80%;
+ 
 }
 }
 </style>

@@ -111,7 +111,7 @@ export default {
   margin: 5% auto 0 auto;
   padding-bottom: 5%;
   padding-top: 0%;
-  padding-left: 1%;
+  padding-left: 0%;
   left:0;
   z-index: 0;
   transform-origin: 0% 0%;
