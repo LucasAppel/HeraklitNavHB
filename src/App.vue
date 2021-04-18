@@ -16,9 +16,9 @@
         <ModuleNetworkNav @resetZoomer="resetZoomer" /><hr>
         <ModuleTreeNav @resetZoomer="resetZoomer" /><hr>
         <WorkflowNav @resetZoomer="resetZoomer" /><hr>
-        <ViewsNav @resetZoomer="resetZoomer" /><hr>
-        <ProofOfUseNav @resetZoomer="resetZoomer" />
-          <br><br><br><br>
+        <CompositionsNav @resetZoomer="resetZoomer" /><hr>
+        <ViewsNav @resetZoomer="resetZoomer" />
+          <br><br><br><br><br>
         </div>
       
       </nav>
@@ -29,8 +29,8 @@
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
         <ModuleTree v-show="activeModule=='tree'" @reZoom="reZoom"/>
         <Workflow v-show="activeModule=='workflow'" @reZoom="reZoom" />
+        <Compositions v-show="activeModule=='comp'" @reZoom="reZoom" />
         <Views v-show="activeModule=='views'" @reZoom="reZoom" />
-        <ProofOfUse v-show="activeModule=='proof'" @reZoom="reZoom" />
       </div>
    
       <footer @click="signatureClick">
@@ -50,8 +50,8 @@ import ModuleTree from '@/components/ModuleTree/ModuleTree.vue'
 import ModuleTreeNav from '@/components/ModuleTree/ModuleTreeNav.vue'
 import Workflow from './components/Workflow/Workflow.vue'
 import WorkflowNav from './components/Workflow/WorkflowNav.vue'
-import ProofOfUse from './components/ProofOfUse/ProofOfUse.vue'
-import ProofOfUseNav from './components/ProofOfUse/ProofOfUseNav.vue'
+import Compositions from './components/Compositions/Compositions.vue'
+import CompositionsNav from './components/Compositions/CompositionsNav.vue'
 import Views from './components/Views/Views'
 import ViewsNav from './components/Views/ViewsNav.vue';
 
@@ -65,16 +65,16 @@ export default {
     ModuleTreeNav,
     WorkflowNav,
     Workflow,
-    ProofOfUse,
-    ProofOfUseNav,
+    Compositions,
+    CompositionsNav,
     Views,
     ViewsNav
   },
   data: () => ({
     signatureOpen: false,
     navBarOpen: true,
-    arrowUp: "⬆",
-    arrowDown: "⬇",
+    arrowUp: "▲",
+    arrowDown: "▼",
     menuClose: require('./assets/menuClose.svg'),
     menuOpen: require('./assets/menuOpen.svg')
   
@@ -149,7 +149,7 @@ export default {
         footer.style.height = "35px";
         }
       else {
-        footer.style.height = "75vh";
+        footer.style.height = "72vh";
         }
       this.signatureOpen = !this.signatureOpen;
       },
@@ -303,7 +303,7 @@ nav {
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
   -webkit-overflow-scrolling: auto;
-  white-space: nowrap;
+  white-space: break-spaces;
   top: 35px;
   bottom: 0px;
   position: absolute;
@@ -379,14 +379,6 @@ h1 {
 
 }
 
-footer h1 {
-  cursor: pointer;
-  width:fit-content; 
-  position: absolute;
-  left: 45%;
-  top: -4px;
-}
-
 #navTop {
   z-index:25;
   position: sticky;
@@ -450,6 +442,9 @@ z-index:50;
 #signatureID {
   width: 95vw;
   height: 55vh;
+  position: absolute;
+  left: 2.5vw;
+  top: 50px;
 }
 
 /*Scrollbars: Chrome, Edge, and Safari */

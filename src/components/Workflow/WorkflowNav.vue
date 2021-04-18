@@ -34,14 +34,13 @@ export default {
     name: "WorkflowNav",
     
     data: () => ({
-        ArrowRight: "➡️",
-        ArrowDown: "⬇️",
+        ArrowRight: "►",
+        ArrowDown: "▼",
   
     }),
     computed: {
         Arrow: function () { if(this.isActive) {return this.ArrowDown} else return this.ArrowRight},
         isActive() {return this.$store.getters.activeModule=="workflow"},
-        retailerAbstr() {return this.$store.getters.wf.retailerAbstr},
         activeStr() {return this.$store.getters.wf.activeStr}
         
     },

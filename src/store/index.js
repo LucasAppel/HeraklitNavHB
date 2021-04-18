@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    activeModule: "none", // tree || network || workflow || proof || views
+    activeModule: "none", // tree || network || workflow || comp || views
     moduleNetwork: {
       isActive: false,
       list: ["retailerAbstr", "customerAbstr", "supplierAbstr", "ffAbstr", "orderAbstr", "inventoryAbstr", "warehouseAbstr"],
@@ -19,18 +19,19 @@ export default new Vuex.Store({
     },
     moduleTree: {
       isActive: false,
-      activeStr: "composed",
-      retailerAbstr: false 
+      activeStr: "composed"
     },
     views: {
       isActive: false,
-      activeStr: "retailer",
-      retailerAbstr: false 
+      activeStr: "retailer"
     },
     workflow: {
       isActive: false,
-      activeStr: "composed",
-      retailerAbstr: false 
+      activeStr: "composed"
+    },
+    compositions: {
+      isActive: false,
+      activeStr: 'crsf'
     }
 
   },
@@ -49,6 +50,9 @@ export default new Vuex.Store({
     },
     setV (state, payload){
       state.views[payload[0]] = payload[1];
+    },
+    setComp (state, payload){
+      state.compositions[payload[0]] = payload[1];
     }
   },
   actions: {
@@ -56,6 +60,7 @@ export default new Vuex.Store({
     setMT (state, payload){ state.commit('setMT', payload)},
     setWF (state, payload){ state.commit('setWF', payload)},
     setV (state, payload){ state.commit('setV', payload)},
+    setComp (state, payload){ state.commit('setComp', payload)},
     setActiveModule (state, payload){ state.commit('setActiveModule', payload)}
   },
   modules: {
@@ -65,6 +70,7 @@ export default new Vuex.Store({
     mnw: state => state.moduleNetwork,
     mt: state => state.moduleTree,
     v: state => state.views,
-    wf: state => state.workflow
+    wf: state => state.workflow,
+    comp: state => state.compositions
   }
 })

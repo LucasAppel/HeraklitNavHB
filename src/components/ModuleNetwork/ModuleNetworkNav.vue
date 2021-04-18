@@ -29,8 +29,8 @@ export default {
     name: "ModuleNetworkNav",
     
     data: () => ({
-        ArrowRight: "➡️",
-        ArrowDown: "⬇️",
+        ArrowRight: "►",
+        ArrowDown: "▼",
   
     }),
     computed: {

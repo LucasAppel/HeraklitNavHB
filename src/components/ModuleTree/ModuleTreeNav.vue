@@ -30,14 +30,13 @@ export default {
     name: "ModuleNetworkNav",
     
     data: () => ({
-        ArrowRight: "➡️",
-        ArrowDown: "⬇️",
+        ArrowRight: "►",
+        ArrowDown: "▼",
   
     }),
     computed: {
         Arrow: function () { if(this.isActive) {return this.ArrowDown} else return this.ArrowRight},
         isActive() {return this.$store.getters.activeModule=="tree"},
-        retailerAbstr() {return this.$store.getters.mt.retailerAbstr},
         activeStr() {return this.$store.getters.mt.activeStr}
         
     },

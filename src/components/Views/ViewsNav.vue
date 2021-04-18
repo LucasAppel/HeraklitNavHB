@@ -28,8 +28,8 @@ export default {
     name: "ViewsNav",
     
     data: () => ({
-        ArrowRight: "➡️",
-        ArrowDown: "⬇️",
+        ArrowRight: "►",
+        ArrowDown: "▼",
   
     }),
     computed: {

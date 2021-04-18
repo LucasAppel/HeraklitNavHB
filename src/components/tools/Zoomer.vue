@@ -1,6 +1,6 @@
 <template>
 <div id="zoomerDiv">
-    <span>
+    <span id="zoomspan">
     Zoom: <br>
   <input type="range" id="zoomer" zvalue="1" min="1" max="5" step="0.1" v-model="zvalue" @input="zoom(zvalue)" disabled="true">  <br>
       {{Math.round(zvalue * 100)}}%
@@ -204,7 +204,7 @@ getEventCoordinates(e){
     display: none;
 }
 
-span {
+#zoomspan {
 white-space: nowrap;
 
 }
@@ -218,7 +218,7 @@ white-space: nowrap;
     display: initial;
 }
 
-span {
+#zoomspan {
 white-space: break-spaces;
 
 }

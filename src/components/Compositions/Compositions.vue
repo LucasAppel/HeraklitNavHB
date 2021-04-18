@@ -1,8 +1,13 @@
 <template>
-<div class ="dragscroll svgContainer" id="proof">
+<div class ="dragscroll svgContainer" id="comp">
 
 <div class="zoomObj">
-       <img :src="require('@/assets/engl. Teil_I_II-2-1,engl. Teil_I_II-2-2,engl. Teil_I_II-2-3/proof.svg')" class="MTIMG">
+      <img v-show="activeStr=='crsf'" :src="require('@/assets/figures/Komposition_Abstraktionen.png')" class="MTIMG">
+      <img v-show="activeStr=='oi'" :src="require('@/assets/figures/Komposition_Abteilungen_a.png')" class="MTIMG">
+      <img v-show="activeStr=='iw'" :src="require('@/assets/figures/Komposition_Abteilungen_b.png')" class="MTIMG">
+      <img v-show="activeStr=='retailer'" :src="require('@/assets/figures/Komposition_Abteilungen_c.png')" class="MTIMG">
+      <img v-show="activeStr=='c(oiw)sf'" :src="require('@/assets/figures/Komposition_alle_a.png')" class="MTIMG">
+      <img v-show="activeStr=='coiwsf'" :src="require('@/assets/figures/Komposition_alle_b.png')" class="MTIMG">  
   </div>
 </div>
 </template>
@@ -13,7 +18,7 @@
 
 export default {
   
-  name: 'proof',
+  name: 'compositions',
   components: {
 
     
@@ -22,7 +27,7 @@ export default {
      
   },
   computed: {
-    activeStr() {return this.$store.getters.mt.activeStr}
+    activeStr() {return this.$store.getters.comp.activeStr}
    
   },
   data: function () {
