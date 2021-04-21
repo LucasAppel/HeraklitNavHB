@@ -165,15 +165,14 @@ export default {
 }, { passive: false });
 
   document.getElementById('btn1').style.opacity="1.0";
-
+ 
 
 
   },
   updated(){
     Dragscroll.reset();
     document.getElementById('zoomer').disabled = this.$store.getters.activeModule == 'none';
-    var footer = document.getElementsByTagName('footer')[0];
-    footer.style.bottom = "0px";
+
   }
 }
 
@@ -181,6 +180,8 @@ export default {
 </script>
 
 <style>
+
+
 html {
    -khtml-user-drag: none;
    -moz-user-drag: none;
@@ -191,26 +192,24 @@ html {
   -webkit-touch-callout: none;
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
-  -webkit-overflow-scrolling: auto;
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   -webkit-overflow: hidden;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
+
   
 }
 body {
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
-  -webkit-overflow-scrolling: auto;
-   height: 100%;
-   width: 100vw;
- 
+   width: 100%;
   margin: 0;
   position: fixed;
   overflow: hidden;
    -webkit-overflow: hidden;
    z-index: -5;
- /* background-color: rgb(0, 103, 129);*/
+min-height: 50vh;
  background-color: black;
        -khtml-user-drag: none;
    -moz-user-drag: none;
@@ -223,14 +222,13 @@ body {
 
 
 #app {
-position: absolute;
-height: 100vh;
-width: 100vw;
+position: fixed;
+height: 50vh;
+width: 100%;
 font-weight:500;
 font-size: 11pt;
     overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
--webkit-overflow-scrolling: auto;
   font-family: "Arial Narrow", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -240,10 +238,10 @@ font-size: 11pt;
 
 header {
   display: inline-block;
-  height: 35px;
+  height: 40px;
   width: 100%;
   background-color: rgb(0, 0, 0);
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   overflow: hidden;
@@ -260,11 +258,12 @@ footer {
   width:100%;
   height: 35px;
   color: white;
+
   position: fixed;
-  bottom: 0px;
+  bottom: 0;
   left: 0px;
   border-top: solid black 1px;
-  z-index: 20;
+  z-index: 80;
   transition: 0.6s;
   background-color: black;
   backdrop-filter: blur(9px);
@@ -274,11 +273,9 @@ footer {
 
 
 
-
-
-
 #content {
   width: 100vw;
+  height: calc(100vh - 35px);
   background-image: linear-gradient(to bottom right, rgb(72, 180, 113) , rgb(105, 161, 163), rgba(49, 86, 138, 0.897));
   bottom: 0px;
   top: 35px;
@@ -289,34 +286,29 @@ footer {
  user-select: none;
  position: absolute;
  overflow: hidden;
-
 }
+
 nav {
- background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
- background-attachment: initial;
- background-size: auto;
-  width: 19%;
+  background-image: linear-gradient(to left bottom, rgba(72, 180, 113, 0.452) , rgba(99, 161, 163, 0.692), rgba(49, 86, 138, 0.644));
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 10;
   transition: right 1.5s;
   border-top: solid black 1px;
   border-left: solid black 1px;
-  -webkit-overflow-scrolling: auto;
-  height: calc(100vh - 35px);
-  top: 35px;
-  bottom: 0px;
+  height: calc(100vh - 40px);
+  width: 19%;
   position: absolute;
+  top: 40px;
+  bottom: 0px;
   right: 0px;
- 
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
 }
 @supports not (backdrop-filter: none) {
   nav {
     background-color:rgba(169, 169, 169, 0.808);
   }
-
 }
 
 
@@ -373,19 +365,24 @@ nav {
   color: darkslateblue;
 }
 
-h1 {
+ h1 {
   font-size:100% ;
-
 }
+header > h1 {
+  position: relative;
+  top: 5px;
+}
+
+footer > h1 {
+  position: relative;
+  top: -3px;
+}
+
 
 #navTop {
   z-index:25;
   position: sticky;
   top:0;
-
-  
-
-
   overflow: hidden;
  
 }

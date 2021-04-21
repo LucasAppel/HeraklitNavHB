@@ -256,7 +256,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text76"><tspan
                y="-388.64999"
                x="572.72998 580.22998 586.21796 589.96198"
@@ -283,7 +283,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text87"><tspan
                y="-388.64999"
                x="595.16998"
@@ -310,7 +310,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text98"><tspan
                y="-388.64999"
                x="598.45001"
@@ -337,7 +337,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text109"><tspan
                y="-374.25"
                x="571.09998 577.112 583.12402 589.10004 594.34399"
@@ -401,7 +401,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text130"><tspan
                y="-453.70001"
                x="416.67001 419.65222 425.67676 430.90762 436.16254 442.18707 445.9028 451.92734 455.65509 460.91"
@@ -428,7 +428,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text141"><tspan
                y="-439.28"
                x="408.48001 417.46799 422.71201 428.724 433.95599 439.96799 445.944 454.19998 460.18799 466.19998"
@@ -638,7 +638,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text218"><tspan
                y="-439.64999"
                x="280.38 286.40454 290.13229 296.15683 301.3877 305.87302"
@@ -665,7 +665,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text229"><tspan
                y="-425.23001"
                x="262.57001 271.55798 276.80197 282.81396 288.04596 294.05795 300.03397 308.28995 314.27795 320.28995"
@@ -692,7 +692,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text240"><tspan
                y="-490.32999"
                x="568.09998 571.85181 577.10675 580.84656 586.1015 589.08368 591.33234 597.3208"
@@ -1147,7 +1147,7 @@
              font-size="11.275px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text416"><tspan
                y="-416.42001"
                x="133.89999 139.14287 144.39702 149.63989 152.63905 157.8932 166.11267 170.64522 174.38852"
@@ -1401,7 +1401,7 @@
              font-size="11.25px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text516"><tspan
                y="-312.29999"
                x="721.20001 724.20374 727.93872 732.43872 735.43121 740.68494 745.93866 748.94238"
@@ -1428,7 +1428,7 @@
              font-size="11.275px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text527"><tspan
                y="-299.10001"
                x="711.90002 714.92169 720.19843 723.96429 730.74054 736.00598 739.77185 745.04858 750.31403 753.33575"
@@ -1538,7 +1538,7 @@
              font-size="11.25px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text565"><tspan
                y="-444"
                x="714.38 719.6225 724.87622 730.12994 736.11493 738.36493 740.61493 745.85742"
@@ -1775,7 +1775,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text654"><tspan
                y="-388.64999"
                x="572.72998 580.22998 586.21796 589.96198"
@@ -1802,7 +1802,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text665"><tspan
                y="-388.64999"
                x="595.16998"
@@ -1829,7 +1829,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text676"><tspan
                y="-388.64999"
                x="598.45001"
@@ -1856,7 +1856,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text687"><tspan
                y="-374.25"
                x="571.09998 577.112 583.12402 589.10004 594.34399"
@@ -1920,7 +1920,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text708"><tspan
                y="-453.70001"
                x="416.67001 419.65222 425.67676 430.90762 436.16254 442.18707 445.9028 451.92734 455.65509 460.91"
@@ -1947,7 +1947,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text719"><tspan
                y="-439.28"
                x="408.48001 417.46799 422.71201 428.724 433.95599 439.96799 445.944 454.19998 460.18799 466.19998"
@@ -2157,7 +2157,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text796"><tspan
                y="-439.64999"
                x="280.38 286.40454 290.13229 296.15683 301.3877 305.87302"
@@ -2184,7 +2184,7 @@
              font-size="12px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text807"><tspan
                y="-425.23001"
                x="262.57001 271.55798 276.80197 282.81396 288.04596 294.05795 300.03397 308.28995 314.27795 320.28995"
@@ -2211,7 +2211,7 @@
              font-size="12.025px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text818"><tspan
                y="-490.32999"
                x="568.09998 571.85181 577.10675 580.84656 586.1015 589.08368 591.33234 597.3208"
@@ -2666,7 +2666,7 @@
              font-size="11.275px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text994"><tspan
                y="-416.42001"
                x="133.89999 139.14287 144.39702 149.63989 152.63905 157.8932 166.11267 170.64522 174.38852"
@@ -2920,7 +2920,7 @@
              font-size="11.25px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text1094"><tspan
                y="-312.29999"
                x="721.20001 724.20374 727.93872 732.43872 735.43121 740.68494 745.93866 748.94238"
@@ -2947,7 +2947,7 @@
              font-size="11.275px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text1105"><tspan
                y="-299.10001"
                x="711.90002 714.92169 720.19843 723.96429 730.74054 736.00598 739.77185 745.04858 750.31403 753.33575"
@@ -3057,7 +3057,7 @@
              font-size="11.25px"
              font-family="ArialNarrow"
              font-weight="bold"
-             
+             font-style="italic"
              id="text1143"><tspan
                y="-444"
                x="714.38 719.6225 724.87622 730.12994 736.11493 738.36493 740.61493 745.85742"
