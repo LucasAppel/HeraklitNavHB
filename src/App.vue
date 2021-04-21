@@ -147,10 +147,16 @@ export default {
       var footer = document.getElementsByTagName("footer")[0];
       if (this.signatureOpen) {
         footer.style.height = "35px";
+        footer.style.backgroundColor = "black";
         }
       else {
         footer.style.height = "72vh";
-        }
+        if (CSS.supports("backdrop-filter: none") || CSS.supports("-webkit-backdrop-filter: none")){
+            footer.style.backgroundColor = "rgba(59, 59, 59, 0.472)";
+        } else {
+           footer.style.backgroundColor =  "rgba(105, 105, 105, 0.96)"; 
+          }
+      }
       this.signatureOpen = !this.signatureOpen;
       },
   
@@ -170,7 +176,8 @@ export default {
   updated(){
     Dragscroll.reset();
     document.getElementById('zoomer').disabled = this.$store.getters.activeModule == 'none';
- 
+    var footer = document.getElementsByTagName('footer')[0];
+    footer.style.bottom = "0px";
   }
 }
 
@@ -216,6 +223,7 @@ body {
       -webkit-touch-callout: none;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 
 #app {
@@ -227,7 +235,7 @@ font-size: 11pt;
     overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
 -webkit-overflow-scrolling: auto;
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -261,15 +269,12 @@ footer {
   left: 0px;
   border-top: solid black 1px;
   z-index: 20;
-  transition: height 0.6s;
-  background-color: rgba(59, 59, 59, 0.472);
+  transition: 0.6s;
+  background-color: black;
   backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
 }
-@supports not (backdrop-filter: none) {
-  footer {
-    background-color:rgba(105, 105, 105, 0.96);
-  }
-}
+
 
 
 
@@ -296,14 +301,11 @@ nav {
  background-size: auto;
   width: 19%;
   z-index: 10;
-
   transition: right 1.5s;
   border-top: solid black 1px;
   border-left: solid black 1px;
-  overscroll-behavior-y: none;
-  -webkit-overscroll-behaviour-y: none;
   -webkit-overflow-scrolling: auto;
-  white-space: break-spaces;
+  height: calc(100vh - 35px);
   top: 35px;
   bottom: 0px;
   position: absolute;
@@ -312,6 +314,7 @@ nav {
   scrollbar-width: thin;
   scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 @supports not (backdrop-filter: none) {
   nav {

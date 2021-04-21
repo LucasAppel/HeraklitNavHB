@@ -97,6 +97,7 @@ overflow-x:hidden;
   }
   .ModuleList h4 { /* Style of Module title */
     color: rgb(0, 46, 88);
+    font-size: 12.5pt;
     margin-bottom: 5px;
     border-bottom: 0;
     margin-top: 0px;

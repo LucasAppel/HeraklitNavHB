@@ -1,8 +1,9 @@
 <template>
 <div class="ModuleList">
-    <h4 @click="changeToActive">{{Arrow}} Run (Instance Ute)</h4>
+    <h4 @click="changeToActive">{{Arrow}} Run <b v-if=isActive style="font-size: 12pt; color: black"> Instance Ute (shoes, hat)</b></h4> 
     <transition name="slide">
     <div v-if=isActive class="Sublist">
+     
          <ul>
             <li><div><b v-if="activeStr=='composed'">Composed Run</b><span v-else class="clickable" @click="menuClick('composed')">Composed Run</span></div></li>
             <li><div><b v-if="activeStr=='altcomposed'">Alternative <br> Composed Run</b><span v-else class="clickable" @click="menuClick('altcomposed')">Alternative <br> Composed Run</span></div></li>

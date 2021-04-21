@@ -70,6 +70,7 @@ export default {
   padding-bottom: 5%;
   padding-top: 0%;
   padding-left: 0%;
+
   left:0;
   z-index: 0;
   transform-origin: 0% 0%;

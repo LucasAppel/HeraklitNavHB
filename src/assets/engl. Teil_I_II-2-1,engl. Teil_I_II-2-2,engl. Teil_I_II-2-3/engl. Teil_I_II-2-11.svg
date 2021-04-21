@@ -3160,7 +3160,7 @@
      transform="matrix(0.93668485,0,0,1.0675949,24.976819,-25.782523)"><tspan
        x="332.1152"
        y="104.66661"><tspan
-         style="font-size:24px;stroke-width:0.965558">Retailer</tspan></tspan></text>
+         style="font-family: ArialNarrow; font-style: italic; font-weight: bold; font-size:24px;stroke-width:0.965558">retailer</tspan></tspan></text>
   <rect
      style="fill:#ffffff;fill-opacity:0;stroke-width:0.75"
      id="supplierClick"
