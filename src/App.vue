@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-
       <header>
         <h1>Heraklit-Navigator: Retailer</h1>
       </header>
@@ -20,10 +19,8 @@
         <ViewsNav @resetZoomer="resetZoomer" />
           <br><br><br><br><br>
         </div>
-      
       </nav>
   
-
       <div id="content">
         <h2 v-show="activeModule=='none'">Heraklit-Navigator:<br>Retailer</h2>
         <ModuleNetwork v-show="activeModule=='network'" @reZoom="reZoom" />
@@ -37,7 +34,6 @@
         <h1>{{Arrow}} Signatures {{Arrow}}</h1><br><br><br>
         <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-2.svg">
       </footer>
-
   </div>
 </template>
 
@@ -235,7 +231,7 @@ font-size: 11pt;
     overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
 -webkit-overflow-scrolling: auto;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Arial Narrow", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
