@@ -72,7 +72,8 @@ export default {
     arrowUp: "▲",
     arrowDown: "▼",
     menuClose: require('./assets/menuClose.svg'),
-    menuOpen: require('./assets/menuOpen.svg')
+    menuOpen: require('./assets/menuOpen.svg'),
+    lastActiveModule: "none"
   
   }),
   computed: {
@@ -81,8 +82,6 @@ export default {
       else return this.arrowUp
     },
     activeModule() {return this.$store.getters.activeModule},
-    ModuleNetworkActive(){return this.$store.getters.mnw.isActive},
-    ModuleTreeActive(){return this.$store.getters.mt.isActive},
   },
   methods: {
     reZoom(){ //Whenever a component is rendered, func rezoom is called to determine zoom position
@@ -90,6 +89,9 @@ export default {
     },
     resetZoomer(){ //Reset values to 100%
       this.$refs.Zoomer.resetZoomer();
+    },
+    initScroll(){ 
+      this.$refs.Zoomer.initScroll();
     },
     widthToFloat(px){
             return parseFloat(getComputedStyle(px).width.split("p")[0]);
@@ -165,16 +167,18 @@ export default {
 }, { passive: false });
 
   document.getElementById('btn1').style.opacity="1.0";
- 
-
 
   },
   updated(){
     Dragscroll.reset();
     document.getElementById('zoomer').disabled = this.$store.getters.activeModule == 'none';
-
+    if (this.lastActiveModule != this.activeModule){
+        this.initScroll();
+        this.lastActiveModule = this.activeModule;
+      }
+    },
   }
-}
+
 
 
 </script>
@@ -193,10 +197,12 @@ html {
   overscroll-behavior-y: none;
   -webkit-overscroll-behaviour-y: none;
   position: absolute;
+  z-index: -100;
   overflow: hidden;
   -webkit-overflow: hidden;
   width: 100vw;
   height: 100vh;
+
 
   
 }

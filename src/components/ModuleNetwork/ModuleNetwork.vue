@@ -3,13 +3,13 @@
 
 <div class="zoomObj">
 
-  <transition name="fade"><retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/></transition>
-  <transition name="fade"><customer @customerClick="customerClick" v-show="!customerAbstr" key="2"/></transition>
-  <transition name="fade"><order-management @orderClick="orderClick" v-show="!orderAbstr" key="order"/></transition>
-  <transition name="fade"><warehouse @warehouseClick="warehouseClick" v-show="!warehouseAbstr" key="warehouse"/></transition>
-  <transition name="fade"><inventory-management @inventoryClick="inventoryClick" v-show="!inventoryAbstr" key="inventory"/></transition>
-  <transition name="fade"><supplier @supplierClick="supplierClick" v-show="!supplierAbstr" key="3"/></transition>
-  <transition name="fade"><freightforwarders @ffClick="ffClick" v-show="!ffAbstr" key="4"/></transition>
+<retailer @customerClick="customerClick" @orderClick="orderClick" @inventoryClick="inventoryClick" @warehouseClick="warehouseClick" @supplierClick="supplierClick" @ffClick="ffClick" key="1"/>
+<customer @customerClick="customerClick" v-show="!customerAbstr" key="2"/>
+<order-management @orderClick="orderClick" v-show="!orderAbstr" key="order"/>
+<warehouse @warehouseClick="warehouseClick" v-show="!warehouseAbstr" key="warehouse"/>
+<inventory-management @inventoryClick="inventoryClick" v-show="!inventoryAbstr" key="inventory"/>
+<supplier @supplierClick="supplierClick" v-show="!supplierAbstr" key="3"/>
+<freightforwarders @ffClick="ffClick" v-show="!ffAbstr" key="4"/>
 
 
 </div>
@@ -106,10 +106,6 @@ return {
  -webkit-user-select: none;
 
   z-index: 10;
- /*Firefox
-
- scrollbar-color: rgb(117, 169, 204) rgba(0, 83, 122, 0.212);
-*/
  scrollbar-width: none;
  overflow: -moz-scrollbars-none;
  -ms-overflow-style: none;
@@ -147,26 +143,13 @@ return {
 }
 
 @media screen and (max-width:1400px) { /*mobile*/
-
-
 .zoomObj{
   min-width: 700px;
   max-width: 700px;
   margin:10% auto 0 auto;
   padding-right: 21vw;
   padding-left: calc(1vw + 60px);
-  
-
-
-}
-
-
-}
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.0s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0.0s;
+  }
 }
 
 </style>

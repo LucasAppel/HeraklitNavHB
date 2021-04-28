@@ -2,7 +2,7 @@
     <span class="switchtext"> Abstract 
     <label class="switch">
     <input type="checkbox" @change="changed" :checked="value">
-    <span class="slider round"></span>
+    <span class="slider"></span>
     </label>
      Concrete</span>
 </template>
@@ -59,7 +59,7 @@ export default {
   font-size: 70%;
   text-align: center;
 }
- /* The switch - the box around the slider */
+ /* box around the slider */
 .switch {
   position: relative;
   display: inline-block;
@@ -108,6 +108,7 @@ export default {
   background-color: #ccc;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 17px;
 }
 
 .slider:before {
@@ -120,6 +121,7 @@ export default {
   background-color: white;
   -webkit-transition: .4s;
   transition: .4s;
+  border-radius: 50%;
 }
 
 input:checked + .slider {
@@ -134,14 +136,5 @@ input:checked + .slider:before {
   -webkit-transform: translateX(13px);
   -ms-transform: translateX(13px);
   transform: translateX(13px);
-}
-
-/* Rounded sliders */
-.slider.round {
-  border-radius: 17px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
 } 
 </style>
