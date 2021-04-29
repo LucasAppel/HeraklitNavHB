@@ -17,10 +17,10 @@ var webpackConfig = {
         // other plugins ...
     ]}
     VueHammer.customEvents = {
-        doubletap: { type: 'tap', event: 'doubletap', taps: 2 },
-        singletap: { type: 'tap', event: 'singletap', requireFailure: ['doubletap'] }
+        doubletap: { type: 'tap', event: 'doubletap', taps: 2, interval: 450, time: 350, threshold: 5, posThreshold: 50  }
       };
-Vue.use(VueHammer)
+
+Vue.use(VueHammer);
 new Vue({
     store,
 
