@@ -3,9 +3,8 @@ module.exports = {
 
   pwa: {
     name: 'HK: Retailer',
-    themeColor: '#4DBA87',
-    msTileColor: '#000000',
+    themeColor: '#000000',
     appleMobileWebAppCapable: 'yes',
-    appleMobileWebAppStatusBarStyle: 'black',
-}
+    appleMobileWebAppStatusBarStyle: 'black'
+  }
 }

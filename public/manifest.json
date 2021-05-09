@@ -1,33 +1,33 @@
 {
-    "name": "HERAKLIT-Navigator: Retailer",
-    "short_name": "HK: Retailer",
-    "lang": "en",
-    "description": "HERAKLIT-Navigator to the retailer case-study",
-    "icons": [
-        {
-            "src": "./H_69.png",
-            "sizes": "69x69",
-            "type": "image/png"
-        },
-        {
-            "src": "./H_144.png",
-            "sizes": "144x144",
-            "type": "image/png"
-        },
-        {
-            "src": "./H_192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "any maskable"
-        },
-        {
-            "src": "./H_512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        }
-    ],
-    "start_url": "./index.html",
-    "display": "standalone",
-    "theme_color": "black",
-    "background_color": "black"
+  "name": "Heraklit-Navigator: Retailer",
+  "short_name": "HK: Retailer",
+  "lang": "en",
+  "description": "Heraklit-Navigator to the retailer case-study",
+  "icons": [
+    {
+      "src": "./H_69.png",
+      "sizes": "69x69",
+      "type": "image/png"
+    },
+    {
+      "src": "./H_144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "./H_192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./H_512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "black",
+  "background_color": "black"
 }

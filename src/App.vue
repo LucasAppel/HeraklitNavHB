@@ -214,7 +214,7 @@ body {
   position: fixed;
   overflow: hidden;
    -webkit-overflow: hidden;
-   z-index: -5;
+   z-index: -100;
 min-height: 50vh;
  background-color: black;
        -khtml-user-drag: none;
@@ -230,6 +230,7 @@ min-height: 50vh;
 #app {
 position: fixed;
 height: 50vh;
+z-index: -100;
 width: 100%;
 font-weight:500;
 font-size: 11pt;
