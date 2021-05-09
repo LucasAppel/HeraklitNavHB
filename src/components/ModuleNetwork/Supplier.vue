@@ -15,7 +15,9 @@ export default {
       supplierClick(){this.$emit('supplierClick')}
   },
    mounted(){
- 
+  document.getElementsByClassName("padRight").forEach(element => {
+    element.style.paddingRight = "24vw";
+  });
   }
 }
 </script>
@@ -46,15 +48,15 @@ export default {
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg186 {
-  top: -2px;
+  top: 10px;
   left: 656px;
   width: 120px;
-  height: 130px;
+  height: 105px;
 
 }
 
 .padRight{
-  padding-right: 25vw;
+  padding-right: 24vw;
   transition: padding 0.6s;
 }
 }

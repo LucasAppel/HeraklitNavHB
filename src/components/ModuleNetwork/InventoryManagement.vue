@@ -36,17 +36,17 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -425px;
+  top: -400px;
   left: 491px;
   width: 270px;
-  height: 215px;
+  height: 165px;
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #imginvent {
-  top: -280px;
+  top: -270px;
   left: 327px;
   width: 183px;
-  height: 130px;
+  height: 112px;
 
 }
 }

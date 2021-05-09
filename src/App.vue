@@ -17,7 +17,7 @@
         <WorkflowNav @resetZoomer="resetZoomer" /><hr>
         <CompositionsNav @resetZoomer="resetZoomer" /><hr>
         <ViewsNav @resetZoomer="resetZoomer" />
-          <br><br><br><br><br>
+          <br><br><br><br><br><br><br><br><br>
         </div>
       </nav>
   
@@ -135,7 +135,7 @@ export default {
                 }
               else {
                 zoomObjs.forEach(zoomObj => {zoomObj.style.paddingRight = "21vw";
-                padRight.forEach(zoomObj => {zoomObj.style.paddingRight = "25vw";}) 
+                padRight.forEach(xe => {xe.style.paddingRight = "24vw";}) 
                 }) }
               }
           
@@ -166,6 +166,12 @@ export default {
   if (event.touches.length == 2) { event.preventDefault(); }
 }, { passive: false });
 
+ document.body.addEventListener('touchmove',function(event){
+  event.preventDefault();
+});
+
+
+
   document.getElementById('btn1').style.opacity="1.0";
 
   },
@@ -194,12 +200,13 @@ html {
    user-select: none;
    -webkit-user-select: none;
   -webkit-touch-callout: none;
-  overscroll-behavior-y: none;
-  -webkit-overscroll-behaviour-y: none;
-  position: absolute;
+  overscroll-behavior: none;
+  -webkit-overscroll-behaviour: none;
+
   z-index: -100;
   overflow: hidden;
   -webkit-overflow: hidden;
+  -webkit-overflow-scrolling: none;
   width: 100vw;
   height: 100vh;
 
@@ -207,21 +214,23 @@ html {
   
 }
 body {
-  overscroll-behavior-y: none;
-  -webkit-overscroll-behaviour-y: none;
+  overscroll-behavior: none;
+  -webkit-overscroll-behaviour: none;
+  -webkit-overflow-scrolling: none;
    width: 100%;
   margin: 0;
-  position: fixed;
+  position:absolute;
   overflow: hidden;
    -webkit-overflow: hidden;
    z-index: -100;
-min-height: 50vh;
+min-height: 100vh;
  background-color: black;
        -khtml-user-drag: none;
    -moz-user-drag: none;
    -o-user-drag: none;
       -webkit-user-drag: none; 
       -webkit-touch-callout: none;
+      display:flex;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -229,13 +238,17 @@ min-height: 50vh;
 
 #app {
 position: fixed;
-height: 50vh;
+top:0;
+left:0;
+height: 100vh;
 z-index: -100;
-width: 100%;
+width: 100vw;
 font-weight:500;
 font-size: 11pt;
-    overscroll-behavior-y: none;
-  -webkit-overscroll-behaviour-y: none;
+overflow: hidden;
+-webkit-overflow-scrolling: none;
+    overscroll-behavior: none;
+  -webkit-overscroll-behaviour: none;
   font-family: "Arial Narrow", "Open Sans", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -287,11 +300,11 @@ footer {
   bottom: 0px;
   top: 35px;
   z-index: 0;
-     overscroll-behavior-y: none;
-  -webkit-overscroll-behaviour-y: none;
+     overscroll-behavior: none;
+  -webkit-overscroll-behaviour: none;
 -webkit-overflow-scrolling: auto;
  user-select: none;
- position: absolute;
+ position: fixed;
  overflow: hidden;
 }
 
@@ -304,7 +317,7 @@ nav {
   border-top: solid black 1px;
   border-left: solid black 1px;
   height: calc(100vh - 40px);
-  width: 19%;
+  width: 305px;
   position: absolute;
   top: 40px;
   bottom: 0px;

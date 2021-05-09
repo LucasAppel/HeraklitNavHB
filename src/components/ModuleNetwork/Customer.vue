@@ -36,18 +36,18 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -440px;
+  top: -387px;
   left: -113px;
   width: 321px;
-  height: 480px;
+  height: 380px;
   
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg1370 {
-  top: -290px;
-  left: -70px;
-  width: 208px;
-  height: 340px;
+  top: -270px;
+  left: -120px;
+  width: 238px;
+  height: 261px;
 }
 
 }

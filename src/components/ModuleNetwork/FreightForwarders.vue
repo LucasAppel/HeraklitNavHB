@@ -35,10 +35,10 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -203px;
+  top: -182px;
   left: 964px;
   width: 190px;
-  height: 215px;
+  height: 155px;
 
 }
 @media screen and (max-width:1400px) {/* Mobile */
@@ -46,8 +46,7 @@ export default {
   top: -140px;
   left: 648px;
   width: 140px;
-  height: 145px;
-  transform: scale(1, 1);
+  height: 120px;
 }
 }
 </style>

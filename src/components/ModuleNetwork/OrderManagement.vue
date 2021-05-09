@@ -40,10 +40,10 @@ cursor: pointer;
   padding-left: 0px;
   object-fit:fill;
  position: absolute;
-  top: -340px;
-  left: 172px;
-  width: 353px;
-  height: 140px;
+  top: -320px;
+  left: 177px;
+  width: 348px;
+  height: 120px;
   transform: scale(1, 2.4);
 }
 

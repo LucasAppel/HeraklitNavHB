@@ -37,19 +37,19 @@ export default {
   padding-left: 0px;
   object-fit: fill;
  position: absolute;
-  top: -300px;
+  top: -280px;
   left: 615px;
   width: 345px;
-  height: 200px;
+  height: 140px;
   transform: scale(1, 1.25);
 }
 @media screen and (max-width:1400px) {/* Mobile */
 #svg4134 {
-  top: -222px;
+  top: -190px;
   left: 410px;
   width: 240px;
-  height: 180px;
-  transform: scale(1, 1);
+  height: 100px;
+
 }
 }
 </style>

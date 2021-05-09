@@ -126,7 +126,7 @@ return {
  
   padding-bottom: 10%;
   padding-right: 21vw;
-  padding-left: 4%;
+  padding-left: 120px;
   transition: padding 0.6s;
 }
 
@@ -147,8 +147,8 @@ return {
   min-width: 700px;
   max-width: 700px;
   margin:10% auto 0 auto;
-  padding-right: 21vw;
-  padding-left: calc(1vw + 60px);
+  padding-right: 24vw;
+  padding-left: 120px;
   }
 }
 
