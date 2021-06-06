@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.1f63c94c670dc6ac2ee591f22cc554bf.js"
+  "/precache-manifest.530403cac432fb2c039c7b6fb1ece7e7.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "heraklit-nav-hb"});

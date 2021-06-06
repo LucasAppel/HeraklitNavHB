@@ -115,8 +115,9 @@ overflow-x:hidden;
 
 .Sublist {
     /* Backgound for whole div of List */
-    background-image: linear-gradient(to bottom left, rgba(82, 137, 209, 0.096), rgba(180, 226, 253, 0.137)30%, rgba(82, 137, 209, 0.075));
+    background-image: linear-gradient(to bottom left, rgba(82, 137, 209, 0.056), rgba(180, 226, 253, 0.037)30%, rgba(82, 137, 209, 0.055));
     border-radius: 6px;
+    backdrop-filter: blur(50px) opacity(50%);
     transition: 1s;
     padding-top:5px;
 }
@@ -129,7 +130,7 @@ li div::after {
     top:-1.5px;
     position: absolute;
     left: 13px;
-    background:  linear-gradient(to bottom right, rgba(82, 137, 209, 0.13), rgba(180, 226, 253, 0.137)30%, rgba(82, 137, 209, 0.109));
+    /*background:  linear-gradient(to bottom right, rgba(82, 137, 209, 0.13), rgba(180, 226, 253, 0.137)30%, rgba(82, 137, 209, 0.109));*/
  z-index: -1;
  border-radius: 5px;
  pointer-events: none;

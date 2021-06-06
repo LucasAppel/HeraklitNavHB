@@ -34,21 +34,7 @@ getScrollLeftMax(ele) {
       : (ele.scrollWidth - ele.clientWidth);
 }, 
 
-/*
-getEventCoordinates(e){
-    var x = null;
-    var y = null;
-  if(e.type == 'touchstart' ||  e.type == 'touchmove'  || e.type == 'touchend' || e.type == 'touchcancel' ){
-        var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0];
-        x = touch.pageX;
-        y = touch.pageY;
-    } else if (e.type == 'wheel' || e.type == 'mousedown' || e.type == 'mouseup' || e.type == 'mousemove' || e.type == 'mouseover'|| e.type=='mouseout' || e.type=='mouseenter' || e.type=='mouseleave') {
-        x = e.clientX;
-        y = e.clientY;
-    }
-    console.log("Touch/Mouse Coord (x/y): " + x.toString() + "/" + y.toString());
-    return (x, y);
-}, */
+
 
 initScroll(){
     var container = document.getElementById(this.$store.getters.activeModule);
@@ -138,12 +124,6 @@ mounted() {
         
                 $vm.zoom($vm.zvalue);
             }
-
-        /*THIS CAN MOVE PIC WITH TWO FINGERS; BUT IS GLITCHY
-      var container = document.getElementById($vm.$store.getters.activeModule);
-      container.scrollTop = container.scrollTop - (coord.y - $vm.startCoord.y);
-      container.scrollLeft = container.scrollLeft - (coord.x - $vm.startCoord.x);
-    $vm.startCoord = coord;  */
 
         }
         }
