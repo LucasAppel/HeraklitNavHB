@@ -4,7 +4,7 @@
         <h1>Heraklit-Navigator: Retailer</h1>
       </header>
 
-      <div @click="navButtonClick"><img class="SBBTN" id="btn1" :src="menuClose"><img class="SBBTN" id="btn2" :src="menuOpen"></div>
+      <div @click="navButtonClick"><img class="SBBTN clickable" id="btn1" :src="menuClose"><img class="SBBTN clickable" id="btn2" :src="menuOpen"></div>
       
       <nav>
         <div id="navTop">
@@ -30,7 +30,7 @@
         <Views v-show="activeModule=='views'" @reZoom="reZoom" />
       </div>
    
-      <footer @click="signatureClick">
+      <footer @click="signatureClick" style="cursor: pointer">
         <h1>{{Arrow}} Signatures {{Arrow}}</h1><br><br><br>
         <img id="signatureID" src="./assets/engl. Teil_III_IV-1,engl. Teil_III_IV-2,engl. Teil_III_IV-3/engl. Teil_III_IV-2.svg">
       </footer>
